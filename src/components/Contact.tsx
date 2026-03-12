@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail } from 'lucide-react';
 // Eliminado import { useLocation } from 'react-router-dom';
 
 export const Contact: React.FC = () => {
-  const location = useLocation();
+//  const location = useLocation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,16 +12,16 @@ export const Contact: React.FC = () => {
     message: ''
   });
 
-  useEffect(() => {
-    document.title = "Contacto | CURRENT COMMAND";
+//  useEffect(() => {
+//    document.title = "Contacto | CURRENT COMMAND";
     // Pre-fill message if coming from product page
-    if (location.state && location.state.productInterest) {
-      setFormData(prev => ({
-        ...prev,
-        message: `Hola, me interesa recibir la ficha técnica y cotización de: ${location.state.productInterest}.`
-      }));
-    }
-  }, [location.state]);
+//    if (location.state && location.state.productInterest) {
+//      setFormData(prev => ({
+//        ...prev,
+//        message: `Hola, me interesa recibir la ficha técnica y cotización de: ${location.state.productInterest}.`
+//      }));
+//    }
+//  }, [location.state]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

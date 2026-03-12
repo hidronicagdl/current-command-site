@@ -56,13 +56,13 @@ export const Products: React.FC = () => {
                 </div>
 
                 <div className="flex items-center">
-                  <Link 
-                    to="/contacto" 
+                  <a href 
+                    ="/contacto" 
                     state={{ productInterest: product.name }}
                     className="inline-flex items-center text-white bg-industrial-blue hover:bg-industrial-dark px-6 py-3 font-bold text-sm transition-colors"
                   >
                     SOLICITAR FICHA TÉCNICA AL ING. <ArrowRight size={16} className="ml-2" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
