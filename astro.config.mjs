@@ -2,9 +2,10 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 
+import sitemap from '@astrojs/sitemap';
+
 export default defineConfig({
-  integrations: [
-    react(), 
-    tailwind() // <--- ESTA LÍNEA ES VITAL
-  ]
+  site: 'https://currentcommand.com',
+  integrations: [react(), // <--- ESTA LÍNEA ES VITAL
+  tailwind(), sitemap()]
 });
