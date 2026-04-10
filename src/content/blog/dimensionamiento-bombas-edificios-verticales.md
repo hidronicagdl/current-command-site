@@ -1,9 +1,10 @@
+---
 title: "Dimensionamiento de Bombas para Edificios Verticales: Más Allá de la Simplicidad"
 description: "Descubra las complejidades y estrategias clave para el dimensionamiento de bombas en edificios verticales, optimizando rendimiento y eficiencia."
 pubDate: "2026-04-10"
 author: "José Aguilar"
 En el ámbito del bombeo para edificaciones, es común pensar que dimensionar un sistema para una casa es comparable a hacerlo para un edificio de gran altura. Sin embargo, la realidad técnica en el diseño de sistemas de bombeo para proyectos verticales presenta desafíos significativos que trascienden esta aparente simplicidad.
-
+---
 ## La Complejidad Oculta del Dimensionamiento de Bombas en Edificios Verticales
 
 La principal distinción radica en la necesidad de gestionar presiones y caudales considerablemente más altos. A diferencia de las instalaciones residenciales unifamiliares, los edificios verticales, como torres de departamentos, hospitales o centros corporativos, requieren un enfoque técnico más robusto y detallado.
