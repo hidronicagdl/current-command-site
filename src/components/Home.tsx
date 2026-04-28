@@ -104,9 +104,11 @@ export const Home: React.FC = () => {
                 Puesta en marcha y alineación láser
               </li>
             </ul>
+            {/* Oculto hasta tener contenido 
             <a href="/recursos" className="text-industrial-blue font-bold hover:underline uppercase tracking-wide text-sm">
               Ver Recursos Técnicos &rarr;
-            </a>
+            </a> 
+            */}
           </div>
         </div>
       </section>

@@ -23,8 +23,8 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "Inicio", path: "/" },
   { label: "Sobre Mí", path: "/sobre-mi" },
   { label: "Bombas & Equipos", path: "/productos" },
-  { label: "Recursos Técnicos", path: "/recursos" },
-  { label: "Ingeniería", path: "/blog" },
+  // { label: "Recursos Técnicos", path: "/recursos" }, // Oculto hasta tener contenido
+  // { label: "Ingeniería", path: "/blog" }, // Oculto hasta tener contenido
   { label: "Contacto", path: "/contacto" },
 ];
 
