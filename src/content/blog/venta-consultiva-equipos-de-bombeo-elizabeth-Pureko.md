@@ -2,6 +2,7 @@
 title: "Venta consultiva de equipos de bombeo: El Método de Elizabeth Pureko"
 description: "Aprende cómo pasar de vender fierros a ser un consultor técnico de autoridad con las lecciones de Elizabeth Pureko y SIBI."
 pubDate: "2026-04-28"
+author: "Jose Aguilar"
 excerpt: "Descubre cómo pasar de ser un vendedor de catálogos a un consultor técnico de alto nivel. Analizamos la historia de éxito de SIBI y Elizabeth Pureko."
 slug: "venta-consultiva-equipos-de-bombeo-elizabeth-pureko"
 keywords: "venta consultiva de equipos de bombeo, ingeniería de bombeo, SIBI, Elizabeth Pureko, equipos de bombeo industriales"
