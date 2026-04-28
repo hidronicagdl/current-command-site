@@ -1,0 +1,22 @@
+name: Generate and Notify Sitemap
+
+on:
+  push:
+    branches: [ main ] # O la rama que uses para producción
+
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Instalar dependencias y Construir
+        run: |
+          npm install
+          npm run build
+
+      # Este paso es para notificar a Google que el sitio cambió
+      - name: Ping Google Search Console
+        run: |
+          curl "https://www.google.com/ping?sitemap=https://currentcommand.com/sitemap-index.xml"
