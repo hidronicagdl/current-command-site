@@ -1,13 +1,13 @@
 ---
-title: "Venta consultiva de equipos de bombeo: El Método de Elizabeth Pureco"
-description: "Aprende cómo pasar de vender fierros a ser un consultor técnico de autoridad con las lecciones de Elizabeth Pureco y SIBI."
-pubDate: 2026-04-28
-excerpt: "Descubre cómo pasar de ser un vendedor de catálogos a un consultor técnico de alto nivel. Analizamos la historia de éxito de SIBI y Elizabeth Pureco."
+title: "Venta consultiva de equipos de bombeo: El Método de Elizabeth Pureko"
+description: "Aprende cómo pasar de vender fierros a ser un consultor técnico de autoridad con las lecciones de Elizabeth Pureko y SIBI."
+pubDate: "2026-04-28"
+excerpt: "Descubre cómo pasar de ser un vendedor de catálogos a un consultor técnico de alto nivel. Analizamos la historia de éxito de SIBI y Elizabeth Pureko."
 slug: "venta-consultiva-equipos-de-bombeo-elizabeth-pureko"
-keywords: "venta consultiva de equipos de bombeo, ingeniería de bombeo, SIBI, Elizabeth Pureco, equipos de bombeo industriales"
+keywords: "venta consultiva de equipos de bombeo, ingeniería de bombeo, SIBI, Elizabeth Pureko, equipos de bombeo industriales"
 ---
 
-# De "Vendedora de Bombas" a Mentora Industrial: El Método de Elizabeth Pureco para Dominar el Mercado
+# De "Vendedora de Bombas" a Mentora Industrial: El Método de Elizabeth Pureko para Dominar el Mercado
 
 ¿Alguna vez has intentado vender un equipo tres veces más caro que la competencia y que el cliente, en lugar de reclamar, te dé las gracias?
 
@@ -17,7 +17,7 @@ Hoy quiero contarte una historia de autoridad pura. Una historia que rompe con e
 
 ## El Conocimiento Vence a la Ignorancia (y al Machismo)
 
-En 1985, el sector hidráulico en México no era un lugar para "niñas". **Elizabeth Pureco** comenzó su carrera enfrentándose a un entorno donde los mecánicos e ingenieros de la "vieja escuela" intentaban invalidar su criterio. 
+En 1985, el sector hidráulico en México no era un lugar para "niñas". **Elizabeth Pureko** comenzó su carrera enfrentándose a un entorno donde los mecánicos e ingenieros de la "vieja escuela" intentaban invalidar su criterio. 
 
 **¿Cómo lo venció? No fue con carisma. Fue con datos.** Elizabeth no vendía bombas; resolvía problemas que otros ni siquiera entendían. Su metodología se resume en una frase que todo ingeniero de ventas debería tatuarse: *"El conocimiento vence a la ignorancia"*. Si puedes demostrar con cálculos, documentos y hechos que tu solución es la técnicamente correcta, la resistencia del cliente desaparece.
 
@@ -35,7 +35,7 @@ Esa frase, que Elizabeth soltó en una llamada real, no es arrogancia. Es el niv
 
 ## Lo que aprenderás en este episodio de "Bombeando Soluciones"
 
-Hemos rescatado una conversación épica entre Elizabeth Pureco, Edith Villanueva y Jose Aguilar. No es solo una entrevista; es una Masterclass sobre cómo construir una empresa desde cero (**SIBI**) y cómo transitar de empleado a dueño de negocio mediante la especialización.
+Hemos rescatado una conversación épica entre Elizabeth Pureko, Edith Villanueva y Jose Aguilar. No es solo una entrevista; es una Masterclass sobre cómo construir una empresa desde cero (**SIBI**) y cómo transitar de empleado a dueño de negocio mediante la especialización.
 
 **Dale play al video para descubrir:**
 
