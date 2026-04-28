@@ -48,6 +48,7 @@ export const Home: React.FC = () => {
                 src={typeof hydroMpcImage === 'string' ? hydroMpcImage : hydroMpcImage.src} 
                 alt="Sistema de presión constante Hydro MPC de Grundfos" 
                 className="w-full h-auto shadow-2xl grayscale hover:grayscale-0 transition-all duration-500 rounded-sm border border-slate-700"
+				fetchpriority="high"
               />
             </div>
 
