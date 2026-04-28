@@ -6,10 +6,10 @@ import { MapPin, Phone, Mail } from 'lucide-react';
 export const Contact: React.FC = () => {
 //  const location = useLocation();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
+    "Nombre Completo": '',
+    "Email Corporativo": '',
+    "Teléfono": '',
+    "Detalle del Requerimiento": ''
   });
 
 //  useEffect(() => {
@@ -18,7 +18,7 @@ export const Contact: React.FC = () => {
 //    if (location.state && location.state.productInterest) {
 //      setFormData(prev => ({
 //        ...prev,
-//        message: `Hola, me interesa recibir la ficha técnica y cotización de: ${location.state.productInterest}.`
+//        "Detalle del Requerimiento": `Hola, me interesa recibir la ficha técnica y cotización de: ${location.state.productInterest}.`
 //      }));
 //    }
 //  }, [location.state]);
@@ -27,26 +27,36 @@ export const Contact: React.FC = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const encode = (data: any) => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget;
+    const formDataObj = new FormData(e.currentTarget);
     
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...formData
-      })
-    })
-      .then(() => alert("Mensaje enviado correctamente. Un ingeniero le contactará en breve."))
-      .catch(error => alert(error));
+    // URL ajustada a /formResponse para permitir el envío de datos
+    const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeDEJ1mWKj7cpsxEfujhX51TgT-RGjb8h1-evlYA1cS1ny3WA/formResponse";
+
+    const data = new URLSearchParams();
+    
+    // Mapeo exacto con los IDs que extraje de tu imagen:
+    data.append("entry.1634109051", formDataObj.get("Nombre Completo") as string); 
+    data.append("entry.411597984", formDataObj.get("Email Corporativo") as string);
+    data.append("entry.1760353485", formDataObj.get("Teléfono") as string);
+    data.append("entry.1082939488", formDataObj.get("Detalle del Requerimiento") as string);
+
+    try {
+      await fetch(GOOGLE_FORM_URL, {
+        method: "POST",
+        mode: "no-cors", 
+        body: data,
+      });
+      
+      // Aquí puedes manejar el éxito (ej. mostrar un mensaje o limpiar el form)
+      alert("Mensaje enviado correctamente. Un ingeniero le contactará en breve.");
+      console.log("Mensaje enviado correctamente. Un ingeniero le contactará en breve.");
+      
+    } catch (error) {
+      console.error("Error al enviar el formulario", error);
+      alert("Error al enviar el formulario");
+    }
   };
 
   return (
@@ -105,25 +115,17 @@ export const Contact: React.FC = () => {
             <h2 className="text-xl font-bold text-slate-800 mb-6 border-b border-gray-300 pb-2">Enviar Requerimiento</h2>
             
             <form 
-              name="contact" 
-              method="post" 
-              data-netlify="true" 
-              data-netlify-honeypot="bot-field" 
               onSubmit={handleSubmit}
               className="space-y-4"
             >
-              {/* Netlify Hidden Fields */}
-              <input type="hidden" name="form-name" value="contact" />
-              <input type="hidden" name="bot-field" />
-
               <div>
                 <label htmlFor="name" className="block text-xs font-bold text-slate-600 uppercase tracking-wide mb-1">Nombre Completo</label>
                 <input 
                   type="text" 
-                  name="name" 
+                  name="Nombre Completo" 
                   id="name"
                   required
-                  value={formData.name}
+                  value={formData["Nombre Completo"]}
                   onChange={handleChange}
                   className="w-full p-3 border border-gray-300 focus:border-industrial-blue focus:ring-1 focus:ring-industrial-blue outline-none transition-all"
                 />
@@ -133,10 +135,10 @@ export const Contact: React.FC = () => {
                 <label htmlFor="email" className="block text-xs font-bold text-slate-600 uppercase tracking-wide mb-1">Email Corporativo</label>
                 <input 
                   type="email" 
-                  name="email" 
+                  name="Email Corporativo" 
                   id="email"
                   required
-                  value={formData.email}
+                  value={formData["Email Corporativo"]}
                   onChange={handleChange}
                   className="w-full p-3 border border-gray-300 focus:border-industrial-blue focus:ring-1 focus:ring-industrial-blue outline-none transition-all"
                 />
@@ -146,9 +148,9 @@ export const Contact: React.FC = () => {
                 <label htmlFor="phone" className="block text-xs font-bold text-slate-600 uppercase tracking-wide mb-1">Teléfono</label>
                 <input 
                   type="tel" 
-                  name="phone" 
+                  name="Teléfono" 
                   id="phone"
-                  value={formData.phone}
+                  value={formData["Teléfono"]}
                   onChange={handleChange}
                   className="w-full p-3 border border-gray-300 focus:border-industrial-blue focus:ring-1 focus:ring-industrial-blue outline-none transition-all"
                 />
@@ -157,11 +159,11 @@ export const Contact: React.FC = () => {
               <div>
                 <label htmlFor="message" className="block text-xs font-bold text-slate-600 uppercase tracking-wide mb-1">Detalle del Requerimiento</label>
                 <textarea 
-                  name="message" 
+                  name="Detalle del Requerimiento" 
                   id="message"
                   rows={4}
                   required
-                  value={formData.message}
+                  value={formData["Detalle del Requerimiento"]}
                   onChange={handleChange}
                   className="w-full p-3 border border-gray-300 focus:border-industrial-blue focus:ring-1 focus:ring-industrial-blue outline-none transition-all resize-none"
                 ></textarea>
