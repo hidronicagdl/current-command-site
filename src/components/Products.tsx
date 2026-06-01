@@ -17,7 +17,7 @@ const SILO_PRODUCTS: SiloProduct[] = [
     name: "Sistemas Hidroneumáticos Booster de Presión Constante",
     brand: "Grundfos / Sencillo",
     siloUrl: "/productos/sistemas-hidroneumaticos-booster",
-    imageUrl: "/src/assets/booster-system.webp",
+    imageUrl: "/assets/booster-system.webp",
     description: "Sistemas hidroneumáticos tipo booster multibombas para el mantenimiento crítico de presión constante, configurados con variadores de frecuencia integrados de fábrica, motores de altísima eficiencia energética y controladores lógicos avanzados con comunicación nativa compatible con varios protocolos de comunicación, montados sobre una estructura de soporte rígida de acero al carbón estructural galvanizado por inmersión en caliente con colectores de succión y descarga fabricados en acero inoxidable AISI 304, diseñados específicamente para mitigar el golpe de ariete y optimizar el consumo de kilowatts en edificaciones verticales comerciales de gran envergadura.",
     specs: [
       "Control PID de Presión Constante",
@@ -31,7 +31,7 @@ const SILO_PRODUCTS: SiloProduct[] = [
     name: "Cárcamos Prefabricados en Plástico Reforzado con Fibra de Vidrio (PRFV)",
     brand: "Estaciones Zoeller",
     siloUrl: "/productos/carcamos-prefabricados-fibra-de-vidrio",
-    imageUrl: "/src/assets/carcamo-prfv.webp",
+    imageUrl: "/assets/carcamo-prfv.webp",
     description: "Cárcamos de bombeo e infraestructura prefabricada de ingeniería monolítica monocasco en plástico reforzado con fibra de vidrio (PRFV), provistos de una pared estructural impermeable de alta resistencia mecánica contra empujes hidrostáticos externos y protección química nativa absoluta frente a la corrosión severa provocada por gas sulfhídrico (H2S), equipados de fábrica con tubería interna de descarga, codos de acoplamiento automático de hierro fundido dúctil y sistemas de izaje en acero inoxidable AISI 304.",
     specs: [
       "Monocasco de PRFV 100% Hermético",
@@ -45,7 +45,7 @@ const SILO_PRODUCTS: SiloProduct[] = [
     name: "Cárcamos Compactos con Bombas Sumergibles Presurizados",
     brand: "Zoeller LPS",
     siloUrl: "/productos/carcamos-bombas-sumergibles-presurizados",
-    imageUrl: "/src/assets/carcamo-presurizado.webp",
+    imageUrl: "/assets/carcamo-presurizado.webp",
     description: "Estaciones de bombeo compactas con bombas trituradoras sumergibles diseñadas bajo criterios de arquitectura tecnológica abierta para redes de alcantarillado a presión, equipadas con un mecanismo axial de corte de alta dureza con anillo y cortador de aleación de acero endurecido con alta concentración de cromo, motor síncrono con doble sello mecánico en cámara de aceite, complementado con un tablero de control automatizado con componentes industriales estándar de mercado para eliminar la dependencia de servicios técnicos especiales.",
     specs: [
       "Mecanismo Triturador de Alta Presión",
@@ -59,7 +59,7 @@ const SILO_PRODUCTS: SiloProduct[] = [
     name: "Sistemas de Bombeo Contra Incendio Certificados UL/FM",
     brand: "NFPA 20 Compliant UL/FM",
     siloUrl: "/productos/sistemas-contra-incendio-ul-fm",
-    imageUrl: "/src/assets/contra-incendio-ul-fm.webp",
+    imageUrl: "/assets/contra-incendio-ul-fm.webp",
     description: "Equipos y paquetes empaquetados de bombeo contra incendio estacionarios bajo el cumplimiento estricto de la norma NFPA 20 con componentes individuales listados por Underwriters Laboratories (UL) y aprobaciones Factory Mutual (FM), integrando bombas de carcasa partida o turbina vertical en hierro dúctil e impulsores de bronce con curvas hidráulicas planas extendidas capaces de operar al ciento cincuenta por ciento de su caudal nominal, operados por controladores redundantes con lógica de arranque dual asistida por dos bancos de baterías independientes y acoplamiento a motor diésel o eléctrico de alta confiabilidad industrial.",
     specs: [
       "Certificada UL & Aprobación FM",
