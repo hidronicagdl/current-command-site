@@ -1,53 +1,115 @@
 ---
-// src/pages/productos/carcamos-bombas-sumergibles-presurizados.astro
+// src/pages/productos/sistemas-drenaje-presurizado-lps.astro
 import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+// Importación de Imágenes desde src/assets/
+import HeroImg from '../../assets/sistema-drenaje-presurizado-lps-mexico.webp';
+import InstalacionImg from '../../assets/instalacion-tuberia-hdpe-nivel-freatico-alto.webp';
+import BombaImg from '../../assets/bomba-trituradora-desplazamiento-positivo.webp';
+import RetrofitImg from '../../assets/reemplazo-bomba-cavidad-progresiva-eone.webp';
+import CarcamoImg from '../../assets/carcamos-prefabricados-polietileno-aguas-negras.webp';
+
+const title = "Sistemas de Drenaje Presurizado LPS | Ingeniería de Fluidos de Alta Confiabilidad";
+const description = "Estaciones de bombeo presurizado y cárcamos prefabricados de arquitectura abierta en México. Mitigación de riesgos por nivel freático alto y topografía inversa.";
 ---
 
-<Layout 
-  title="Cárcamos con Bombas Sumergibles Presurizados | CurrentCommand" 
-  description="Sistemas de alcantarillado a presión y estaciones de bombeo trituradoras en México. La alternativa técnica ideal a sistemas tradicionales tipo E-One."
->
-  <main class="bg-white font-sans text-steel-gray">
+<Layout title={title} description={description}>
+  <main class="bg-white font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900">
     
-    <section class="max-w-7xl mx-auto px-6 py-16 md:py-24 border-b border-gray-100">
-      <div class="max-w-3xl">
-        <span class="text-sm font-bold tracking-wider uppercase text-blue-600 block mb-3">Sistemas de Alcantarillado de Alta Eficiencia</span>
-        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-steel-gray mb-6 leading-tight">
-          Cárcamos con Bombas Sumergibles Presurizados y Estaciones Trituradoras
-        </h1>
-        <p class="text-lg md:text-xl text-steel-gray/80 leading-relaxed mb-8">
-          Soluciones avanzadas de bombeo a presión para el desalojo eficiente de aguas residuales en topografías complejas, ofreciendo una alternativa robusta de alta disponibilidad frente a sistemas convencionales del mercado.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="#cotizar" class="inline-block bg-steel-gray text-white font-semibold px-6 py-3 rounded-lg hover:bg-steel-gray/90 transition-colors">
-            Solicitar Asesoría de Proyecto
-          </a>
-          <a href="#especificaciones" class="inline-block bg-gray-100 text-steel-gray font-semibold px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors">
-            Especificaciones del Sistema
-          </a>
+    <!-- Hero Section -->
+    <section class="relative max-w-7xl mx-auto px-6 py-16 md:py-24 border-b border-gray-100">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-sm font-bold tracking-wider uppercase text-blue-600 block mb-3">
+            Cárcamos con Bombas Sumergibles Para Sistemas de Drenaje de Baja Presión
+          </span>
+          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
+            Sistemas de Drenaje Presurizado LPS: <span class="text-blue-700">Arquitectura Abierta</span>
+          </h1>
+          <p class="text-lg md:text-xl text-slate-600 leading-relaxed mb-8">
+            Optimización hidráulica para desarrollos habitacionales, comerciales e industriales en México. Soluciones diseñadas para superar niveles freáticos altos y topografías inversas mediante tecnología de cavidad progresiva.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#cotizar" class="bg-slate-900 text-white font-semibold px-8 py-4 rounded-lg hover:bg-slate-800 transition-all shadow-xl hover:shadow-2xl">
+              Solicitar Asesoría
+            </a>
+            <a href="#especificaciones" class="bg-gray-100 text-slate-700 font-semibold px-8 py-4 rounded-lg hover:bg-gray-200 transition-colors">
+              Especificaciones Técnicas
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <Image 
+            src={HeroImg} 
+            alt="Sistema de drenaje presurizado LPS en México." 
+            class="rounded-2xl shadow-2xl border border-slate-100"
+            loading="eager"
+          />
+          <div class="absolute -bottom-6 -right-6 bg-blue-600 text-white p-6 rounded-xl hidden md:block shadow-xl">
+            <p class="font-bold text-2xl">Extiende la</p>
+            <p class="text-xs uppercase tracking-widest opacity-80">Vida Útil Proyectada</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
-      <div class="md:col-span-2 space-y-8 text-base leading-relaxed text-steel-gray/90">
-        <h2 class="text-2xl md:text-3xl font-bold text-steel-gray tracking-tight">
-          Tecnología de Bombeo a Presión para Redes de Alcantarillado Modernas
-        </h2>
-        
-        <p>
-          Las redes de alcantarillado por gravedad convencional presentan severas limitaciones de diseño cuando se desarrollan proyectos en terrenos con topografías irregulares, pendientes contra pendientes o zonas con niveles freáticos superficiales elevados. Para resolver estos desafíos de infraestructura sin incurrir en excavaciones profundas y costosas, los sistemas de alcantarillado a presión mediante cárcamos compactos presurizados representan la solución técnica más eficiente. Nuestras estaciones empaquetadas integran bombas sumergibles trituradoras de alta resistencia que reducen los sólidos suspendidos en el efluente a una fina pastosidad, permitiendo el uso de tuberías de descarga de diámetros significativamente menores hacia el colector principal.
-        </p>
-        
-        <p>
-          Esta configuración de bombeo presurizado opera como una alternativa directa y de alto rendimiento frente a los sistemas tradicionales tipo E-One. El corazón del equipo está diseñado para soportar las demandas severas de aplicaciones comerciales e industriales ligeras, utilizando impulsores con mecanismos de corte de aleaciones de alta dureza que cortan de manera limpia textiles, plásticos y materiales fibrosos antes de que ingresen a la voluta de la bomba. Este principio de operación previene de forma absoluta los taponamientos en la línea de conducción y minimiza los arranques en falso causados por bloqueos mecánicos, asegurando que el motor trabaje estrictamente dentro de su curva de diseño hidráulico y evitando las sobrecargas eléctricas que comúnmente queman los embobinados estándar.
-        </p>
+    <!-- Content Section 1: Viabilidad -->
+    <section class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-3 gap-16">
+      <div class="lg:col-span-2 space-y-10">
+        <div class="prose prose-slate max-w-none">
+          <h2 class="text-3xl font-bold text-slate-900 tracking-tight mb-6">
+            Viabilidad Geotécnica e Hidráulica: Superando la Topografía Inversa
+          </h2>
+          <p class="text-lg text-slate-700 leading-relaxed">
+            La descentralización en la conducción de aguas negras en el mercado mexicano demanda un cambio de paradigma. Los <strong>sistemas de drenaje presurizado LPS</strong> se consolidan como la solución de ingeniería de fluidos más avanzada para la mitigación de riesgos operativos en infraestructuras donde el alcantarillado por gravedad es inviable.
+          </p>
+          
+          <div class="my-12">
+            <Image 
+              src={InstalacionImg} 
+              alt="Instalación de tuberías para alcantarillado a presión en suelos con nivel freático elevado." 
+              class="rounded-xl shadow-lg"
+            />
+            <p class="text-sm text-slate-500 mt-4 italic text-center">Instalación ágil de líneas de impulsión en terrenos difíciles.</p>
+          </div>
 
-        <p>
-          Para los gerentes de mantenimiento y comités de obra civil en México, migrar o especificar estos sistemas compactos de bombeo se traduce en un control operativo total y un reabastecimiento continuo de refacciones críticas. A diferencia de las plataformas cerradas internacionales que monopolizan los servicios de soporte, nuestra arquitectura abierta simplifica el acceso a los componentes de control, agiliza la calibración de los sensores de nivel por flotación o transductores de presión, y reduce sustancialmente el costo total de propiedad. Es la opción idónea para desarrollos turísticos, desarrollos residenciales en zonas de costa y complejos industriales que demandan una instalación rápida, hermética y con un respaldo de ingeniería en sitio inmediato.
-        </p>
+          <p class="text-lg text-slate-700 leading-relaxed">
+            Al implementar una red basada en nodos de bombeo periféricos con tuberías de diámetro pequeño, se elimina la dependencia de pozos de visita grandes. <strong>Soluciones Integrales en Bombeo Inteligente SIBI</strong> garantiza disponibilidad inmediata de componentes eléctricos industriales estándar y refacciones de proveedores locales.
+          </p>
+        </div>
+
+        <!-- Retrofit Section Highlight -->
+        <div class="bg-blue-50 border-l-8 border-blue-600 p-10 rounded-r-2xl shadow-sm">
+          <div class="flex flex-col md:flex-row gap-10 items-center">
+            <div class="flex-1">
+              <h3 class="text-2xl font-bold text-blue-900 mb-4">Soluciones Retrofit (Alternativa E-One)</h3>
+              <p class="text-blue-800 text-lg mb-6">
+                Sustituya unidades dañadas de la competencia por tecnología Zoeller de alta confiabilidad, sin necesidad de demoliciones civiles ni cambios en el tanque original.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-center gap-3 text-blue-900 font-medium">
+                  <span class="bg-blue-600 text-white p-1 rounded-full"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></span>
+                  Conector SCUD de 6 pines (IP68)
+                </li>
+                <li class="flex items-center gap-3 text-blue-900 font-medium">
+                  <span class="bg-blue-600 text-white p-1 rounded-full"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></span>
+                  Descarga tipo bastón Inox 304/316
+                </li>
+              </ul>
+            </div>
+            <div class="w-full md:w-64">
+              <Image 
+                src={RetrofitImg} 
+                alt="Módulo de reemplazo rápido Retrofit con conector SCUD de 6 pines hermético IP68 compatible con estaciones de bombeo E-One." 
+                class="rounded-xl shadow-md border-2 border-white"
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
+      <!-- Sidebar -->
       <aside class="bg-gray-50 p-8 rounded-xl h-fit border border-gray-100">
         <h3 class="text-lg font-bold text-steel-gray mb-4">Ingeniería Consultiva</h3>
         <p class="text-sm text-steel-gray/70 mb-6 leading-relaxed">
@@ -66,65 +128,96 @@ import Layout from '../../layouts/Layout.astro';
       </aside>
     </section>
 
-    <section id="especificaciones" class="bg-gray-50 border-t border-b border-gray-100 py-16">
+    <!-- Tech Specs Section -->
+    <section id="especificaciones" class="bg-slate-900 py-24 text-white overflow-hidden">
       <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-2xl md:text-3xl font-bold text-steel-gray tracking-tight mb-8">
-          Parámetros Operativos del Sistema de Bombeo Presurizado
-        </h2>
-        <div class="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow-sm">
-          <table class="w-full text-left border-collapse">
-            <thead>
-              <tr class="bg-steel-gray text-white text-sm uppercase tracking-wider font-semibold">
-                <th class="p-4">Componente del Sistema</th>
-                <th class="p-4">Configuración / Capacidad Estándar</th>
-                <th class="p-4">Ventajas de Operación e Ingeniería</th>
-              </tr>
-            </thead>
-            <tbody class="text-sm divide-y divide-gray-200 text-steel-gray/90">
-              <tr>
-                <td class="p-4 font-bold bg-gray-50/50">Mecanismo Triturador</td>
-                <td class="p-4">Anillo y cortador radial de acero inoxidable endurecido</td>
-                <td class="p-4">Sólidos reducidos a partículas finas; elimina obstrucciones mecánicas en red</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-bold bg-gray-50/50">Diámetro de Descarga</td>
-                <td class="p-4">1-1/4" a 2" NPT (Líneas de conducción optimizadas)</td>
-                <td class="p-4">Permite el uso de tuberías de polietileno de alta densidad de bajo costo</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-bold bg-gray-50/50">Contenedor del Cárcamo</td>
-                <td class="p-4">Polietileno de alta densidad o PRFV reforzado</td>
-                <td class="p-4">Estructura compacta, ligera y 100% hermética contra gases corrosivos</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-bold bg-gray-50/50">Gestión de Control</td>
-                <td class="p-4">Tablero con relevador alternador e interruptores herméticos</td>
-                <td class="p-4">Monitoreo térmico del motor y alarmas visuales de alto nivel integrables a SCADA</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-bold bg-gray-50/50">Compatibilidad Hidráulica</td>
-                <td class="p-4">Reemplazo e interconexión modular</td>
-                <td class="p-4">Diseño adaptable para sustitución eficiente de estaciones compactas existentes</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">Ingeniería de Componentes y Desempeño Hidrodinámico</h2>
+            <p class="text-slate-400 text-lg mb-10">
+              La tecnología de cavidad progresiva (PC) mantiene un gasto volumétrico prácticamente constante, venciendo contrapresiones extremas sin sacrificar el caudal de diseño.
+            </p>
+            <div class="overflow-hidden rounded-xl border border-slate-800 bg-slate-950/50 backdrop-blur-sm">
+              <table class="w-full text-left">
+                <thead>
+                  <tr class="bg-slate-800/50 text-xs uppercase tracking-widest">
+                    <th class="p-4 font-bold">Variable Técnica</th>
+                    <th class="p-4 font-bold">Motor 1.0 HP</th>
+                    <th class="p-4 font-bold">Motor 2.0 HP</th>
+                  </tr>
+                </thead>
+                <tbody class="text-sm divide-y divide-slate-800">
+                  <tr><td class="p-4 font-semibold text-blue-400">Tipo Hidráulico</td><td class="p-4">PC / Trituradora</td><td class="p-4">PC / Trituradora</td></tr>
+                  <tr><td class="p-4 font-semibold text-blue-400">Presión Máxima</td><td class="p-4">64 PSI</td><td class="p-4">104 PSI</td></tr>
+                  <tr><td class="p-4 font-semibold text-blue-400">RPM Nominales</td><td class="p-4">1,750</td><td class="p-4">1,750</td></tr>
+                  <tr><td class="p-4 font-semibold text-blue-400">Corte/Navaja</td><td class="p-4" colspan="2">Inox Rockwell 55-60</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="relative">
+            <Image 
+              src={BombaImg} 
+              alt="Detalle del rotor y sistema triturador de acero inoxidable de una bomba sumergible de cavidad progresiva de alta carga." 
+              class="rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-500 border border-slate-700"
+            />
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="cotizar" class="max-w-4xl mx-auto px-6 py-16 md:py-24 text-center">
-      <h2 class="text-3xl font-extrabold text-steel-gray tracking-tight mb-4">
-        ¿Busca una Alternativa Confiable para su Sistema de Alcantarillado a Presión?
-      </h2>
-      <p class="text-lg text-steel-gray/80 mb-8 max-w-2xl mx-auto">
-        Optimice los costos de mantenimiento y asegure la disponibilidad de refacciones en su proyecto. Desarrollamos memorias técnicas de cálculo a la medida de sus necesidades operativas en México.
-      </p>
-      <div class="inline-flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md mx-auto">
-        <a href="/contacto/" class="w-full text-center bg-blue-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors shadow-sm">
-          Cotizar Equipos de Bombeo Presurizado
+    <!-- Structural Integrity Section -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+      <div class="flex flex-col lg:flex-row gap-16 items-center">
+        <div class="lg:w-1/3">
+          <Image 
+            src={CarcamoImg} 
+            alt="Cárcamo prefabricado de polietileno rotomoldeado de alta densidad con dispositivo de seguridad anti-flotación AFD." 
+            class="rounded-3xl shadow-xl border border-slate-100"
+          />
+        </div>
+        <div class="lg:w-2/3">
+          <h2 class="text-3xl font-bold text-slate-900 mb-6">Integridad Geotécnica: Estructuras AFD</h2>
+          <p class="text-lg text-slate-700 mb-8">
+            Los <strong>cárcamos prefabricados de HDPE</strong> Zoeller son de una sola pieza e impermeables. El riesgo de que un contenedor sea expulsado por el empuje de flotación queda mitigado mediante el diseño AFD (Anti-Flotation Device).
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 bg-slate-50 rounded-xl border border-slate-100">
+              <h4 class="font-bold text-slate-900 mb-2">Material Corrugado</h4>
+              <p class="text-sm text-slate-600">Polietileno Rotomoldeado de Alta Densidad con inercia química al H2S.</p>
+            </div>
+            <div class="p-6 bg-slate-50 rounded-xl border border-slate-100">
+              <h4 class="font-bold text-slate-900 mb-2">Anclaje Mecánico</h4>
+              <p class="text-sm text-slate-600">Brida inferior para fijación a zapata de concreto de sacrificio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cotizar" class="bg-blue-600 py-20">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">
+          Optimice el CAPEX de su Desarrollo Inmobiliario
+        </h2>
+        <p class="text-blue-100 text-xl mb-10">
+          La arquitectura modular LPS permite segmentar la inversión de manera proporcional al avance de la habitabilidad u ocupación industrial.
+        </p>
+        <a href="/contacto/" class="inline-block bg-white text-blue-700 font-bold px-10 py-5 rounded-xl hover:bg-slate-100 transition-all shadow-2xl scale-105 hover:scale-110">
+          Cotizar Proyecto en México
         </a>
       </div>
     </section>
 
   </main>
 </Layout>
+
+<style>
+  /* Optimizaciones para impresión y legibilidad */
+  @media print {
+    .bg-slate-900 { background-color: white !important; color: black !important; }
+    .text-white { color: black !important; }
+    #cotizar, aside { display: none; }
+  }
+</style>

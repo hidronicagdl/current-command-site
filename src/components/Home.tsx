@@ -30,7 +30,7 @@ export const Home: React.FC = () => {
               </h1>
               <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl">
                 18 años de experiencia en campo resolviendo desafíos hidráulicos. 
-                Distribuidores autorizados Grundfos, Wolf y Zoeller. Respaldo SIBI.
+                Distribuidores autorizados Grundfos, Wolf y Zoeller. Soluciones Integrales en Bombeo Inteligente SIBI.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="/productos" className="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white bg-blue-700 hover:bg-blue-800 transition-colors rounded-none shadow-lg">
@@ -105,7 +105,7 @@ export const Home: React.FC = () => {
           <div className="w-full md:w-1/2">
             <h2 className="text-3xl font-bold text-slate-800 mb-6 font-mono">RESPALDO TÉCNICO TOTAL</h2>
             <p className="text-slate-600 mb-6">
-              Detrás de CURRENT COMMAND está la infraestructura de <strong>SIBI SA DE CV</strong>. Con base en Tlaquepaque, Jalisco, atendemos a la industria alimenticia, metalmecánica y desarrollos verticales en todo el occidente del país.
+              Detrás de CURRENT COMMAND está la infraestructura de <strong>Soluciones Integrales en Bombeo Inteligente SIBI</strong>. Con base en Tlaquepaque, Jalisco, atendemos a la industria alimenticia, metalmecánica y desarrollos verticales en todo el occidente del país.
             </p>
             <ul className="space-y-3 mb-8">
               <li className="flex items-center text-sm text-slate-700">
