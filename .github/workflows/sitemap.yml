@@ -13,7 +13,7 @@ jobs:
 
       - name: Instalar dependencias y Construir
         run: |
-          npm install
+          npm install--legacy-peer-deps
           npm run build
 
       # Este paso es para notificar a Google que el sitio cambió
