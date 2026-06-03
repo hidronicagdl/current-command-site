@@ -4,6 +4,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { WhatsAppWidget } from '../components/WhatsAppWidget';
 import { CookieConsent } from '../components/CookieConsent';
+import 'katex/dist/katex.min.css';
 
 import '../styles/global.css';
 
@@ -13,6 +14,10 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+
+
+
+
 ---
 
 <!doctype html>
@@ -41,13 +46,7 @@ const { title, description } = Astro.props;
         
 		<title>{title}</title>
 		
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
-			integrity="sha384-GvrOXuhTE8gdWdBLYuH9BlyihkM6Fd46zCX67UKJu53NGmQHCDW34SiC/34686+A"
-			crossorigin="anonymous"
-		/>
-		
+				
 	</head>
 	<body class="font-sans text-steel-gray bg-white flex flex-col min-h-screen">
 		

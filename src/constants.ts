@@ -1,8 +1,8 @@
 import { Product, SiteConfig, NavItem } from './types';
 
 export const SITE_CONFIG: SiteConfig = {
-  companyName: "CURRENT COMMAND",
-  companyLegalName: "Soluciones Integrales en Bombeo Inteligente SIBI SA DE CV",
+  companyName: "Soluciones Integrales en Bombeo Inteligente SIBI",
+  companyLegalName: "Soluciones Integrales en Bombeo Inteligente SIBI",
   address: {
     street: "Calle Heliotropo #74",
     colonia: "Colonia Los Meseros",

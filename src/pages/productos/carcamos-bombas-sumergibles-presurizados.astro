@@ -83,7 +83,9 @@ const description = "Estaciones de bombeo presurizado y cárcamos prefabricados 
         <div class="bg-blue-50 border-l-8 border-blue-600 p-10 rounded-r-2xl shadow-sm">
           <div class="flex flex-col md:flex-row gap-10 items-center">
             <div class="flex-1">
-              <h3 class="text-2xl font-bold text-blue-900 mb-4">Soluciones Retrofit (Alternativa E-One)</h3>
+              <h3 id="retrofit-bomba-cavidad-progresiva" data-compat="e-one" class="text-2xl font-bold text-blue-900 mb-4">
+				Soluciones Retrofit (Alternativa E-One)
+				</h3>
               <p class="text-blue-800 text-lg mb-6">
                 Sustituya unidades dañadas de la competencia por tecnología Zoeller de alta confiabilidad, sin necesidad de demoliciones civiles ni cambios en el tanque original.
               </p>
@@ -111,7 +113,9 @@ const description = "Estaciones de bombeo presurizado y cárcamos prefabricados 
 
       <!-- Sidebar -->
       <aside class="bg-gray-50 p-8 rounded-xl h-fit border border-gray-100">
-        <h3 class="text-lg font-bold text-steel-gray mb-4">Ingeniería Consultiva</h3>
+        <h3 id="documentacion-ingenieria-consultiva-lps" class="text-lg font-bold text-steel-gray mb-4">
+			Ingeniería Consultiva
+		</h3>
         <p class="text-sm text-steel-gray/70 mb-6 leading-relaxed">
           Complemente los criterios de diseño técnico y evite errores críticos de dimensionamiento consultando nuestra documentación especializada:
         </p>
@@ -211,6 +215,42 @@ const description = "Estaciones de bombeo presurizado y cárcamos prefabricados 
     </section>
 
   </main>
+  <!-- SCHEMA MARKUP (JSON-LD) - SISTEMAS LPS CURRENT COMMAND -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Sistemas de Drenaje Presurizado LPS | Ingeniería de Fluidos de Alta Confiabilidad",
+    "description": "Estaciones de bombeo presurizado y cárcamos prefabricados de arquitectura abierta en México. Mitigación de riesgos por nivel freático alto y topografía inversa.",
+    "inLanguage": "es-MX",
+    "datePublished": "2026-06-03",
+    "author": {
+      "@type": "WebSite",
+      "name": "Current Command",
+      "url": "https://currentcommand.com"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Drenaje Presurizado LPS",
+        "description": "Sistemas de alcantarillado a baja presión que utilizan bombas trituradoras de cavidad progresiva."
+      },
+      {
+        "@type": "Brand",
+        "name": "Zoeller"
+      }
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://currentcommand.com/productos/sistemas-drenaje-presurizado-lps"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SIBI Soluciones Integrales en Bombeo Inteligente",
+      "url": "https://sibi.mx"
+    }
+  }
+</script>
 </Layout>
 
 <style>
