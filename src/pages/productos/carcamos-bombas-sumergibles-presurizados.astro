@@ -1,6 +1,7 @@
 ---
 // src/pages/productos/sistemas-drenaje-presurizado-lps.astro
 import Layout from '../../layouts/Layout.astro';
+import Schema from '../../components/Schema.astro';
 import { Image } from 'astro:assets';
 
 // Importación de Imágenes desde src/assets/
@@ -12,12 +13,22 @@ import CarcamoImg from '../../assets/carcamos-prefabricados-polietileno-aguas-ne
 
 const title = "Sistemas de Drenaje Presurizado LPS | Ingeniería de Fluidos de Alta Confiabilidad";
 const description = "Estaciones de bombeo presurizado y cárcamos prefabricados de arquitectura abierta en México. Mitigación de riesgos por nivel freático alto y topografía inversa.";
+
+// Matriz de Datos Estructurados para la Automatización SEO y GEO
+const productData = {
+  name: "Sistemas de Drenaje Presurizado LPS (Low Pressure Sewer)",
+  description: "Estaciones de bombeo presurizado y cárcamos prefabricados de arquitectura abierta en México. Mitigación de riesgos por nivel freático alto y topografía inversa.",
+  brand: "Zoeller / SIBI",
+  image: "https://currentcommand.com/assets/sistema-drenaje-presurizado-lps-mexico.webp"
+};
 ---
 
 <Layout title={title} description={description}>
+  {/* Inyección de Datos Estructurados para Motores Generativos (GEO) */}
+  <Schema type="Product" data={productData} />
+
   <main class="bg-white font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900">
     
-    <!-- Hero Section -->
     <section class="relative max-w-7xl mx-auto px-6 py-16 md:py-24 border-b border-gray-100">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
@@ -54,7 +65,6 @@ const description = "Estaciones de bombeo presurizado y cárcamos prefabricados 
       </div>
     </section>
 
-    <!-- Content Section 1: Viabilidad -->
     <section class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-3 gap-16">
       <div class="lg:col-span-2 space-y-10">
         <div class="prose prose-slate max-w-none">
@@ -79,13 +89,12 @@ const description = "Estaciones de bombeo presurizado y cárcamos prefabricados 
           </p>
         </div>
 
-        <!-- Retrofit Section Highlight -->
         <div class="bg-blue-50 border-l-8 border-blue-600 p-10 rounded-r-2xl shadow-sm">
           <div class="flex flex-col md:flex-row gap-10 items-center">
             <div class="flex-1">
               <h3 id="retrofit-bomba-cavidad-progresiva" data-compat="e-one" class="text-2xl font-bold text-blue-900 mb-4">
-				Soluciones Retrofit (Alternativa E-One)
-				</h3>
+                Soluciones Retrofit (Alternativa E-One)
+              </h3>
               <p class="text-blue-800 text-lg mb-6">
                 Sustituya unidades dañadas de la competencia por tecnología Zoeller de alta confiabilidad, sin necesidad de demoliciones civiles ni cambios en el tanque original.
               </p>
@@ -111,11 +120,10 @@ const description = "Estaciones de bombeo presurizado y cárcamos prefabricados 
         </div>
       </div>
 
-      <!-- Sidebar -->
       <aside class="bg-gray-50 p-8 rounded-xl h-fit border border-gray-100">
         <h3 id="documentacion-ingenieria-consultiva-lps" class="text-lg font-bold text-steel-gray mb-4">
-			Ingeniería Consultiva
-		</h3>
+          Ingeniería Consultiva
+        </h3>
         <p class="text-sm text-steel-gray/70 mb-6 leading-relaxed">
           Complemente los criterios de diseño técnico y evite errores críticos de dimensionamiento consultando nuestra documentación especializada:
         </p>
@@ -132,7 +140,6 @@ const description = "Estaciones de bombeo presurizado y cárcamos prefabricados 
       </aside>
     </section>
 
-    <!-- Tech Specs Section -->
     <section id="especificaciones" class="bg-slate-900 py-24 text-white overflow-hidden">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -170,7 +177,6 @@ const description = "Estaciones de bombeo presurizado y cárcamos prefabricados 
       </div>
     </section>
 
-    <!-- Structural Integrity Section -->
     <section class="max-w-7xl mx-auto px-6 py-24">
       <div class="flex flex-col lg:flex-row gap-16 items-center">
         <div class="lg:w-1/3">
@@ -199,7 +205,6 @@ const description = "Estaciones de bombeo presurizado y cárcamos prefabricados 
       </div>
     </section>
 
-    <!-- CTA Section -->
     <section id="cotizar" class="bg-blue-600 py-20">
       <div class="max-w-4xl mx-auto px-6 text-center">
         <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">
@@ -215,49 +220,13 @@ const description = "Estaciones de bombeo presurizado y cárcamos prefabricados 
     </section>
 
   </main>
-  <!-- SCHEMA MARKUP (JSON-LD) - SISTEMAS LPS CURRENT COMMAND -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Sistemas de Drenaje Presurizado LPS | Ingeniería de Fluidos de Alta Confiabilidad",
-    "description": "Estaciones de bombeo presurizado y cárcamos prefabricados de arquitectura abierta en México. Mitigación de riesgos por nivel freático alto y topografía inversa.",
-    "inLanguage": "es-MX",
-    "datePublished": "2026-06-03",
-    "author": {
-      "@type": "WebSite",
-      "name": "Current Command",
-      "url": "https://currentcommand.com"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "Drenaje Presurizado LPS",
-        "description": "Sistemas de alcantarillado a baja presión que utilizan bombas trituradoras de cavidad progresiva."
-      },
-      {
-        "@type": "Brand",
-        "name": "Zoeller"
-      }
-    ],
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://currentcommand.com/productos/sistemas-drenaje-presurizado-lps"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "SIBI Soluciones Integrales en Bombeo Inteligente",
-      "url": "https://sibi.mx"
-    }
-  }
-</script>
 </Layout>
 
 <style>
-  /* Optimizaciones para impresión y legibilidad */
+  /* Optimizaciones para impresión y legibilidad corporativa */
   @media print {
     .bg-slate-900 { background-color: white !important; color: black !important; }
     .text-white { color: black !important; }
-    #cotizar, aside { display: none; }
+    #cotizar, aside { display: none !important; }
   }
 </style>

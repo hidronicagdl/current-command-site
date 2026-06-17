@@ -13,7 +13,7 @@ tags: ["reemplazo de bombas e-one",
   "descarga acero inoxidable baston"]
 ---
 
-# Reemplazo de Bombas de Cavidad Progresiva E-One: Guía de Ingeniería para el Retrofit de Estaciones de Bombeo a Presión
+
 
 ![Retrofit de estación de bombeo LPS sustituyendo una bomba de cavidad progresiva E-One por un conjunto triturador de arquitectura abierta de CurrentCommand en México](../../assets/retrofit-bomba-trituradora-arquitectura-abierta.webp)
 

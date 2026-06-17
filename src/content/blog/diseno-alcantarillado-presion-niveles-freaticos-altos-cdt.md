@@ -17,7 +17,7 @@ tags: [
 
 
 
-# Diseño de Alcantarillado a Presión en Niveles Freáticos Altos: Análisis de Contrapresión y Curvas Hidráulicas Pronunciadas
+# Análisis de Contrapresión y Curvas Hidráulicas Pronunciadas
 
 El desarrollo de infraestructura de conducción de aguas residuales en las regiones costeras o zonas con acuíferos someros en México plantea uno de los desafíos de ingeniería civil más complejos y costosos del sector. La instalación tradicional de colectores por gravedad bajo estas condiciones geotécnicas específicas exige excavaciones profundas que interceptan de forma inmediata el flujo subterráneo, demandando sistemas continuos de abatimiento del nivel freático, entibados estructurales severos y un riesgo latente de asentamientos mecánicos en las edificaciones colindantes. Frente a este escenario de alta vulnerabilidad operativa, el diseño de sistemas de alcantarillado a presión (LPS) se consolida como la única alternativa metodológica capaz de garantizar la mitigación de riesgos, la viabilidad financiera y la estabilidad estructural del activo a largo plazo, promoviendo sistemas hidrodinámicos diseñados para trabajar de manera ininterrumpida durante quince o veinte años sin experimentar colapsos mecánicos ni degradaciones estructurales.
 

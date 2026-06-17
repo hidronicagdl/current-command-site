@@ -1,0 +1,57 @@
+---
+// src/components/Schema.astro
+interface Props {
+  type: 'Product' | 'TechArticle';
+  data: Record<string, any>;
+}
+
+const { type, data } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, 'https://currentcommand.com');
+
+// Estructuración dinámica de la entidad basándose en el tipo solicitado
+const jsonLd = type === 'Product' 
+  ? {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": data.name,
+      "image": data.image || "https://currentcommand.com/images/default-product.png",
+      "description": data.description,
+      "brand": {
+        "@type": "Brand",
+        "name": data.brand || "SIBI"
+      },
+      "category": "Industrial Pumps & Hydraulics",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "MXN",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "https://schema.org/InStock",
+        "url": canonicalURL.href
+      }
+    }
+  : {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": data.title,
+      "description": data.description,
+      "datePublished": data.pubDate,
+      "author": {
+        "@type": "Person",
+        "name": data.author || "José Aguilar",
+        "url": "https://currentcommand.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CurrentCommand",
+        "url": "https://currentcommand.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": canonicalURL.href
+      },
+      "inLanguage": "es-MX"
+    };
+---
+
+{/* Inyección segura y limpia en el DOM para indexación tradicional y GEO */}
+<script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />

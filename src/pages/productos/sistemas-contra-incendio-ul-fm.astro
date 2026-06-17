@@ -1,15 +1,26 @@
 ---
 // src/pages/productos/sistemas-contra-incendio-ul-fm.astro
 import Layout from '../../layouts/Layout.astro';
+import Schema from '../../components/Schema.astro';
+
+// Matriz de Datos Estructurados para la Automatización SEO y GEO
+const productData = {
+  name: "Sistemas de Bombeo Contra Incendio Certificados UL/FM y NFPA 20",
+  description: "Equipos de bombeo contra incendio certificados bajo normativa NFPA 20 en México. Sistemas diésel y eléctricos con aprobaciones UL y FM para protección industrial.",
+  brand: "SIBI",
+  image: "https://currentcommand.com/images/contra-incendio-ul-fm.png"
+};
 ---
 
 <Layout 
   title="Sistemas Contra Incendio Listados UL/FM en México | Current Command" 
   description="Equipos de bombeo contra incendio certificados bajo normativa NFPA 20 en México. Sistemas diésel y eléctricos con aprobaciones UL y FM para protección industrial."
 >
+  {/* Inyección de Datos Estructurados para Motores Generativos (GEO) */}
+  <Schema type="Product" data={productData} />
+
   <main class="bg-white font-sans text-slate-900 selection:bg-red-100 selection:text-red-900">
     
-    <!-- HERO SECTION -->
     <section class="max-w-7xl mx-auto px-6 py-16 md:py-24 border-b border-gray-100">
       <div class="max-w-3xl">
         <span class="text-sm font-bold tracking-wider uppercase text-red-600 block mb-3">
@@ -32,7 +43,6 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- NARRATIVA TÉCNICA E INGENIERÍA -->
     <section class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
       <div class="md:col-span-2 space-y-10 text-base leading-relaxed text-slate-700">
         <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
@@ -62,12 +72,11 @@ import Layout from '../../layouts/Layout.astro';
             3. Configuración de Paquetes Integrados (Skids) y Controladores Inteligentes
           </h3>
           <p>
-            Para los directores de proyectos y gerentes de mantenimiento industrial, seleccionar un equipo listado UL/FM con el respaldo y distribución oficial de <strong>SIBI</strong> elimina por completo los riesgos de rechazo en auditorías de seguridad y aprobaciones por parte de las unidades de verificación. El paquete tecnológico se entrega completamente integrado sobre una base estructural unificada de acero, incorporando la bomba principal (eléctrica o diésel), la bomba mantenedora de presión (Jockey) para compensar pérdidas menores en la red sin arrancar el equipo principal, y controladores automatizados dedicados con microprocesadores que registran el historial de eventos críticos de presión. Es la solución de ingeniería de alta especialización demandada por centros de distribución, plantas químicas, naves de manufactura y complejos comerciales que buscan proteger su legado de inversión y asegurar la continuidad del negocio.
+            Para los directores de proyectos y gerentes de mantenimiento industrial, seleccionar un equipo listado UL/FM con el respaldo y distribución oficial de <strong>SIBI</strong> eliminates por completo los riesgos de rechazo en auditorías de seguridad y aprobaciones por parte de las unidades de verificación. El paquete tecnológico se entrega completamente integrado sobre una base estructural unificada de acero, incorporando la bomba principal (eléctrica o diésel), la bomba mantenedora de presión (Jockey) para compensar pérdidas menores en la red sin arrancar el equipo principal, y controladores automatizados dedicados con microprocesadores que registran el historial de eventos críticos de presión. Es la solución de ingeniería de alta especialización demandada por centros de distribución, plantas químicas, naves de manufactura y complejos comerciales que buscan proteger su legado de inversión y asegurar la continuidad del negocio.
           </p>
         </div>
       </div>
 
-      <!-- SIDEBAR -->
       <aside class="bg-gray-50 p-8 rounded-xl h-fit border border-gray-100">
         <h3 id="soporte-tecnico-ingenieria-incendio" class="text-lg font-bold text-slate-900 mb-4">Soporte Técnico de Ingeniería</h3>
         <p class="text-sm text-slate-600 mb-6 leading-relaxed">
@@ -86,7 +95,6 @@ import Layout from '../../layouts/Layout.astro';
       </aside>
     </section>
 
-    <!-- MATRIZ DE ESPECIFICACIONES -->
     <section id="especificaciones" class="bg-gray-50 border-t border-b border-gray-100 py-16">
       <div class="max-w-7xl mx-auto px-6">
         <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-8">
@@ -133,7 +141,6 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- CTA SECTION -->
     <section id="cotizar" class="max-w-4xl mx-auto px-6 py-16 md:py-24 text-center">
       <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mb-4">
         ¿Su Proyecto Requiere un Sistema con Certificación Estricta?
@@ -150,36 +157,3 @@ import Layout from '../../layouts/Layout.astro';
 
   </main>
 </Layout>
-
-<!-- MARKUP JSON-LD PARA SISTEMAS CONTRA INCENDIO -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Sistemas de Bombeo Contra Incendio Certificados UL/FM y NFPA 20",
-    "description": "Equipos de bombeo contra incendio certificados bajo normativa NFPA 20 en México. Sistemas diésel y eléctricos con aprobaciones UL y FM para protección industrial.",
-    "inLanguage": "es-MX",
-    "datePublished": "2026-06-03",
-    "author": {
-      "@type": "WebSite",
-      "name": "Current Command",
-      "url": "https://currentcommand.com"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "Sistemas Contra Incendio",
-        "description": "Equipos de bombeo estacionarios normados por la NFPA 20 con aprobaciones UL/FM."
-      }
-    ],
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://currentcommand.com/productos/sistemas-contra-incendio-ul-fm"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "SIBI Soluciones Integrales en Bombeo Inteligente",
-      "url": "https://sibi.mx"
-    }
-  }
-</script>

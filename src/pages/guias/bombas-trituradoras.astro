@@ -1,0 +1,911 @@
+---
+// src/pages/guias/bombas-trituradoras.astro
+// Integración nativa con el sistema de diseño de currentcommand.com
+import Layout from '../../layouts/Layout.astro';
+import Schema from '../../components/Schema.astro';
+
+// Matriz de Datos Estructurados para la Automatización SEO y GEO
+const schemaData = {
+  name: "Guía Definitiva de Bombas Trituradoras para Cárcamos | SIBI",
+  description: "Análisis de ingeniería sobre selección, reología del agua moderna, lógicas de control y solución de fallas críticas en sistemas de bombeo con trituración.",
+  brand: "Zoeller",
+  image: "https://currentcommand.com/images/default-product.png"
+};
+---
+
+<Layout title={schemaData.name} description={schemaData.description}>
+  <main class="max-w-4xl mx-auto px-4 py-12 font-sans text-slate-800 dark:text-slate-200 antialiased">
+    
+    <header class="mb-16 border-b border-slate-200 dark:border-slate-700 pb-8">
+      <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm tracking-wider uppercase">Guía de Ingeniería Avanzada</span>
+      <h1 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mt-2 mb-6 leading-tight">
+        Bombas Trituradoras para Cárcamos: Selección, Reología del Agua Moderna y Lógicas de Control
+      </h1>
+      <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
+        Un manual vivo diseñado para ingenieros, diseñadores hidráulicos y contratistas que enfrentan los retos operativos de los desechos poliméricos contemporáneos.
+      </p>
+    </header>
+
+    <section id="reologia-moderna" class="prose prose-slate dark:prose-invert max-w-none mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+        <span class="text-blue-600 dark:text-blue-400">1.</span> La Crisis del Diseño Tradicional: Cambios en la Reología del Agua Residual
+      </h2>
+      
+      <p class="mb-6 leading-relaxed text-justify">
+        El diseño hidráulico de sistemas de bombeo para cárcamos ha operado durante décadas bajo una premisa que hoy resulta obsoleta: tratar el agua residual municipal o comercial como un fluido puramente newtoniano de viscosidad constante y predecible. En el siglo pasado, los modelos de cálculo asumían que los sólidos suspendidos eran principalmente orgánicos, biodegradables y friables (fáciles de desmenuzar o dispersar ante el esfuerzo mecánico).
+      </p>
+      
+      <p class="mb-8 leading-relaxed text-justify">
+        Sin embargo, la composición del agua residual moderna ha experimentado una mutación reológica crítica. La proliferación de materiales sintéticos de alta resistencia a la tracción ha transformado el comportamiento del fluido dentro de la voluta, rompiendo los paradigmas de selección basados únicamente en el "paso de esfera" y obligando a los ingenieros a recalcular los límites de resistencia mecánica y torque en las unidades de bombeo.
+      </p>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          1.1 El error crítico en el cálculo de sólidos suspendidos
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          El error de diseño más recurrente y severo en la ingeniería de cárcamos es sobredimensionar la importancia del "paso de esfera" libre (generalmente de 2 a 3 pulgadas) en bombas de aguas negras convencionales, ignorando la geometría y la elasticidad de los cuerpos suspendidos.
+        </p>
+        <p class="mb-6 leading-relaxed text-justify">
+          El paso de esfera es un criterio dimensional válido exclusivamente para sólidos blandos (como las eses fecales). Los desechos contemporáneos no son blandos; son alargados, deformables y altamente cohesivos. Bajo condiciones de flujo turbulento y aceleración centrífuga en el ojo del impulsor, estos materiales no se comportan como partículas individuales suspendidas, sino que interactúan entre si modificando la viscosidad aparente del fluido.
+        </p>
+        
+        <blockquote class="border-l-4 border-blue-500 bg-slate-50 dark:bg-slate-800/50 p-4 rounded-r-lg my-6 text-slate-700 dark:text-slate-300 italic">
+          Al diseñar pensando en un "caso ideal" sin sólidos peligrosos, se omite que el esfuerzo cortante (<em>shear rate</em>) requerido para desplazar el fluido se eleva exponencialmente. Cuando un sólido de alta resistencia geométrica se elonga y se flexiona al entrar en contacto con los álabes, la bomba ya no se enfrenta a un fluido con gravedad específica cercana a 1.0, sino a una masa compuesta de alta resistencia mecánica que estrangula el área útil de paso, desplaza el punto de operación de la curva hidráulica y eleva la fricción interna en la voluta.
+        </blockquote>
+
+        <div class="my-8 p-6 bg-slate-100 dark:bg-slate-800 rounded-xl border border-dashed border-slate-300 dark:border-slate-600 text-center text-sm text-slate-500">
+          <p class="font-mono">[Placeholder Gráfico: Comparativa Dinámica - Sólido Blando vs Polímero en Ojo de Impulsor]</p>
+        </div>
+      </div>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          1.2 Anatomía de los "Sólidos Peligrosos Modernos"
+        </h3>
+        <p class="mb-6 leading-relaxed">
+          Para corregir los criterios de selección, es obligatorio analizar las propiedades mecánicas y estructurales de los materiales no degradables que saturan los cárcamos actuales. Estos componentes se clasifican en tres grandes grupos de riesgo según su impacto reológico en el equipo:
+        </p>
+
+        <div class="overflow-x-auto my-6 rounded-lg border border-slate-200 dark:border-slate-700">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/4">Tipo de Sólido Moderno</th>
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/4">Composición Material</th>
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/4">Propiedades Mecánicas</th>
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/4">Comportamiento en Voluta</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">Toallitas húmedas y textiles no tejidos</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Celulosa entrelazada con poliéster o polipropileno.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Alta resistencia a tracción; nula distribución por cizallamiento.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Se aglomeran por efecto centrífugo formando cuerdas continuas.</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">Preservativos y guantes de látex</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Elastómeros naturales o sintéticos (nitrilo/poliuretano).</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Elasticidad extrema (&gt;500%) y memoria de forma.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Se enredan en el eje rotativo destruyendo sellos por fricción.</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">Pañales y toallas femeninas</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Polímeros superabsorbentes (SAP) y polietileno.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Expansión volumétrica masiva por saturación de líquido.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Obstruyen la succión demandando torque superior al nominal.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          1.3 El fenómeno del Hilachado (Ragging) y su impacto en el torque
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          El fenómeno del hilachado —conocido internacionalmente en la literatura de ingeniería como <em>ragging</em>— es el proceso mediante el cual los textiles no tejidos y las fibras elásticas suspendidas en el agua se entrelazan de forma concéntrica debido a las fuerzas de vórtice presentes en el cárcamo y en la succión de la bomba.
+        </p>
+        <p class="mb-6 leading-relaxed text-justify">
+          Cuando estas micro-fibras y cuerpos elásticos entran en contacto con los bordes de ataque de los álabes de un impulsor convencional (ya sea cerrado, semiabierto o incluso tipo Vortex de canal amplio), ocurre el siguiente mecanismo físico:
+        </p>
+
+        <ol class="list-decimal list-inside space-y-3 mb-6 pl-2 text-slate-700 dark:text-slate-300">
+          <li><strong>Captura por borde de ataque:</strong> La fibra se dobla simétricamente sobre el filo del álabe debido al flujo dinámico.</li>
+          <li><strong>Efecto cabrestante (Capstan Effect):</strong> La rotación del impulsor genera una fuerza de fricción acumulativa. Las fibras subsecuentes se adhieren a la primera capa, iniciando un embobinamiento alrededor del eje.</li>
+          <li><strong>Formación de la "trenza hidráulica":</strong> El material se compacta por la presión hidrodinámica, transformándose en una masa sólida y densa que obstruye los canales de descarga.</li>
+        </ol>
+
+        <div class="my-8 p-6 bg-slate-100 dark:bg-slate-800 rounded-xl border border-dashed border-slate-300 dark:border-slate-600 text-center text-sm text-slate-500">
+          <p class="font-mono">[Placeholder Infografía: Mecanismo de Efecto Cabrestante y Formación de Trenza Hidráulica]</p>
+        </div>
+
+        <h4 class="text-xl font-medium text-slate-900 dark:text-white mt-6 mb-3">
+          El impacto matemático en el torque operativo
+        </h4>
+        <p class="mb-4 leading-relaxed text-justify">
+          Desde la perspectiva de la física de control, el <em>ragging</em> altera directamente la ecuación de potencia al freno (BHP) de la bomba:
+        </p>
+
+        <div class="my-8 flex items-center justify-center font-serif text-xl md:text-2xl p-6 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 tracking-wide text-slate-900 dark:text-white">
+  <span class="font-bold mr-4">BHP</span>
+  <span class="mr-4 text-slate-400 dark:text-slate-600">=</span>
+  <div class="flex flex-col items-center">
+    <span class="px-4 pb-2 border-b border-slate-400 dark:border-slate-600 font-semibold italic text-base md:text-lg">Q × H × SG</span>
+    <span class="px-4 pt-2 font-semibold italic text-base md:text-lg">3960 × η</span>
+  </div>
+</div>
+
+        <p class="mb-4 leading-relaxed text-justify">
+          Donde Q es el flujo, H es la carga, SG es la gravedad específica y &eta; es la eficiencia hidráulica. 
+        </p>
+        <p class="mb-6 leading-relaxed text-justify">
+          Al consolidarse la masa de hilachas en el impulsor, la eficiencia hidráulica (&eta;) se desploma súbitamente hacia valores cercanos a cero. Sin embargo, la resistencia mecánica al giro aumenta. La relación fundamental entre la potencia, el torque (T) y la velocidad angular (&omega;) está definida por:
+        </p>
+
+        <div class="my-6 flex items-center justify-center font-serif text-xl md:text-2xl bg-slate-50 dark:bg-slate-950 p-5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white tracking-wide">
+  <span class="font-bold italic">P</span>
+  <span class="mx-3 text-slate-400 dark:text-slate-600">=</span>
+  <span class="font-bold italic">T</span>
+  <span class="mx-2 text-sm text-slate-400 dark:text-slate-600">×</span>
+  <span class="font-bold italic">ω</span>
+</div>
+
+        <p class="mb-4 leading-relaxed text-justify">
+          Para mantener la velocidad síncrona del motor ante una eficiencia en caída libre y una fricción mecánica en ascenso, el motor eléctrico se ve obligado a demandar una corriente (amperaje) drásticamente superior a su corriente de placa a plena carga (FLA). Si el torque de diseño del motor o el diseño del impulsor no cuenta con un sistema de corte activo capaz de rebanar estas fibras de forma instantánea en el eje axial o radial, el rotor se frena, superando la curva de torque de rotor bloqueado (<em>Locked Rotor Torque</em>).
+        </p>
+        
+        <p class="leading-relaxed text-justify">
+          Esto provoca el disparo inmediato de las protecciones térmicas en el tablero de control para evitar la destrucción del aislamiento del estator.
+        </p>
+      </div>
+    </section>
+	
+	<section id="fundamentos-hidraulicos" class="prose prose-slate dark:prose-invert max-w-none mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+        <span class="text-blue-600 dark:text-blue-400">2.</span> Fundamentos de Ingeniería Hidráulica para Sistemas con Trituración
+      </h2>
+      
+      <p class="mb-6 leading-relaxed text-justify">
+        El dimensionamiento de un sistema con bombas trituradoras difiere significativamente de una instalación de aguas negras convencional. Mientras que las bombas de paso de esfera grande requieren tuberías de descarga de diámetros amplios (mínimo 3" o 4") para evitar obstrucciones por sólidos enteros, las bombas trituradoras reducen los desechos a una suspensión fina o lodo ligero (<em>slurry</em>). Esto permite el uso de tuberías de descarga restrictivas de entre 1-1/4" y 2", modificando drásticamente el régimen hidráulico, las velocidades de flujo y las pérdidas por fricción.
+      </p>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          2.1 Pérdidas por fricción en tuberías de diámetro restrictivo (1-1/4” a 2”)
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          Al reducir el diámetro interno de la tubería, el área transversal disminuye de forma cuadrática, lo que provoca un incremento directo en la velocidad del fluido para un mismo gasto o caudal (Q). De acuerdo con la ecuación de continuidad, velocidades elevadas en regímenes de flujo turbulento aumentan exponencialmente las pérdidas de energía por fricción (pérdidas primarias).
+        </p>
+        <p class="mb-4 leading-relaxed text-justify">
+          Para evaluar con precisión estas pérdidas en sistemas de trituración, la ingeniería hidráulica utiliza la ecuación de Darcy-Weisbach. A diferencia de las aproximaciones comerciales como Hazen-Williams —la cual no considera la viscosidad cinemática ni opera bien fuera de rangos estándar de temperatura—, Darcy-Weisbach modela la pérdida de carga (h<sub>f</sub>) con rigor físico:
+        </p>
+
+        <div class="my-8 flex items-center justify-center font-serif text-xl md:text-2xl p-6 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 tracking-wide text-slate-900 dark:text-white">
+          <span class="font-bold italic mr-4">h<sub>f</sub></span>
+          <span class="mr-4 text-slate-400 dark:text-slate-600">=</span>
+          <span class="font-bold italic mr-2">f</span>
+          <span class="mx-2 text-sm text-slate-400 dark:text-slate-600">×</span>
+          <div class="flex flex-col items-center mx-2">
+            <span class="px-3 pb-1 border-b border-slate-400 dark:border-slate-600 font-semibold italic text-base md:text-lg">L</span>
+            <span class="px-3 pt-1 font-semibold italic text-base md:text-lg">D</span>
+          </div>
+          <span class="mx-2 text-sm text-slate-400 dark:text-slate-600">×</span>
+          <div class="flex flex-col items-center mx-2">
+            <span class="px-3 pb-1 border-b border-slate-400 dark:border-slate-600 font-semibold italic text-base md:text-lg">v<sup>2</sup></span>
+            <span class="px-3 pt-1 font-semibold italic text-base md:text-lg">2g</span>
+          </div>
+        </div>
+
+        <h4 class="text-lg font-medium text-slate-900 dark:text-white mt-4 mb-2">El Factor de Envejecimiento por Biopelícula (Biofilm y Grasas)</h4>
+        <p class="mb-4 leading-relaxed text-justify">
+  Un error crítico en el cálculo a largo plazo es utilizar la rugosidad absoluta (<em>ε</em>) nominal de tuberías nuevas (PVC = 0.0015 mm o PEAD = 0.007 mm). En sistemas de trituración de aguas residuales, la fricción interna sufre una degradación progresiva debido a la adherencia de lípidos, grasas saturadas y colonias bacterianas anaerobias. Esta biopelícula genera un estrechamiento del diámetro interno real (&lt; D<sub>nominal</sub>) y altera la rugosidad relativa de la pared, lo que desplaza el factor de fricción (<em>f</em>) en el diagrama de Moody hacia la zona de flujo turbulento rugoso. 
+</p>
+        <p class="mb-6 leading-relaxed text-justify">
+          Para contrarrestar este fenómeno y asegurar la vida útil del proyecto a 10 o 15 años, el diseñador debe aplicar un factor de penalización, asumiendo un coeficiente de rugosidad equivalente al hierro galvanizado viejo o reduciendo artificialmente el coeficiente C de Hazen-Williams a valores de <strong>C = 120</strong> en lugar del valor nominal de 140 o 150 característico de los polímeros nuevos.
+        </p>
+      </div>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          2.2 Cálculo de la Altura Dinámica Total (TDH) con sólidos triturados
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          La Altura Dinámica Total (TDH) representa la presión total que debe desarrollar la bomba para vencer la carga estática y la resistencia por fricción del sistema. Su cálculo matemático exacto se expresa mediante la siguiente relación:
+        </p>
+
+        <div class="my-8 flex items-center justify-center font-serif text-xl md:text-2xl p-6 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 tracking-wide text-slate-900 dark:text-white">
+          <span class="font-bold mr-4">TDH</span>
+          <span class="mr-4 text-slate-400 dark:text-slate-600">=</span>
+          <span class="font-bold italic mr-2">H<sub>s</sub></span>
+          <span class="mx-3 text-slate-400 dark:text-slate-600">+</span>
+          <span class="font-bold italic mr-2">h<sub>f</sub></span>
+          <span class="mx-3 text-slate-400 dark:text-slate-600">+</span>
+          <span class="font-bold italic mr-2">h<sub>m</sub></span>
+        </div>
+
+        <p class="mb-4 leading-relaxed text-justify">
+          Donde <strong>H<sub>s</sub></strong> es la carga estática total, <strong>h<sub>f</sub></strong> son las pérdidas por fricción primarias en la tubería recta, y <strong>h<sub>m</sub></strong> representa las pérdidas menores o locales en accesorios, definidas por la ecuación:
+        </p>
+
+        <div class="my-6 flex items-center justify-center font-serif text-xl md:text-2xl bg-slate-50 dark:bg-slate-950 p-5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white tracking-wide">
+          <span class="font-bold italic mr-2">h<sub>m</sub></span>
+          <span class="mr-4 text-slate-400 dark:text-slate-600">=</span>
+          <span class="font-bold text-base md:text-lg mr-2">∑ K</span>
+          <span class="mx-1 text-sm text-slate-400 dark:text-slate-600">×</span>
+          <div class="flex flex-col items-center mx-2">
+            <span class="px-3 pb-1 border-b border-slate-400 dark:border-slate-600 font-semibold italic text-base md:text-lg">v<sup>2</sup></span>
+            <span class="px-3 pt-1 font-semibold italic text-base md:text-lg">2g</span>
+          </div>
+        </div>
+
+        <p class="mb-4 leading-relaxed text-justify">
+          En las líneas de descarga pequeñas de las bombas trituradoras, los coeficientes de pérdida local (<em class="font-serif text-sm">K</em>) son drásticamente más restrictivos. Por ejemplo, una válvula de retención de bola de paso completo (esencial para evitar el atascamiento por acumulación de micro-fibras residuales) posee un coeficiente empírico de <strong>K ≈ 1.5 a 2.5</strong>. Omitir estos valores o calcularlos con los coeficientes de válvulas de retención de columpio estándar (K ≈ 0.6 a 1.0) genera un déficit en el cálculo del TDH, provocando que la bomba opere a la derecha de su punto de máxima eficiencia (BEP).
+        </p>
+
+        <p class="mb-4 leading-relaxed text-justify">
+          Para la correcta especificación de los componentes del cárcamo y la selección de las curvas de operación, la carga hidráulica en pies se traduce de forma mandatoria a unidades de presión de campo en <strong>PSI (Libras por Pulgada Cuadrada)</strong>:
+        </p>
+
+        <div class="my-8 flex items-center justify-center font-serif text-xl md:text-2xl p-6 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 tracking-wide text-slate-900 dark:text-white">
+          <span class="font-bold mr-4">PSI</span>
+          <span class="mr-4 text-slate-400 dark:text-slate-600">=</span>
+          <div class="flex flex-col items-center mr-4">
+            <span class="px-3 pb-1 border-b border-slate-400 dark:border-slate-600 font-semibold text-base md:text-lg">Carga en Pies × SG</span>
+            <span class="px-3 pt-1 font-semibold text-base md:text-lg">2.31</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          2.3 Velocidad mínima de autolimpieza vs. Velocidad crítica de sedimentación
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          El diseño de las líneas de descarga de diámetro restrictivo exige un control de velocidad sumamente estricto. El fluido resultante del proceso de corte contiene partículas finas suspendidas que, a pesar de estar trituradas, conservan una gravedad específica superior a la del agua y tienden a decantarse si la energía cinética del flujo disminuye.
+        </p>
+        
+        <ul class="list-disc list-inside space-y-3 mb-6 pl-2 text-slate-700 dark:text-slate-300 text-justify">
+          <li><strong>Dinámica de Autolimpieza Horizontal (Límite Inferior):</strong> El flujo debe mantener de forma continua una velocidad mínima de <strong>2.0 pies por segundo (0.61 m/s)</strong>. Esto garantiza el esfuerzo cortante hidráulico necesario en las paredes internas de la tubería para arrastrar los sedimentos orgánicos e impedir la consolidación de depósitos de lodo.</li>
+          <li><strong>Dinámica Ascendente Vertical:</strong> En tramos verticales, para contrarrestar la fuerza de gravedad sobre las micro-partículas, la velocidad debe incrementarse a un mínimo de <strong>3.0 pies por segundo (0.91 m/s)</strong>.</li>
+          <li><strong>Velocidad Crítica de Sedimentación por Sobredimensionamiento:</strong> Instalar una tubería de diámetro excesivo (por ejemplo, línea de 3" o 4" para una bomba trituradora de bajo caudal) reduce drásticamente la velocidad por debajo del umbral crítico. Esto provoca la decantación paulatina de los sólidos triturados, obstruyendo la sección inferior de la tubería y reduciendo el área útil de paso hasta generar un taponamiento severo a mediano plazo.</li>
+        </ul>
+
+        <div class="my-8 p-6 bg-slate-100 dark:bg-slate-800 rounded-xl border border-dashed border-slate-300 dark:border-slate-600 text-center text-sm text-slate-500">
+          <p class="font-mono">[Placeholder Gráfico: Ventana Operativa de Velocidades de Flujo en Tuberías Restrictivas]</p>
+        </div>
+      </div>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          2.4 Configuración Física del Cárcamo: Sistemas de Izaje y Rieles de Guía
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          La ingeniería de un sistema de bombeo eficiente no se limita a las variables operativas internas de la voluta; debe resolver la interacción física del equipo con la infraestructura civil durante las maniobras de servicio. Debido a la naturaleza del agua residual moderna y la acumulación de gases biogénicos altamente peligrosos en espacios confinados —como el metano (CH₄) y el ácido sulfhídrico (H₂S)—, está estrictamente contraindicado el ingreso de personal técnico al interior del cárcamo para realizar operaciones de desacoplamiento manual. La integración de un <strong>Sistema de Acoplamiento Automático con Rieles de Guía (Slide Rail System)</strong> es un requerimiento de diseño obligatorio.
+        </p>
+        
+        <h4 class="text-lg font-medium text-slate-900 dark:text-white mt-4 mb-2">Física del Acoplamiento por Cuña y Gravedad</h4>
+        <p class="mb-4 leading-relaxed text-justify">
+          Este sistema consta de una base de acoplamiento anclada permanentemente al fondo del cárcamo y conectada rígidamente a la tubería de descarga vertical. Dos rieles guía paralelos (comúnmente de acero inoxidable o hierro galvanizado IPS) corren verticalmente desde la base hasta el acceso superior del cárcamo, sirviendo como rieles de dirección sin soportar el peso del equipo.
+        </p>
+        <p class="mb-6 leading-relaxed text-justify">
+          La bomba se equipa con una brida de acoplamiento móvil o "zapata deslizante" con un perfil cónico maquinado de alta precisión. Al descender la bomba mediante una cadena de izaje desde el exterior, la zapata se desliza a lo largo de los rieles. Al llegar al extremo inferior, el propio peso de la bomba ejerce una fuerza vectorial vertical que, combinada con la geometría cónica de la base, genera un efecto de cuña mecánica. Esta acción sella herméticamente la unión metal-metal (o asistida por empaques de elastómero) contra la brida fija de descarga. La presión hidrostática positiva generada por la bomba al arrancar incrementa la fuerza de cierre sobre el asiento, impidiendo fugas de presión y asegurando que el 100% del caudal se dirija hacia la línea de descarga sin requerir tornillería ni intervención humana en el fondo del cárcamo.
+        </p>
+
+        <div class="my-8 p-6 bg-slate-100 dark:bg-slate-800 rounded-xl border border-dashed border-slate-300 dark:border-slate-600 text-center text-sm text-slate-500">
+          <p class="font-mono">[Placeholder Diagrama: Corte Transversal de Cárcamo con Sistema de Rieles de Guía de Desconexión Automática]</p>
+        </div>
+      </div>
+    </section>
+	
+	<section id="anatomia-mecanica" class="prose prose-slate dark:prose-invert max-w-none mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+        <span class="text-blue-600 dark:text-blue-400">3.</span> Anatomía Mecánica y Ciencia de Materiales en Mecanismos de Corte
+      </h2>
+      
+      <p class="mb-6 leading-relaxed text-justify">
+        La capacidad de una bomba trituradora para procesar materiales poliméricos de alta resistencia a la tracción no depende de la hidráulica de la voluta, sino de la eficiencia mecánica de su etapa previa de corte. Convierte la energía cinética rotacional del eje del motor en un esfuerzo mecánico concentrado en un área geométrica milimétrica. Para comprender por qué los sistemas de trituración convencionales fallan ante las demandas del agua residual contemporánea, es necesario analizar el diseño estructural de las cuchillas, su comportamiento cinemático y la metalurgia de sus componentes bajo condiciones extremas de operación.
+      </p>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          3.1 Mecanismos de corte radial vs. Sistemas axiales de alta velocidad
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          Existen dos configuraciones cinemáticas principales en el mercado industrial para ejecutar la reducción dimensional de los sólidos: el corte radial y el corte axial. La elección de la geometría de corte define la tolerancia del equipo ante materiales elásticos como el látex y las fibras celulosas entrelazadas.
+        </p>
+        
+        <p class="mb-4 leading-relaxed text-justify">
+          Los <strong>mecanismos de corte radial</strong> operan bajo el principio de cizallamiento por cizalla simple, similar al comportamiento de una tijera. Constan de un cortador rotativo que gira en un plano perpendicular u horizontal respecto a un anillo de corte estático perimetral. Si bien son eficientes para sólidos quebradizos u orgánicos densos, presentan una debilidad geométrica ante textiles no tejidos: cuando el espacio libre (<em>clearance gap</em>) entre la cuchilla rotativa y el anillo estático se desgasta aunque sea unas milésimas de pulgada debido a la abrasión, los materiales altamente elásticos (como toallitas húmedas o látex) no se rebanan; en su lugar, se flexionan y se introducen en la holgura, provocando el embobinamiento del eje y el frenado del motor.
+        </p>
+        
+        <p class="mb-6 leading-relaxed text-justify">
+          Los <strong>sistemas de corte axial avanzados</strong> (característicos de ingenierías de alto rendimiento como Zoeller) modifican la dirección del esfuerzo. Utilizan un disco cortador estático multi-perforado dispuesto de forma concéntrica en la succión de la bomba, combinado con una cuchilla rotativa que ejerce una acción de corte multidireccional de alta velocidad justo antes de que el fluido toque el ojo del impulsor. Esta disposición asegura que el sólido sea fragmentado en un plano axial, succionando y pulverizando el material instantáneamente en micro-partículas antes de que tengan oportunidad de elongarse o enrollarse en el cubo del impulsor.
+        </p>
+
+        <div class="my-8 p-6 bg-slate-100 dark:bg-slate-800 rounded-xl border border-dashed border-slate-300 dark:border-slate-600 text-center text-sm text-slate-500">
+          <p class="font-mono">[Placeholder Gráfico: Cinemática de Corte - Vectores de Fuerza Radial vs Axial]</p>
+        </div>
+      </div>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          3.2 Metalurgia del triturador: Dureza Rockwell C y resistencia al desgaste abrasivo
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          El agua residual no es solo un medio corrosivo; es un fluido altamente abrasivo debido a la presencia constante de arenas finas, sílice, cuarzo y micro-sólidos minerales. Un mecanismo de corte que pierda su filo debido a la abrasión sufrirá un incremento inmediato en la demanda de torque operativo, reduciendo la eficiencia de trituración hasta provocar paros por sobrecorriente. Por ello, la ciencia de materiales en esta sección es crítica.
+        </p>
+        <p class="mb-4 leading-relaxed text-justify">
+          Para garantizar la durabilidad del filo cortante, los componentes del triturador deben fabricarse con aleaciones de alta resistencia mecánica sometidas a tratamientos térmicos de endurecimiento. Los materiales de referencia industrial incluyen el <strong>acero inoxidable de grado martensítico AISI 440C</strong> o aleaciones especializadas de cromo-cobalto. La propiedad mecánica fundamental a evaluar en las fichas técnicas es la dureza en la escala <strong>Rockwell C (HRC)</strong>.
+        </p>
+
+        <div class="overflow-x-auto my-6 rounded-lg border border-slate-200 dark:border-slate-700">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/4">Aleación Material</th>
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/4">Rango de Dureza Típico</th>
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/4">Resistencia a la Abrasión</th>
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/4">Comportamiento del Filo Operativo</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">Acero al Carbón Convencional</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">30 - 40 HRC</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Baja. Vulnerable a cuarzos y arenas.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Pérdida rápida de geometría de corte; genera embobinamiento en meses.</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">Acero Inoxidable AISI 316</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">20 - 25 HRC</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Excelente anticorrosión; nula antiabrasión.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Material suave que se deforma plásticamente ante sólidos duros.</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">Acero Martensítico AISI 440C Tratado</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400"><strong>55 - 60 HRC</strong></td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Ultra-alta. Diseñado para trituración severa.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Mantiene el micro-filo de corte intacto frente a abrasivos y textiles.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="mb-6 leading-relaxed text-justify">
+          Un triturador con una dureza de <strong>55 a 60 HRC</strong> garantiza que el esfuerzo cortante aplicado supere permanentemente el límite elástico y de ruptura de cualquier desecho orgánico o sintético sin sufrir melladuras, protegiendo la integridad de la holgura mecánica operativa y manteniendo estable el consumo energético del motor.
+        </p>
+      </div>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          3.3 El mito de los caballos de fuerza (HP) vs. El torque real de arranque
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          En la especificación de proyectos, existe una concepción errónea generalizada: asumir que la capacidad anti-bloqueo de una bomba trituradora es directamente proporcional a los Caballos de Fuerza (HP) de su motor eléctrico. Los HP definen la potencia de trabajo continuo de la bomba una vez que ha alcanzado su velocidad de régimen, pero no determinan su capacidad para romper la inercia inicial cuando un sólido se encuentra atrapado en el mecanismo de corte en el momento exacto del arranque.
+        </p>
+        <p class="mb-4 leading-relaxed text-justify">
+          La variable mecánica crítica que determina si una bomba trituradora arrancará con éxito o se bloqueará de inmediato es el <strong>Torque de Arranque (<em>T<sub>start</sub></em>)</strong>. La relación fundamental entre el torque (<em>T</em>), los caballos de fuerza (HP) y la velocidad angular del motor eléctrico en revoluciones por minuto (<em>n</em>) en el sistema mecánico se expresa mediante la siguiente ecuación:
+        </p>
+
+        <div class="my-8 flex items-center justify-center font-serif text-xl md:text-2xl p-6 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 tracking-wide text-slate-900 dark:text-white">
+          <span class="font-bold italic mr-4">T</span>
+          <span class="mr-4 text-slate-400 dark:text-slate-600">=</span>
+          <div class="flex flex-col items-center">
+            <span class="px-4 pb-2 border-b border-slate-400 dark:border-slate-600 font-semibold italic text-base md:text-lg">5252 × HP</span>
+            <span class="px-4 pt-2 font-semibold italic text-base md:text-lg">n</span>
+          </div>
+        </div>
+
+        <p class="mb-4 leading-relaxed text-justify">
+          Analizando la ecuación, para una misma potencia nominal en HP, el torque mecánico es inversamente proporcional a la velocidad de rotación. Sin embargo, para cortar de forma limpia las fibras textiles, se requiere una velocidad angular elevada (motores monofásicos o trifásicos síncronos de 2 polos operando a ≈ 3450 RPM a 60 Hz). Debido a que la velocidad nominal (<em>n</em>) es alta, el torque de operación continua es intrínsecamente bajo en comparación con motores de 4 polos (1750 RPM).
+        </p>
+        <p class="mb-6 leading-relaxed text-justify">
+          Para compensar esta restricción física durante el arranque, el motor eléctrico debe contar con un diseño eléctrico especializado de alto torque de rotor bloqueado (Clase NEMA Diseño B o C en sistemas trifásicos). En el caso de instalaciones residenciales o comerciales monofásicas, es indispensable utilizar configuraciones de motor tipo <strong>Capacitor de Arranque / Capacitor de Marcha (CSCR - Capacitor Start Capacitor Run)</strong> asistidas por un relevador de potencial en el panel de control. El capacitor de arranque provee un desfasamiento eléctrico óptimo que duplica el torque inicial de rotación, permitiendo que las cuchillas rebanen cualquier sólido atrapado y alcancen la velocidad de régimen antes de que el motor sufra un sobrecalentamiento térmico por inercia residual.
+        </p>
+      </div>
+    </section>
+	
+	<section id="matriz-comparativa" class="prose prose-slate dark:prose-invert max-w-none mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+        <span class="text-blue-600 dark:text-blue-400">4.</span> Matriz Comparativa de Tecnologías de Bombeo en Cárcamos
+      </h2>
+      
+      <p class="mb-6 leading-relaxed text-justify">
+        La selección de la tecnología de bombeo en un cárcamo de aguas residuales no debe basarse en preferencias comerciales, sino en un análisis estricto de las restricciones del proyecto: la composición reológica del fluido, el caudal de diseño (Q) y la configuración de la red de alcantarillado aguas abajo. Confundir los límites operativos de una bomba manejadora de sólidos por paso de esfera con los de una unidad trituradora es una de las causas principales de fallas mecánicas crónicas y subdimensionamiento de torque en instalaciones comerciales e industriales.
+      </p>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          4.1 Bombas de paso de esfera (Vortex / Monocanal) vs. Bombas Trituradoras
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          Las bombas manejadoras de sólidos tradicionales se dividen principalmente en dos geometrías de impulsor: de canal (monocanal o bicanal) y de tipo Vortex (impulsor retraído). Cada una opera bajo principios físicos radicalmente distintos a los de una unidad trituradora activa, lo que define su comportamiento ante los residuos poliméricos modernos.
+        </p>
+        <p class="mb-6 leading-relaxed text-justify">
+          Las unidades <strong>Monocanal</strong> ofrecen la mayor eficiencia hidráulica pura, pero su canal cerrado es altamente vulnerable al desequilibrio dinámico y obstrucción cuando un textil largo se enrolla en el álabe. Por otro lado, las bombas con impulsor <strong>Vortex</strong> minimizan el contacto físico con el sólido al crear un remolino síncrono en la voluta que arrastra los cuerpos suspendidos; sin embargo, esta transferencia indirecta de energía degrada drásticamente su eficiencia general, haciéndolas inviables para cargas dinámicas elevadas. Las <strong>Bombas Trituradoras</strong> eliminan esta disyuntiva al acondicionar mecánicamente el fluido en la succión, permitiendo desplazar lodos de alta densidad con un consumo energético optimizado.
+        </p>
+
+        <div class="overflow-x-auto my-8 rounded-lg border border-slate-200 dark:border-slate-700">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/5">Criterio de Ingeniería</th>
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/5">Impulsor de Canal (Manejadora)</th>
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/5">Impulsor Tipo Vortex (Manejadora)</th>
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/5">Bomba Trituradora Avanzada</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">Eficiencia Hidráulica Nominal (&eta;)</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Alta (70% - 85%). Diseñada para optimización de energía en grandes volúmenes.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Baja a Moderada (40% - 55%). Alta pérdida por transferencia indirecta de momento.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Moderada (50% - 65%). Balanceada para vencer altas presiones con caudales controlados.</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">Respuesta ante Textiles y Látex</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Crítica. Tiende al embobinamiento y bloqueo inmediato del rotor.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Aceptable para fibras cortas; vulnerable ante aglomeraciones densas de toallitas de desecho.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400"><strong>Absoluta.</strong> Reduce el 100% de los polímeros elásticos a partículas milimétricas.</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">Restricción de Diámetro de Descarga</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Amplio. Mínimo obligatorio de 3" a 4" para permitir el paso de la esfera nominal.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Amplio. Requiere mantener secciones grandes (3" - 4") para evitar la desaceleración del flujo.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400"><strong>Restrictivo.</strong> Optimizado para operar de forma segura en líneas de 1-1/4" a 2".</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">Rango de Operación en Presión (Carga)</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Bajo a Moderado. Limitado por el diseño geométrico de los álabes anchos de canal.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Bajo. Ineficiente ante demandas de alta presión estática o distancias largas.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400"><strong>Ultra-Alto.</strong> Capaz de vencer cargas elevadas (altas presiones en PSI).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          4.2 Límites operativos: ¿Cuándo es estrictamente obligatorio triturar?
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          Para establecer un criterio de diseño institucional infalible, la ingeniería hidráulica de especificación determina que la implementación de una bomba trituradora no es opcional, sino una restricción obligatoria bajo cualquiera de los siguientes escenarios de campo:
+        </p>
+
+        <div class="mb-6 p-5 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 text-justify">
+          <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+            Criterio 1: Diámetro de la Infraestructura de Descarga Existente o Proyectada
+          </h4>
+          <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+            Siempre que la red de tuberías de descarga sea menor o igual a 2 pulgadas (<em>D<sub>interno</sub></em> &le; 2"), el uso de bombas trituradoras es obligatorio. Intentar operar una bomba manejadora de sólidos convencional en estos diámetros, reduciendo la salida mediante conexiones mecánicas bridadas o coples de reducción, garantiza una falla por sedimentación y obstrucción mecánica en las válvulas de retención a las pocas semanas de operación.
+          </p>
+        </div>
+
+        <div class="mb-6 p-5 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 text-justify">
+          <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+            Criterio 2: Relación de Alta Presión y Bajo Caudal (Cárcamos Remotos o con Alta Elevación)
+          </h4>
+          <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+            Cuando el perfil topográfico del proyecto exige bombear hacia colectores municipales ubicados a grandes distancias horizontales o con diferencias geométricas verticales severas (altas presiones dinámicas), pero el aporte de agua residual del complejo es bajo (pocos GPM o LPS), la trituradora es la única tecnología capaz de trabajar de forma segura en la zona estable de la curva hidráulica, evitando que motores grandes operen en la zona de sobrecarga o estrangulamiento.
+          </p>
+        </div>
+
+        <div class="p-5 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 text-justify">
+          <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+            Criterio 3: Origen y Control de la Descarga en el Complejo Civil
+          </h4>
+          <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+            En cárcamos destinados a desarrollos donde no existe un control sobre el usuario final —como centros comerciales, hospitales, hoteles, gasolineras, escuelas o desarrollos multifamiliares de alta densidad—, el diseño debe asumir por defecto la presencia de sólidos de alta resistencia (toallitas, guantes de nitrilo, textiles). En estos entornos de uso público severo, especificar una bomba manejadora de sólidos por paso de esfera sin etapa previa de trituración constituye un error de diseño que derivará en interrupciones recurrentes del servicio.
+          </p>
+        </div>
+
+        <div class="my-8 p-6 bg-slate-100 dark:bg-slate-800 rounded-xl border border-dashed border-slate-300 dark:border-slate-600 text-center text-sm text-slate-500">
+          <p class="font-mono">[Placeholder Diagrama: Árbol Lógico de Decisión de Ingeniería para Selección de Tecnología de Bombeo]</p>
+        </div>
+      </div>
+    </section>
+
+		<section id="criterios-seleccion" class="prose prose-slate dark:prose-invert max-w-none mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+        <span class="text-blue-600 dark:text-blue-400">5.</span> Criterios de Selección y Modelos de Alto Rendimiento
+      </h2>
+      
+      <p class="mb-6 leading-relaxed text-justify">
+        El dimensionamiento definitivo de una estación de bombeo con tecnología de trituración exige un protocolo de cálculo multifactorial. No es técnicamente aceptable seleccionar un equipo basándose únicamente en la coincidencia del punto nominal de operación con la curva del fabricante. El ingeniero de diseño debe evaluar la respuesta dinámica del motor en el arranque, la resistencia química y mecánica de las barreras de sellado y las normativas de seguridad eléctrica aplicables al entorno del cárcamo.
+      </p>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          5.1 Guía paso a paso para dimensionar una bomba trituradora
+        </h3>
+        <p class="mb-6 leading-relaxed text-justify">
+          Para garantizar la estabilidad operativa del sistema y evitar el desgaste prematuro de los componentes, la ingeniería de especificación debe seguir de forma estricta el siguiente algoritmo de diseño:
+        </p>
+
+        <ol class="list-decimal list-inside space-y-4 mb-6 pl-2 text-slate-700 dark:text-slate-300 text-justify">
+          <li>
+            <strong class="text-slate-900 dark:text-white">Determinación del Caudal de Diseño (Q):</strong> El gasto mínimo se calcula sumando las Unidades Mueble (Fixture Units) del complejo civil utilizando el Método de Hunter modificado, o evaluando los aportes máximos instantáneos en instalaciones industriales. El caudal resultante debe ser capaz de desalojar el volumen útil del cárcamo respetando los tiempos máximos de retención para evitar condiciones de anaerobiosis severa.
+          </li>
+          <li>
+            <strong class="text-slate-900 dark:text-white">Cálculo del TDH Ajustado:</strong> Utilizando el modelo de Darcy-Weisbach detallado en la Sección 2, se determinan las pérdidas por fricción primarias e hidráulicas locales (<em>h<sub>f</sub></em> + <em>h<sub>m</sub></em>). Al valor total en pies o metros se le aplica el factor de corrección por envejecimiento de la tubería y se convierte a unidades de presión en PSI.
+          </li>
+          <li>
+            <strong class="text-slate-900 dark:text-white">Intersección de la Curva del Sistema y Selección del BEP:</strong> Se grafica la parábola de carga del sistema sobre las curvas hidráulicas de los fabricantes. El punto de operación proyectado debe ubicarse idealmente dentro del Rango Preferencial de Operación (POR), lo más cercano posible al Punto de Máxima Eficiencia (BEP). Operar de forma prolongada a la extrema izquierda de la curva genera cargas radiales excesivas en el eje, mientras que operar a la extrema derecha induce cavitación por insuficiencia de NPSH disponible.
+          </li>
+        </ol>
+      </div>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          5.2 Análisis de configuraciones avanzadas de catálogo (Series Zoeller de Alto Rendimiento)
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          El análisis comparativo de las curvas de rendimiento mecánico e hidráulico demuestra que no existe una solución única para la gestión de cárcamos. La ingeniería de Zoeller segmenta sus unidades de trituración según el régimen de descarga (sistemas de gravedad modificada frente a redes presurizadas de alta carga estática) y la severidad del entorno civil, clasificándose en cuatro familias tecnológicas fundamentales:
+        </p>
+
+        <div class="overflow-x-auto my-8 rounded-lg border border-slate-200 dark:border-slate-700">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/5">Línea de Equipos</th>
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/5">Modelos y Potencia (HP)</th>
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/5">Mecanismo de Corte / Impulsor</th>
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-2/5">Aplicación Hidráulica Limitante y Control</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">
+                  <strong>Grinder Residencial Fraccionario</strong><br/>
+                  <span class="text-xs text-slate-500 font-mono">Patente US 8,562,287</span>
+                </td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">
+                  <strong>803:</strong> 1/2 HP<br/>
+                  <strong>805:</strong> 3/4 HP<br/>
+                  <strong>807:</strong> 1.0 HP<br/>
+                  <span class="text-xs font-semibold">1&Phi; (115V / 230V)</span>
+                </td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">
+                  Cortador integral automático con motor sumergible protegido térmicamente en cámara de aceite. Descarga 1-1/4&Prime; NPT.
+                </td>
+                <td class="p-4 text-slate-600 dark:text-slate-400 text-justify">
+                  Sustitución directa de sistemas eyectores convencionales en aplicaciones residenciales críticas. Diseñada para procesar el 100% de los materiales de higiene domésticos no dispersables (toallitas de desecho) sin requerir infraestructura eléctrica de costo comercial.
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">
+                  <strong>Cavidad Progresiva Shark&reg; Series</strong><br/>
+                  <span class="text-xs text-slate-500 font-mono">Alta Presión Lineal</span>
+                </td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">
+                  <strong>810 / 815:</strong><br/>
+                  Rangos operativos continuos de 1.0 HP y 2.0 HP.
+                </td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">
+                  Cortador tipo estrella de acero inoxidable endurecido con acción de tijera. Impulsor de cavidad progresiva (desplazamiento positivo).
+                </td>
+                <td class="p-4 text-slate-600 dark:text-slate-400 text-justify">
+                  Desarrollada exclusivamente para <strong>redes de alcantarillado presurizadas de baja presión</strong>. Capaz de vencer cargas extremas de hasta <strong>240 pies de columna de agua (~104 PSI)</strong>. Incorpora una válvula de alivio de presión interna para proteger los componentes hidráulicos contra picos dinámicos severos en la red.
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">
+                  <strong>Tri-Slice&reg; High-Torque Series</strong><br/>
+                  <span class="text-xs text-slate-500 font-mono">Reducción Fina</span>
+                </td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">
+                  <strong>818:</strong> 1.0 HP<br/>
+                  <strong>819:</strong> 1.5 HP<br/>
+                  <strong>820:</strong> 2.0 HP<br/>
+                  <span class="text-xs font-semibold">1&Phi; y 3&Phi; en varias tensiones.</span>
+                </td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">
+                  Sistema Tri-Slice&reg; de doble álabe de alta torsión (acero 440C a 55-60 HRC) acoplado a un <strong>impulsor tipo Vortex</strong>.
+                </td>
+                <td class="p-4 text-slate-600 dark:text-slate-400 text-justify">
+                  Sistemas de alcantarillado por vacío o presión comercial ligera. Su cortador de doble filo reduce los sólidos suspendidos a micro-partículas de un diámetro inferior a <strong>7/32&Prime; (5 mm)</strong>, las cuales son evacuadas instantáneamente por el impulsor Vortex sin entrar en contacto con el cubo del eje, suprimiendo el efecto de hilachado.
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">
+                  <strong>Heavy-Duty Auto-Reversing Shark&reg;</strong><br/>
+                  <span class="text-xs text-slate-500 font-mono">Uso Municipal / Industrial</span>
+                </td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">
+                  <strong>840 / 841 / 842:</strong><br/>
+                  2.0 HP de alta eficiencia continua.<br/>
+                  <span class="text-xs font-semibold">Opciones de grado Class I, Div 1.</span>
+                </td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">
+                  Mecanismo cortador en estrella (440C, 55-60 HRC). El modelo 840 incluye <strong>sistema inversor automático de giro</strong>. Impulsor Vortex.
+                </td>
+                <td class="p-4 text-slate-600 dark:text-slate-400 text-justify">
+                  La solución definitiva para las aplicaciones más severas: plantas de tratamiento, hospitales, complejos comerciales masivos e industria pesada. La lógica auto-reversible del modelo 840 invierte el sentido de rotación ante cada ciclo o variación de torque, lo que elimina mecánicamente los amarrados de material, afila ambas caras de la cuchilla y duplica el tiempo de vida útil operativa en campo. Cuenta con doble sello mecánico, sensores de humedad y protección térmica integrada de fábrica.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+	  
+	  <section id="automatizacion-control" class="prose prose-slate dark:prose-invert max-w-none mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+        <span class="text-blue-600 dark:text-blue-400">6.</span> Automatización, Tableros de Control y Lógicas de Protección
+      </h2>
+      
+      <p class="mb-6 leading-relaxed text-justify">
+        La eficiencia operativa de una estación de bombeo con tecnología de trituración no depende únicamente de las virtudes mecánicas de sus cuchillas, sino de la robustez de la lógica electrónica que gobierna el sistema. Un panel de control industrial moderno debe garantizar la continuidad del servicio de desalojo de aguas residuales, optimizar los ciclos de trabajo de los equipos y ofrecer mecanismos de diagnóstico reactivo capaces de aislar fallas sin interrumpir el funcionamiento general de la instalación civil.
+      </p>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          6.1 Inversión de marcha bi-direccional automática: Solución en sistemas monofásicos
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          En cárcamos expuestos a la descarga constante de textiles no tejidos y desechos elásticos, el mecanismo de corte puede experimentar esfuerzos mecánicos asimétricos. Para contrarrestar esto, la ingeniería de Zoeller incorpora sistemas de inversión automática de marcha en sus unidades de trituración bi-direccionales, logrando alternar el sentido de rotación en cada ciclo para auto-limpiar las cuchillas y duplicar la vida útil del micro-filo.
+        </p>
+        
+        <p class="mb-4 leading-relaxed text-justify">
+          En configuraciones trifásicas (3<em>&Phi;</em>), invertir el sentido de rotación es una tarea directa que se ejecuta conmutando dos de las fases de alimentación a través de contactores magnéticos cruzados gobernados por el controlador. Sin embargo, lograr la inversión automática de giro en un motor de inducción <strong>monofásico (1<em>&Phi;</em>)</strong> representa un hito de ingeniería eléctrica de control. 
+        </p>
+        
+        <p class="mb-6 leading-relaxed text-justify">
+          En los motores monofásicos de alto torque de arranque (tipo CSCR), la dirección de rotación inicial está condicionada por la conexión del devanado auxiliar relativo al devanado de marcha principal. La tecnología basada en microchips de los tableros <strong>Pivot&reg; de Zoeller</strong> gestiona eléctricamente este desfasamiento. Mediante el uso de relevadores dedicados internos, conmutan las terminales de los devanados en el instante exacto previo al arranque, permitiendo que las trituradoras monofásicas operen de forma reversible en entornos residenciales o comerciales ligeros sin necesidad de incurrir en los elevados costos de infraestructura de una línea trifásica comercial.
+        </p>
+
+        <div class="my-8 p-6 bg-slate-100 dark:bg-slate-800 rounded-xl border border-dashed border-slate-300 dark:border-slate-600 text-center text-sm text-slate-500">
+          <p class="font-mono">[Placeholder Diagrama: Circuito de Control Eléctrico para Inversión de Marcha Monofásica]</p>
+        </div>
+      </div>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          6.2 Arquitectura de Microprocesador y la Patente Smart Float Logic
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          A diferencia de los sistemas de proceso químico complejo que requieren de controladores lógicos programables (PLC) que demandan programación externa en lenguaje Ladder, los paneles de la serie Pivot&reg; (en sus variantes Simplex, Duplex, Pro y Pro+) basan su arquitectura en <strong>tecnología de microchips con lógica de estado sólido dedicada</strong>. Las funciones operativas de la estación de bombeo vienen integradas de fábrica, suprimiendo la necesidad de calibraciones de software externas en campo y asegurando una respuesta robusta y estable ante perturbaciones eléctricas.
+        </p>
+        <p class="mb-4 leading-relaxed text-justify">
+          El núcleo de protección del microcontrolador ante fallas mecánicas en los sensores de nivel es la función patentada <strong>Smart Float Logic (Lógica Inteligente de Flotadores)</strong>. En estaciones de bombeo de agua residual, las peras de nivel de contacto seco están expuestas a la acumulación de costras de grasa o lodos pesados que pueden trabarlas mecánicamente. 
+        </p>
+        <p class="mb-6 leading-relaxed text-justify">
+          El microchip supervisa continuamente la secuencia secuencial de los contactos. Si el flotador de alarma de nivel alto se cierra sin que se haya registrado previamente la activación del flotador de arranque operativo, la Smart Float Logic concluye de forma automática que el flotador de arranque ha sufrido una falla o se encuentra obstruido. Para evitar un desbordamiento en el cárcamo, el tablero ejecuta las siguientes acciones en milisegundos: ignora el interruptor dañado, ordena el arranque preventivo de la bomba, activa una alerta visual/audible en el gabinete y conmuta la desconexión del sistema a un <strong>temporizador de seguridad integrado (Continuous Run Alarm)</strong>. Este temporizador, preconfigurado de fábrica, detendrá el motor de forma segura para impedir que trabaje en seco en caso de que el nivel baje por completo, protegiendo los sellos mecánicos sin requerir costosos sensores de nivel continuo (radar o ultrasonido).
+        </p>
+      </div>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          6.3 Monitoreo Binario y Diagnóstico de Componentes Electromecánicos
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          Es un error común asumir que los paneles de control de estado sólido estándar actúan como analizadores de redes midiendo el amperaje de forma continua a través de transformadores de corriente. La serie Pivot&reg; utiliza un enfoque de <strong>monitoreo binario y diagnóstico reactivo de periféricos</strong>, delegando la protección contra sobrecorriente a los elementos bimetálicos o electrónicos tradicionales de estado sólido.
+        </p>
+        <p class="mb-4 leading-relaxed text-justify">
+          En los modelos trifásicos, el tablero integra guardamotores o relevadores de sobrecarga ajustables manualmente. El microchip no lee un valor numérico variable (por ejemplo, si la bomba consume 8.5 A o 12 A); lo que hace es monitorear el estado de los contactos auxiliares del relevador térmico. Si la trituradora sufre un bloqueo severo por un cuerpo extraño y la corriente supera el límite de placa, el dispositivo térmico se bota mecánicamente. El Pivot&reg; detecta instantáneamente este cambio de estado binario, registra la interrupción bajo la alarma de <em>Thermal Trip / Overload</em>, interrumpe el paso de energía para proteger el estator y transmite el evento a la interfaz de usuario.
+        </p>
+        
+        <p class="mb-4 leading-relaxed text-justify">
+          Las versiones Pro y Pro+, el panel cuenta con una pantalla LCD avanzada que despliega exclusivamente las variables de diagnóstico certificadas de fábrica:
+        </p>
+
+        <ul class="list-disc list-inside space-y-2 mb-6 pl-2 text-slate-700 dark:text-slate-300 text-justify">
+          <li><strong>Estado de Flotadores:</strong> Indicación visual en tiempo real del estado (abierto/cerrado) de cada pera de nivel.</li>
+          <li><strong>Contadores de Ciclos:</strong> Contadores digitales que registran la cantidad exacta de arranques para evaluar el desgaste de los contactores.</li>
+          <li><strong>Horas de Funcionamiento:</strong> Acumulador de horas de marcha de los motores para la programación de mantenimientos preventivos en el mecanismo de corte.</li>
+          <li><strong>Historial de Alarmas Activas:</strong> Registro claro de fallas de sello (intrusión de humedad en cámara de aceite), fallas térmicas y errores en la secuencia lógica de flotadores.</li>
+        </ul>
+      </div>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          6.4 Telemetría Cloud mediante la plataforma Z Control&reg;
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          Para los ingenieros de infraestructura que requieren centralizar la supervisión de múltiples estaciones de bombeo, los tableros Pivot&reg; integran la arquitectura necesaria para enlazarse de forma directa con la plataforma de telemetría en la nube <strong>Z Control&reg;</strong> de Zoeller.
+        </p>
+        <p class="mb-6 leading-relaxed text-justify">
+          Este ecosistema cloud permite el acceso remoto a los datos de los horómetros, contadores de ciclos y alarmas activas recopilados por el microchip sin requerir el pago de licencias o suscripciones recurrentes tras la integración del hardware de conexión (gateway). La única limitante técnica a considerar en el proyecto ejecutivo es que el sitio geográfico del cárcamo debe contar con la cobertura de una <strong>red inalámbrica Wi-Fi local estable</strong>. En instalaciones remotas o áreas de infraestructura civil básica, es imperativo que el contratista complemente el gabinete instalando un módem o enrutador celular de grado industrial para canalizar la señal de datos móviles, garantizando así la conectividad y la emisión inmediata de alertas vía correo electrónico o notificaciones Push ante disparos por sobrecarga.
+        </p>
+      </div>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          6.5 Seguridad Intrínseca Modular: La Solución Pivot Pak&trade; IS
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          De acuerdo con los lineamientos de seguridad eléctrica del National Electrical Code (NEC) para ubicaciones peligrosas Clase I, División 1, Grupo D, está prohibido introducir voltajes comerciales directos en zonas con alta concentración de gas metano (CH₄). No existe un modelo de panel Pivot&reg; de línea que se suministre dentro de un gabinete a prueba de explosiones para instalarse dentro del área de riesgo. La ingeniería de Zoeller resuelve esta necesidad mediante una arquitectura modular: el accesorio <strong>Pivot Pak&trade; IS (Intrinsically Safe)</strong>.
+        </p>
+        <p class="mb-4 leading-relaxed text-justify">
+          Este módulo independiente (Número de pieza 90104-0001) viene precableado de fábrica con un cordón de conducto para una conexión rápida al gabinete principal, permitiendo convertir cualquier panel Pivot&reg; Simplex o Duplex convencional NEMA 4X de intemperie en un sistema apto para gestionar cárcamos con atmósferas explosivas bajo el siguiente protocolo de seguridad:
+        </p>
+
+        <ul class="list-disc list-inside space-y-3 mb-6 pl-2 text-slate-700 dark:text-slate-300 text-justify">
+          <li>
+            <strong class="text-slate-900 dark:text-white">Ubicación del Tablero (Zona Segura):</strong> El panel Pivot&reg; estándar se instala estrictamente fuera del área clasificada, en un espacio de uso general libre de acumulación de gases biogénicos.
+          </li>
+          <li>
+            <strong class="text-slate-900 dark:text-white">Operación de la Barrera Intrínseca:</strong> El módulo Pivot Pak&trade; IS toma la energía de control de 120V proveniente del tablero principal y, mediante circuitos limitadores de energía de estado sólido, reduce drásticamente el voltaje y la corriente galvánica que viaja hacia las peras de nivel dentro del pozo. Al suprimir el potencial eléctrico por debajo del umbral mínimo de ignición térmica, el circuito se vuelve intrínsecamente seguro, garantizando que un cortocircuito o chispa en los cables de los flotadores no pueda detonar la atmósfera de gas.
+          </li>
+          <li>
+            <strong class="text-slate-900 dark:text-white">Control de Bombas Certificadas:</strong> Una vez implementada esta configuración modular externa, el sistema queda plenamente habilitado para controlar y alimentar de forma segura bombas con motores que sí cuentan con certificación nativa a prueba de explosión, como la serie de grado industrial <strong>Zoeller EX (ej. EX840)</strong>.
+          </li>
+        </ul>
+
+        <div class="my-8 p-6 bg-slate-100 dark:bg-slate-800 rounded-xl border border-dashed border-slate-300 dark:border-slate-600 text-center text-sm text-slate-500">
+          <p class="font-mono">[Placeholder Infografía: Arquitectura de Instalación de Seguridad Intrínseca con Módulo Pivot Pak™ IS]</p>
+        </div>
+      </div>
+    </section>
+	
+	<section id="diagnostico-fallas" class="prose prose-slate dark:prose-invert max-w-none mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+        <span class="text-blue-600 dark:text-blue-400">7.</span> Matriz de Diagnóstico de Fallas Críticas (Troubleshooting)
+      </h2>
+      
+      <p class="mb-6 leading-relaxed text-justify">
+        El diagnóstico de fallas en estaciones de bombeo de alta presión no debe basarse en la sustitución empírica de componentes. Requiere una metodología analítica que vincule los síntomas dinámicos observados en el cárcamo con las leyes de la mecánica de fluidos y la electrotecnia. Una lectura incorrecta de las alarmas en el panel de control puede derivar en intervenciones innecesarias o en el agravamiento de un problema mecánico latente en la voluta.
+      </p>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          7.1 Matriz sistemática de fallas hidráulicas y eléctricas
+        </h3>
+        <p class="mb-6 leading-relaxed text-justify">
+          La siguiente matriz de resolución de problemas de campo ha sido estructurada bajo el estándar de ingeniería para identificar la causa raíz probable a partir de variables binarias y mediciones de control, proponiendo acciones correctivas directas:
+        </p>
+
+        <div class="overflow-x-auto my-6 rounded-lg border border-slate-200 dark:border-slate-700">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/4">Síntoma en Campo</th>
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/4">Indicador / Alarma Pivot&reg;</th>
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/4">Causa Raíz Probable</th>
+                <th class="p-4 font-bold text-slate-900 dark:text-white w-1/4">Acción Correctiva de Ingeniería</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">El motor gira a RPM nominales pero la presión en PSI es cero y no hay desalojo de caudal (Q = 0).</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Pantalla LCD indica: <em>Pump Running</em> de forma continua. Sin disparo térmico.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400 text-justify">Fenómeno de <strong>Air Lock</strong> (Bolsa de aire comprimida atrapada en el interior de la voluta que impide el cebado del impulsor Vortex).</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400 text-justify">Apagar el equipo de forma inmediata. Perforar el orificio de purga (vent hole) obligatorio en la tubería de descarga por debajo de la válvula check. </td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">Disparo recurrente de las protecciones eléctricas a los pocos segundos del arranque.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">LED indicador: <strong>Thermal Trip / Overload</strong> activo en el gabinete.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400 text-justify">Embobinamiento o atascamiento parcial por acumulación severa de textiles en el eje axial; o cortocircuito de espiras en el estator por sobrecalentamiento.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400 text-justify">Medir resistencia de aislamiento (megueo) del motor. Si el aislamiento es correcto, izar la bomba por el sistema de rieles de guía e inspeccionar físicamente el mecanismo de corte.</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">Pérdida progresiva de presión en la descarga (PSI) con incremento gradual en el tiempo de vaciado del cárcamo.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Horómetro LCD muestra un aumento inusual en las horas de marcha por ciclo.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400 text-justify">Desgaste abrasivo del filo del mecanismo cortador (pérdida de la holgura mecánica o <em>clearance</em>) o abrasión en los álabes del impulsor Vortex.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400 text-justify">Extraer la unidad. Validar visualmente el estado del disco y la cuchilla. Si la aleación presenta melladuras por sílice, sustituir el cortador por refacciones originales de alta dureza (55-60 HRC).</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                <td class="p-4 font-semibold text-slate-900 dark:text-white">El panel de control activa alertas intermitentes pero las bombas no arrancan de forma automática.</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400">Pantalla LCD despliega: <strong>Float Sequence Error</strong> (Smart Float Logic activa).</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400 text-justify">Falla física en la pera de nivel de arranque (encapsulado perforado por humedad, cables trozados o switch interno pegado por lodos).</td>
+                <td class="p-4 text-slate-600 dark:text-slate-400 text-justify">El sistema Pivot&reg; operará por tiempo de seguridad de forma preventiva. Se debe realizar una prueba de continuidad (medición de &Omega;) en los bornes del flotador dañado y sustituir el periférico.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+          7.2 Caso de Estudio Técnico: Análisis Físico del Bloqueo por Aire (Air Lock)
+        </h3>
+        <p class="mb-4 leading-relaxed text-justify">
+          El <strong>Air Lock</strong> es uno de los fenómenos marginales más frustrantes e incomprendidos en la operación de cárcamos con bombas trituradoras y líneas de descarga de diámetro restrictivo (1-1/4&Prime; a 2&Prime;). Ocurre típicamente tras un periodo prolongado de inactividad de la estación de bombeo o cuando el cárcamo ha sido vaciado por completo hasta el límite físico de la succión.
+        </p>
+        <p class="mb-4 leading-relaxed text-justify">
+          Cuando el nivel de agua residual desciende por debajo de la brida de succión de la bomba, el aire de la atmósfera ingresa al interior de la voluta ocupando el espacio del impulsor. Al subir el nivel del agua nuevamente impulsado por los aportes del complejo civil, el agua sella la succión exterior de la bomba por debajo. Al mismo tiempo, la columna de fluido que permanece retenida estáticamente en la tubería de descarga vertical ejerce una presión hidrostática descendente que mantiene firmemente cerrada la válvula de retención (check) superior.
+        </p>
+        
+        <blockquote class="border-l-4 border-blue-500 bg-slate-50 dark:bg-slate-800/50 p-4 rounded-r-lg my-6 text-slate-700 dark:text-slate-300 italic text-justify">
+          Mecánica del Bloqueo: Al arrancar el motor eléctrico, el impulsor Vortex gira a alta velocidad (~3450 RPM). Debido a que el aire posee una densidad molecular drásticamente inferior a la del agua residual, la fuerza centrífuga desarrollada por el impulsor es incapaz de generar la diferencia de presión necesaria (&Delta;P) para comprimir y desplazar la columna de aire hacia arriba con la fuerza suficiente para vencer el peso de la válvula check. El aire se expande y se contrae cíclicamente dentro de la voluta, formando un tapón neumático hermético. El agua no puede ingresar, la bomba no desaloja flujo y la energía mecánica entregada por el eje se disipa puramente en forma de fricción térmica, elevando la temperatura del fluido estagnado y arriesgando la integridad estructural de las caras del sello mecánico.
+        </blockquote>
+
+        <h4 class="text-xl font-medium text-slate-900 dark:text-white mt-6 mb-3">La Solución de Diseño Obligatoria</h4>
+        <p class="mb-4 leading-relaxed text-justify">
+          Para suprimir de forma definitiva el riesgo de Air Lock, la especificación constructiva del cárcamo debe contemplar la perforación de un <strong>orificio de purga de aire (vent hole) de 3/16&Prime; (5 mm) de diámetro</strong> en la tubería de descarga de PVC o PEAD. 
+        </p>
+        <p class="mb-6 leading-relaxed text-justify">
+          Este barreno debe ejecutarse con una inclinación de 45&deg; hacia abajo, ubicado estrictamente <strong>por encima de la brida de descarga de la bomba y por debajo de la válvula de retención de bola</strong>. Cuando la bomba se apaga y el nivel de agua baja, este orificio rompe el vacío y permite que el aire acumulado en la voluta escape libremente hacia la atmósfera del cárcamo conforme el agua vuelve a subir. Al arrancar de nuevo el ciclo, el impulsor se encuentra perfectamente cebado con líquido, desalojando un micro-chorro de alivio por el barreno que no afecta la eficiencia hidráulica global pero blinda el sistema contra fallas de flujo en seco.
+        </p>
+
+        <div class="my-8 p-6 bg-slate-100 dark:bg-slate-800 rounded-xl border border-dashed border-slate-300 dark:border-slate-600 text-center text-sm text-slate-500">
+          <p class="font-mono">[Placeholder Diagrama: Detalle Constructivo de Orificio de Purga Anti-Air Lock]</p>
+        </div>
+      </div>
+    </section>
+	
+	<section id="preguntas-frecuentes" class="prose prose-slate dark:prose-invert max-w-none mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+        <span class="text-blue-600 dark:text-blue-400">8.</span> Preguntas Frecuentes sobre Bombas Trituradoras (FAQs)
+      </h2>
+      
+      <p class="mb-8 leading-relaxed text-justify">
+        A continuación, se compilan y resuelven las consultas técnicas más recurrentes formuladas por ingenieros especificadores, contratistas y departamentos de mantenimiento industrial respecto a la aplicación, diseño y diagnóstico de estaciones de bombeo con tecnologías de trituración activa.
+      </p>
+
+      <div class="mb-8 p-6 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 text-justify">
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+          ¿Cuál es la diferencia mecánica y de aplicación definitiva entre una bomba manejadora de sólidos convencional y una bomba trituradora?
+        </h3>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+          La diferencia radica en el principio hidráulico y la reología del fluido que manejan. Una bomba manejadora de sólidos convencional (con impulsor monocanal o Vortex) no altera la geometría del sólido; está diseñada para desalojar el cuerpo entero a través de un canal amplio (paso de esfera nominal de 2&Prime; a 3&Prime;) hacia tuberías de descarga grandes (mínimo 3&Prime; o 4&Prime;). 
+        </p>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm mt-2">
+          Por el contrario, una bomba trituradora incorpora una etapa mecánica de corte previa a la voluta (mecanismo axial o radial). Esta etapa pulveriza, rebana y fragmenta los materiales de alta resistencia a la tracción (textiles sintéticos, látex) transformándolos en una suspensión fina (<em>slurry</em>). Esto permite evacuar el agua residual a altas presiones a través de líneas de descarga restrictivas de diámetros pequeños (1-1/4&Prime; a 2&Prime;), reduciendo sustancialmente los costos de infraestructura civil.
+        </p>
+      </div>
+
+      <div class="mb-8 p-6 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 text-justify">
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+          ¿Qué protocolo de mantenimiento y verificación tribológica demanda el mecanismo de corte de las series Zoeller Shark&reg;?
+        </h3>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+          A diferencia de los impulsores hidráulicos que solo sufren desgaste por cavitación o erosión general, el triturador opera bajo fricción mecánica directa y requiere la inspección periódica de su geometría de corte. El protocolo obligatorio en campo exige medir con un calibrador de hojas el espacio libre u holgura (<em>clearance gap</em>) entre la cuchilla rotativa y el disco estático, el cual debe mantenerse dentro de las tolerancias milimétricas especificadas por la fábrica para asegurar la acción de tijera. 
+        </p>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm mt-2">
+          Si el cárcamo procesa altos volúmenes de arena o sílice, el filo sufrirá un desgaste abrasivo gradual. En modelos de giro único, es necesario rectificar o sustituir el cortador si presenta melladuras. En unidades avanzadas de la serie <strong>Shark&reg; 840</strong> controladas por tableros <strong>Pivot&reg;</strong>, la lógica de inversión automática de marcha mitiga este desgaste al afilar de forma alterna ambas caras del elemento de acero martensítico AISI 440C (dureza de 55-60 HRC), prolongando los intervalos de mantenimiento preventivo al doble en comparación con sistemas radiales simples.
+        </p>
+      </div>
+
+      <div class="mb-8 p-6 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 text-justify">
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+          ¿Cómo influye la presencia de toallitas húmedas y textiles en el dimensionamiento eléctrico y la selección del torque de arranque en un cárcamo?
+        </h3>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+          Los textiles no tejidos no se dispersan en el agua; bajo regímenes turbulentos sufren el fenómeno de hilachado (<em>ragging</em>), entrelazándose hasta formar trenzas hidráulicas de alta resistencia mecánica. Si un sistema se dimensiona considerando únicamente los Caballos de Fuerza (HP) requeridos para el trabajo continuo, la bomba sufrirá un bloqueo al intentar arrancar con material textil atrapado entre sus cuchillas, ya que los HP representan la potencia síncrona de régimen y no la fuerza torsional inicial.
+        </p>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm mt-2">
+          Para contrarrestar la inercia del material embobinado, el motor debe poseer un elevado <strong>Torque de Arranque (<em>T<sub>start</sub></em>)</strong>. En instalaciones comerciales o residenciales monofásicas (1&Phi;), esto exige especificar de forma mandatoria motores con configuración eléctrica <strong>CSCR (Capacitor de Arranque / Capacitor de Marcha)</strong> gobernados por un relevador de potencial en el tablero. El capacitor de arranque inyecta un desfasamiento eléctrico que duplica el torque de rotor bloqueado, permitiendo que la cuchilla rebane instantáneamente las fibras y alcance las RPM nominales antes de que actúen las protecciones térmicas por sobrecorriente.
+        </p>
+      </div>
+
+      <div class="mb-8 p-6 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 text-justify">
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+          ¿Se puede instalar un tablero Pivot&reg; directamente dentro del área del cárcamo si se utiliza el módulo Pivot Pak&trade; IS?
+        </h3>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+          <strong>No. Es un error crítico de seguridad industrial que viola las normativas del National Electrical Code (NEC).</strong> El tablero Pivot&reg; (incluso con su gabinete NEMA 4X de alta resistencia a la intemperie) y el módulo complementario Pivot Pak&trade; IS deben instalarse obligatoriamente en el <strong>área no clasificada (Zona Segura)</strong>, completamente fuera del perímetro de emanación de gases del cárcamo.
+        </p>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm mt-2">
+          El módulo Pivot Pak&trade; IS opera como una barrera de aislamiento limitadora de energía de estado sólido. Toma la corriente de control del tablero en la zona segura y reduce el potencial eléctrico que viaja hacia las peras de nivel. Únicamente los cables de señal intrínsecamente seguros de bajo voltaje y el cableado de alimentación de la bomba con motor a prueba de explosión (clase EX de Zoeller) están autorizados para cruzar los sellos de conducto e ingresar a la atmósfera clasificada como Clase I, División 1, Grupo D (Zona de Riesgo).
+        </p>
+      </div>
+
+      <div class="p-6 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 text-justify">
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+          ¿Qué ventajas ofrece la función Smart Float Logic frente a un sistema de control de nivel tradicional por relevadores?
+        </h3>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+          En un sistema de control tradicional por relevadores electromecánicos genéricos, si la pera de nivel de arranque operativo se traba mecánicamente debido a las costras de grasa o lodo pesado, el panel permanece inactivo. Esto provoca que el nivel del agua residual suba de forma continua hasta desbordar el cárcamo, ignorando por completo que el flotador de alarma alta se ha activado.
+        </p>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm mt-2">
+          La función patentada <strong>Smart Float Logic</strong> de la serie Pivot&reg; de Zoeller utiliza la tecnología de su microchip de estado sólido para validar de forma continua la secuencia binaria de los contactos secos. Si el microprocesador detecta que se cierra el flotador de alarma de nivel alto sin que se haya cerrado previamente el flotador de arranque, identifica de inmediato la secuencia incorrecta y concluye que el flotador operativo ha fallado. El sistema puentea la lógica, ordena el arranque inmediato de la bomba trituradora para abatir el nivel de inundación, emite una alarma audible y conmuta el paro del motor a un temporizador de seguridad integrado configurado a los 20 minutos para proteger los sellos contra el trabajo en seco.
+        </p>
+      </div>
+    </section>
+	
+	<div class="my-12 p-8 bg-blue-50 dark:bg-slate-800/50 rounded-2xl border border-blue-200 dark:border-blue-950 text-center">
+  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">¿Necesitas especificar un sistema de trituración Zoeller en tu proyecto?</h3>
+  <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-6 text-sm md:text-base">
+    En <strong>SIBI (Soluciones Integrales en Bombeo Inteligente)</strong> somos especialistas en ingeniería de control y distribución autorizada de tecnología de trituración Zoeller. Brindamos soporte técnico y suministro desde la zona metropolitana de Guadalajara a todo México.
+  </p>
+  <a href="/contacto" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors">
+    Contactar con un Ingeniero Especialista
+  </a>
+</div>
+
+  </main>
+</Layout>

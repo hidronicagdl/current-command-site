@@ -5,6 +5,8 @@ pubDate: "2024-05-15"
 author: "José Aguilar"
 ---
 
+
+
 En el ámbito del suministro hidráulico para edificaciones comerciales de gran envergadura, la estabilidad operativa y la eficiencia energética constituyen los pilares fundamentales de una ingeniería exitosa. Infraestructuras críticas como torres de departamentos, complejos hospitalarios, centros comerciales y centros de llamadas dependen de manera intrínseca de un abastecimiento de agua continuo, gobernado bajo una presión estática rigurosamente controlada. Sin embargo, es un fenómeno común observar en instalaciones industriales cómo los equipos de bombeo experimentan fluctuaciones severas e indeseadas en la red de distribución. Estas oscilaciones de presión, que perturban el flujo constante, provienen de manera casi unánime de una sintonización subóptima o empírica en el algoritmo del control PID (Proporcional-Integral-Derivativo).
 
 La problemática se manifiesta con claridad cuando, a pesar de requerir una presión consigna constante de, por ejemplo, 100 PSI, el sistema de bombeo secundario presenta variaciones erráticas que oscilan cíclicamente entre los 80 y los 110 PSI. Estas desviaciones continuas no solo comprometen la operación eficiente de las válvulas y equipos conectados a lo largo de la edificación, sino que también disparan un consumo energético innecesario debido a los picos de demanda eléctrica y aceleran el desgaste mecánico prematuro de los componentes internos del equipo. Para mitigar este escenario, es indispensable comprender la dinámica matemática detrás de los [sistemas hidroneumáticos booster de presión constante](/productos/sistemas-hidroneumaticos-booster) y su correcta programación.

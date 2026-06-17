@@ -1,15 +1,26 @@
 ---
 // src/pages/productos/sistemas-hidroneumaticos-booster.astro
 import Layout from '../../layouts/Layout.astro';
+import Schema from '../../components/Schema.astro';
+
+// Matriz de Datos Estructurados para la Automatización SEO y GEO
+const productData = {
+  name: "Sistemas Hidroneumáticos Booster de Presión Constante y Velocidad Variable",
+  description: "Equipos de presión constante y velocidad variable Grundfos Hidro MPC en México. Soluciones booster industriales y sistemas sencillos de alta eficiencia.",
+  brand: "Grundfos Hydro MPC / SIBI",
+  image: "https://currentcommand.com/images/booster-system.png"
+};
 ---
 
 <Layout 
   title="Sistemas Hidroneumáticos Booster Grundfos Hydro MPC | Current Command" 
   description="Equipos de presión constante y velocidad variable Grundfos Hidro MPC en México. Soluciones booster industriales y sistemas sencillos de alta eficiencia."
 >
+  {/* Inyección de Datos Estructurados para Motores Generativos (GEO) */}
+  <Schema type="Product" data={productData} />
+
   <main class="bg-white font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900">
     
-    <!-- HERO SECTION -->
     <section class="max-w-7xl mx-auto px-6 py-16 md:py-24 border-b border-gray-100">
       <div class="max-w-3xl">
         <span class="text-sm font-bold tracking-wider uppercase text-blue-600 block mb-3">
@@ -32,7 +43,6 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- NARRATIVA TÉCNICA -->
     <section class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
       <div class="md:col-span-2 space-y-10 text-base leading-relaxed text-slate-700">
         <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
@@ -44,7 +54,7 @@ import Layout from '../../layouts/Layout.astro';
             1. Configuración de Sistemas Multi-bomba Grundfos e Inversores Sencillos
           </h3>
           <p>
-            El sistema hidroneumático booster de presión constante y velocidad variable representa el estándar de oro en el suministro y distribución de fluidos a nivel industrial y comercial. En <strong>Current Command</strong> integramos soluciones avanzadas que abarcan tanto la sofisticada arquitectura inteligente del sistema **Grundfos Hydro MPC** como configuraciones paquetizadas de booster sencillo. Estos equipos regulan de manera completamente automática el régimen de operación de cada unidad hidráulica mediante variadores de frecuencia de alta precisión integrados directamente en el panel de control, respondiendo de inmediato ante fluctuaciones repentinas de caudal en la red de distribución.
+            El sistema hidroneumático booster de presión constante y velocidad variable representa el estándar de oro en el suministro y distribución de fluidos a nivel industrial y comercial. En <strong>Current Command</strong> integramos soluciones avanzadas que abarcan tanto la sofisticada arquitectura inteligente del sistema <strong>Grundfos Hydro MPC</strong> como configuraciones paquetizadas de booster sencillo. Estos equipos regulan de manera completamente automática el régimen de operación de cada unidad hidráulica mediante variadores de frecuencia de alta precisión integrados directamente en el panel de control, respondiendo de inmediato ante fluctuaciones repentinas de caudal en la red de distribución.
           </p>
           <blockquote>
             <strong>Resumen técnico:</strong> La integración de sistemas booster de presión constante optimiza el suministro hidráulico abarcando soluciones avanzadas multipombas Grundfos Hydro MPC y configuraciones sencillas con modulación de frecuencia.
@@ -76,7 +86,6 @@ import Layout from '../../layouts/Layout.astro';
         </div>
       </div>
 
-      <!-- SIDEBAR EDITORIAL -->
       <aside class="bg-gray-50 p-8 rounded-xl h-fit border border-gray-100">
         <h3 id="documentacion-ingenieria-booster" class="text-lg font-bold text-slate-900 mb-4">Documentación de Ingeniería</h3>
         <p class="text-sm text-slate-600 mb-6 leading-relaxed">
@@ -99,7 +108,6 @@ import Layout from '../../layouts/Layout.astro';
       </aside>
     </section>
 
-    <!-- FICHA TÉCNICA -->
     <section id="especificaciones" class="bg-gray-50 border-t border-b border-gray-100 py-16">
       <div class="max-w-7xl mx-auto px-6">
         <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-8">
@@ -146,7 +154,6 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- CTA SECTION -->
     <section id="cotizar" class="max-w-4xl mx-auto px-6 py-16 md:py-24 text-center">
       <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mb-4">
         ¿Requiere una Memoria de Cálculo para su Proyecto?
@@ -163,40 +170,3 @@ import Layout from '../../layouts/Layout.astro';
 
   </main>
 </Layout>
-
-<!-- MARKUP JSON-LD PARA SISTEMAS BOOSTER GRUNDFOS HYDRO MPC -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Sistemas Hidroneumáticos Booster de Presión Constante y Velocidad Variable",
-    "description": "Equipos de presión constante y velocidad variable Grundfos Hidro MPC en México. Soluciones booster industriales de alta eficiencia para edificación y procesos críticos.",
-    "inLanguage": "es-MX",
-    "datePublished": "2026-06-03",
-    "author": {
-      "@type": "WebSite",
-      "name": "Current Command",
-      "url": "https://currentcommand.com"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "Sistemas Hidroneumáticos Booster",
-        "description": "Equipos de bombeo de presión constante con variadores de velocidad para la distribución inteligente de agua."
-      },
-      {
-        "@type": "Brand",
-        "name": "Grundfos"
-      }
-    ],
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://currentcommand.com/productos/sistemas-hidroneumaticos-booster"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "SIBI Soluciones Integrales en Bombeo Inteligente",
-      "url": "https://sibi.mx"
-    }
-  }
-</script>

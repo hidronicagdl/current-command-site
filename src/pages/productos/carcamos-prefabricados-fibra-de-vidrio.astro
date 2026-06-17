@@ -1,15 +1,26 @@
 ---
 // src/pages/productos/carcamos-prefabricados-fibra-de-vidrio.astro
 import Layout from '../../layouts/Layout.astro';
+import Schema from '../../components/Schema.astro';
+
+// Matriz de Datos Estructurados para la Automatización SEO y GEO
+const productData = {
+  name: "Cárcamos Prefabricados en Plástico Reforzado con Fibra de Vidrio (PRFV)",
+  description: "Estaciones de bombeo empaquetadas en PRFV para aguas residuales y pluviales en México. La alternativa hermética y de rápida instalación frente al concreto.",
+  brand: "SIBI",
+  image: "https://currentcommand.com/images/carcamo-prfv.png"
+};
 ---
 
 <Layout 
   title="Cárcamos Prefabricados en Fibra de Vidrio (PRFV) en México | Current Command" 
   description="Estaciones de bombeo empaquetadas en PRFV para aguas residuales y pluviales en México. La alternativa hermética y de rápida instalación frente al concreto."
 >
+  {/* Inyección de Datos Estructurados para Motores Generativos (GEO) */}
+  <Schema type="Product" data={productData} />
+
   <main class="bg-white font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900">
     
-    <!-- HERO SECTION -->
     <section class="max-w-7xl mx-auto px-6 py-16 md:py-24 border-b border-gray-100">
       <div class="max-w-3xl">
         <span class="text-sm font-bold tracking-wider uppercase text-blue-600 block mb-3">
@@ -32,7 +43,6 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- NARRATIVA TÉCNICA -->
     <section class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
       <div class="md:col-span-2 space-y-10 text-base leading-relaxed text-slate-700">
         <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
@@ -67,7 +77,6 @@ import Layout from '../../layouts/Layout.astro';
         </div>
       </div>
 
-      <!-- SIDEBAR -->
       <aside class="bg-gray-50 p-8 rounded-xl h-fit border border-gray-100">
         <h3 id="documentacion-ingenieria-asociada" class="text-lg font-bold text-slate-900 mb-4">Ingeniería Asociada</h3>
         <p class="text-sm text-slate-600 mb-6 leading-relaxed">
@@ -82,11 +91,10 @@ import Layout from '../../layouts/Layout.astro';
       </aside>
     </section>
 
-    <!-- ESPECIFICACIONES TÉCNICAS -->
     <section id="especificaciones" class="bg-gray-50 border-t border-b border-gray-100 py-16">
       <div class="max-w-7xl mx-auto px-6">
         <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-8">
-          Capacidades y Configuraciones de Fabricación
+          Capacidades y Configurations de Fabricación
         </h2>
         <div class="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow-sm">
           <table class="w-full text-left border-collapse">
@@ -129,7 +137,6 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- CTA SECTION -->
     <section id="cotizar" class="max-w-4xl mx-auto px-6 py-16 md:py-24 text-center">
       <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mb-4">
         Optimice los Tiempos de Ejecución de su Obra Civil
@@ -146,36 +153,3 @@ import Layout from '../../layouts/Layout.astro';
 
   </main>
 </Layout>
-
-<!-- MARKUP JSON-LD PARA CÁRCAMOS PRFV -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Cárcamos Prefabricados en Fibra de Vidrio (PRFV) con Bombas Integradas",
-    "description": "Estaciones de bombeo empaquetadas en PRFV para aguas residuales y pluviales en México. La alternativa hermética y de rápida instalación frente al concreto.",
-    "inLanguage": "es-MX",
-    "datePublished": "2026-06-03",
-    "author": {
-      "@type": "WebSite",
-      "name": "Current Command",
-      "url": "https://currentcommand.com"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "Cárcamos Prefabricados",
-        "description": "Estaciones de bombeo de plástico reforzado con fibra de vidrio para la conducción de aguas residuales."
-      }
-    ],
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://currentcommand.com/productos/carcamos-prefabricados-fibra-de-vidrio"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "SIBI Soluciones Integrales en Bombeo Inteligente",
-      "url": "https://sibi.mx"
-    }
-  }
-</script>

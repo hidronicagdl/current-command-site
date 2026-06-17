@@ -2,14 +2,24 @@
 // src/pages/comparativa-bombas-grinder.astro
 // Integración nativa con el sistema de diseño de currentcommand.com
 import Layout from '../../layouts/Layout.astro';
+import Schema from '../../components/Schema.astro';
 
+// Matriz de Datos Estructurados para la Automatización SEO y GEO
+const schemaData = {
+  name: "Zoeller vs Competidores: Comparativa de Bombas Trituradoras en México",
+  description: "Análisis técnico avanzado de rendimiento, materiales y sistemas de corte entre las series Zoeller Shark y HD frente a Barmesa, Flygt, Myers, Grundfos, Altamira y Goulds.",
+  brand: "Zoeller",
+  image: "https://currentcommand.com/images/default-product.png"
+};
 ---
 
 <Layout 
   title="Zoeller vs Competidores: Comparativa de Bombas Trituradoras en México" 
   description="Análisis técnico avanzado de rendimiento, materiales y sistemas de corte entre las series Zoeller Shark y HD frente a Barmesa, Flygt, Myers, Grundfos, Altamira y Goulds."
 >
-  <!-- HERO SECTION -->
+  {/* Inyección de Datos Estructurados para Motores Generativos e Inteligencia Artificial */}
+  <Schema type="Product" data={schemaData} />
+
   <section class="bg-gradient-to-b from-steel-light to-white py-16 md:py-24 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <span class="inline-block px-3 py-1 text-xs font-bold tracking-wider text-industrial-blue bg-industrial-blue/10 rounded-full uppercase mb-4">
@@ -20,7 +30,7 @@ import Layout from '../../layouts/Layout.astro';
         <span class="text-industrial-blue">Zoeller Grinder Pumps</span> vs. El Mercado Mexicano
       </h1>
       <p class="max-w-3xl mx-auto text-base sm:text-lg text-steel-gray font-normal leading-relaxed mb-8">
-        Evaluamos objetivamente el diseño mecánico, los sistemas de disipación térmica y la tecnología de corte axial patentada por Zoeller frente a las alternativas más distribuidas en México para la integración en cárcamos y sistemas de control inteligente.
+        Evaluamos objetivamente el diseño mecánico, los sistemas de disipación térmica y la tecnología de corte axial patentada por Zoeller frente a las alternatives más distribuidas en México para la integración en cárcamos y sistemas de control inteligente.
       </p>
       <div class="flex justify-center gap-4">
         <a href="#matriz" class="px-6 py-3 text-sm font-bold text-white bg-industrial-blue hover:bg-industrial-dark rounded-lg transition-all shadow-md">
@@ -33,7 +43,6 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- ANÁLISIS NARRATIVO POR MARCA -->
   <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-12">
@@ -42,28 +51,26 @@ import Layout from '../../layouts/Layout.astro';
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Zoeller -->
         <div class="p-6 rounded-xl border border-industrial-blue/20 bg-steel-light/30 flex flex-col justify-between">
           <div>
             <h3 id="bomba-trituradora-zoeller" data-brand="Zoeller" class="text-lg font-bold text-industrial-dark mb-2">
-			Zoeller (Shark & Engineered Products)
-			</h3>
+              Zoeller (Shark & Engineered Products)
+            </h3>
             <p class="text-xs text-steel-gray leading-relaxed">
               Referente tecnológico en México enfocado en confiabilidad extrema. Las series comerciales Shark (800) y las líneas de alta capacidad 71/72 HD de Zoeller Engineered Products destacan por sus estructuras robustas y disipación de calor optimizada por aletas físicas, minimizando fallos por sobrecalentamiento.
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-slate-250 text-xs">
             <span class="font-bold text-industrial-blue uppercase tracking-wider block mb-1">Resumen de ventaja:</span>
-            Corte axial Tri-Slice® y autoafiliable que elimina por completo el embobinamiento de fibras en el eje del motor.
+            Corte axial Tri-Slice® y autoafilable que elimina por completo el embobinamiento de fibras en el eje del motor.
           </div>
         </div>
 
-        <!-- Barmesa / Barnes -->
         <div class="p-6 rounded-xl border border-slate-200 bg-white flex flex-col justify-between">
           <div>
             <h3 id="bomba-trituradora-barmesa" data-brand="Barmesa" class="text-lg font-bold text-slate-900 mb-2">
-			Barmesa / Barnes
-			</h3>
+              Barmesa / Barnes
+            </h3>
             <p class="text-xs text-steel-gray leading-relaxed">
               La marca con mayor volumen de instalación en el mercado mexicano debido a su costo inicial accesible y amplia red de distribuidores. Son equipos robustos basados en diseños tradicionales de ingeniería hidráulica, ideales para presupuestos ajustados que priorizan la facilidad de conseguir refacciones locales.
             </p>
@@ -74,12 +81,11 @@ import Layout from '../../layouts/Layout.astro';
           </div>
         </div>
 
-        <!-- Flygt -->
         <div class="p-6 rounded-xl border border-slate-200 bg-white flex flex-col justify-between">
           <div>
             <h3 id="bomba-trituradora-flygt" data-brand="Flygt" class="text-lg font-bold text-slate-900 mb-2">
-			Flygt (Xylem)
-			</h3>
+              Flygt (Xylem)
+            </h3>
             <p class="text-xs text-steel-gray leading-relaxed">
               Equipos de alta gama utilizados principalmente en el sector municipal y plantas de tratamiento industriales en México. Incorporan motores secos de alta eficiencia y la posibilidad de añadir camisas de enfriamiento internas para operar de manera continua incluso en cárcamos con niveles dinámicos bajos.
             </p>
@@ -90,12 +96,11 @@ import Layout from '../../layouts/Layout.astro';
           </div>
         </div>
 
-        <!-- Myers -->
         <div class="p-6 rounded-xl border border-slate-200 bg-white flex flex-col justify-between">
           <div>
             <h3 id="bomba-trituradora-myers" data-brand="Myers" class="text-lg font-bold text-slate-900 mb-2">
-			Myers (Pentair)
-			</h3>
+              Myers (Pentair)
+            </h3>
             <p class="text-xs text-steel-gray leading-relaxed">
               Bombas trituradoras de procedencia estadounidense con sólida reputación en desarrollos residenciales y comerciales medianos en el país. Utilizan sistemas de enfriamiento por baño de aceite dieléctrico tradicional y diseños de impulsores semiabiertos orientados a mantener presiones estables de descarga.
             </p>
@@ -106,12 +111,11 @@ import Layout from '../../layouts/Layout.astro';
           </div>
         </div>
 
-        <!-- Grundfos -->
         <div class="p-6 rounded-xl border border-slate-200 bg-white flex flex-col justify-between">
           <div>
             <h3 id="bomba-trituradora-grundfos" data-brand="Grundfos" class="text-lg font-bold text-slate-900 mb-2">
-			Grundfos (Serie SEG)
-			</h3>
+              Grundfos (Serie SEG)
+            </h3>
             <p class="text-xs text-steel-gray leading-relaxed">
               Línea danesa caracterizada por una alta eficiencia energética y sistemas de corte radial avanzado con ajuste milimétrico de holgura. Son excelentes para reducir el consumo eléctrico en instalaciones continuas y cuentan con un excelente torque de arranque gestionado por sus estatores optimizados.
             </p>
@@ -122,12 +126,11 @@ import Layout from '../../layouts/Layout.astro';
           </div>
         </div>
 
-        <!-- Altamira / Goulds -->
         <div class="p-6 rounded-xl border border-slate-200 bg-white flex flex-col justify-between">
           <div>
             <h3 id="bomba-trituradora-altamira-goulds" data-brand="Altamira-Goulds" class="text-lg font-bold text-slate-900 mb-2">
-			Altamira / Goulds Water Technology
-			</h3>
+              Altamira / Goulds Water Technology
+            </h3>
             <p class="text-xs text-steel-gray leading-relaxed">
               Altamira domina el segmento comercial ligero de bajo costo con la serie GRD, mientras que Goulds compite con ingeniería americana tradicional en las series 1GD. Son alternativas balanceadas para proyectos comerciales estándar que no enfrentan concentraciones severas de materiales elásticos.
             </p>
@@ -141,7 +144,6 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- CUADRO COMPARATIVO TÉCNICO -->
   <section id="matriz" class="py-16 bg-steel-light/50 border-y border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-12">
@@ -164,7 +166,6 @@ import Layout from '../../layouts/Layout.astro';
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-200 text-slate-700">
-            <!-- Rango Potencia -->
             <tr class="hover:bg-steel-light/30 transition-all">
               <td class="p-4 font-semibold text-slate-900">Rango de Potencia</td>
               <td class="p-4 bg-industrial-blue/5 font-bold text-industrial-dark">0.5 HP – 2.0 HP</td>
@@ -175,7 +176,6 @@ import Layout from '../../layouts/Layout.astro';
               <td class="p-4">1.0 HP – 7.5 HP</td>
               <td class="p-4">0.5 HP – 2.0 HP</td>
             </tr>
-            <!-- Materiales -->
             <tr class="hover:bg-steel-light/30 transition-all">
               <td class="p-4 font-semibold text-slate-900">Materiales de Fabricación</td>
               <td class="p-4 bg-industrial-blue/5">Hierro Fundido Clase 25/30</td>
@@ -186,7 +186,6 @@ import Layout from '../../layouts/Layout.astro';
               <td class="p-4">Hierro Fundido Estándar</td>
               <td class="p-4">Hierro Fundido Clase 30</td>
             </tr>
-            <!-- Pintura -->
             <tr class="hover:bg-steel-light/30 transition-all">
               <td class="p-4 font-semibold text-slate-900">Tipo de Pintura</td>
               <td class="p-4 bg-industrial-blue/5 text-industrial-blue font-medium">Epóxica Horneada Electrostática</td>
@@ -197,7 +196,6 @@ import Layout from '../../layouts/Layout.astro';
               <td class="p-4">Esmalte protector básico</td>
               <td class="p-4">Pintura Electrocoat (E-Coat)</td>
             </tr>
-            <!-- Motor contacto -->
             <tr class="hover:bg-steel-light/30 transition-all">
               <td class="p-4 font-semibold text-slate-900">Contacto Motor-Carcasa</td>
               <td class="p-4 bg-industrial-blue/5">Directo (Contacto total en cámara)</td>
@@ -208,7 +206,6 @@ import Layout from '../../layouts/Layout.astro';
               <td class="p-4">Separado de pared externa</td>
               <td class="p-4">Directo con cámara de aceite</td>
             </tr>
-            <!-- Aceite -->
             <tr class="hover:bg-steel-light/30 transition-all">
               <td class="p-4 font-semibold text-slate-900">¿Lleva Aceite en Motor?</td>
               <td class="p-4 bg-industrial-blue/5">Sí (Aceite Dieléctrico de Enfriamiento)</td>
@@ -219,7 +216,6 @@ import Layout from '../../layouts/Layout.astro';
               <td class="p-4">Sí (Aceite Dieléctrico)</td>
               <td class="p-4">Sí (Aceite Dieléctrico)</td>
             </tr>
-            <!-- Camisa -->
             <tr class="hover:bg-steel-light/30 transition-all">
               <td class="p-4 font-semibold text-slate-900">Camisa de Enfriamiento</td>
               <td class="p-4 bg-industrial-blue/5 text-slate-400">No requiere (Diseño sumergible)</td>
@@ -230,7 +226,6 @@ import Layout from '../../layouts/Layout.astro';
               <td class="p-4 text-slate-400">No</td>
               <td class="p-4 text-slate-400">No</td>
             </tr>
-            <!-- Aletas -->
             <tr class="hover:bg-steel-light/30 transition-all">
               <td class="p-4 font-semibold text-slate-900">Aletas de Enfriamiento</td>
               <td class="p-4 bg-industrial-blue/5 text-emerald-600 font-bold">No (Aplicaciones ligeras)</td>
@@ -241,7 +236,6 @@ import Layout from '../../layouts/Layout.astro';
               <td class="p-4 text-slate-400">No (Carcasa lisa)</td>
               <td class="p-4 text-slate-400">No (Carcasa lisa)</td>
             </tr>
-            <!-- Impulsor -->
             <tr class="hover:bg-steel-light/30 transition-all">
               <td class="p-4 font-semibold text-slate-900">Tipo de Impulsor</td>
               <td class="p-4 bg-industrial-blue/5">Vortex (Hytrel / Bronce opc.)</td>
@@ -252,7 +246,6 @@ import Layout from '../../layouts/Layout.astro';
               <td class="p-4">Vortex semi-abierto</td>
               <td class="p-4">Semi-abierto Hierro Fundido</td>
             </tr>
-            <!-- Sólidos -->
             <tr class="hover:bg-steel-light/30 transition-all">
               <td class="p-4 font-semibold text-slate-900">Capacidad de Sólidos Suspendidos</td>
               <td class="p-4 bg-industrial-blue/5">Slurry líquido homogéneo</td>
@@ -263,7 +256,6 @@ import Layout from '../../layouts/Layout.astro';
               <td class="p-4">Slurry con paso restringido</td>
               <td class="p-4">Slurry de trituración axial</td>
             </tr>
-            <!-- Cortes por minuto -->
             <tr class="hover:bg-steel-light/30 transition-all">
               <td class="p-4 font-semibold text-slate-900">Cortes por Minuto (CPM)</td>
               <td class="p-4 bg-industrial-blue/5 font-bold text-industrial-blue">>250,000 CPM</td>
@@ -274,7 +266,6 @@ import Layout from '../../layouts/Layout.astro';
               <td class="p-4">~60,000 - 80,000 CPM</td>
               <td class="p-4">~82,000 CPM</td>
             </tr>
-            <!-- Sentidos -->
             <tr class="hover:bg-steel-light/30 transition-all">
               <td class="p-4 font-semibold text-slate-900">Triturado Reversible (2 Sentidos)</td>
               <td class="p-4 bg-industrial-blue/5 text-slate-400">No (Giro estándar)</td>
@@ -285,7 +276,6 @@ import Layout from '../../layouts/Layout.astro';
               <td class="p-4 text-slate-400">No</td>
               <td class="p-4 text-slate-400">No</td>
             </tr>
-            <!-- Autoafilable -->
             <tr class="hover:bg-steel-light/30 transition-all">
               <td class="p-4 font-semibold text-slate-900">Cortador Auto-afilable</td>
               <td class="p-4 bg-industrial-blue/5 text-emerald-600 font-medium">Sí (Acción por cizallamiento plano)</td>
@@ -296,7 +286,6 @@ import Layout from '../../layouts/Layout.astro';
               <td class="p-4 text-amber-600">No (Desgaste rápido con sólidos)</td>
               <td class="p-4">Sí (Mecanismo de cizalla axial)</td>
             </tr>
-            <!-- Sensores -->
             <tr class="hover:bg-steel-light/30 transition-all">
               <td class="p-4 font-semibold text-slate-900">Sensores Integrados de Fábrica</td>
               <td class="p-4 bg-industrial-blue/5">Protección térmica devanado</td>
@@ -313,7 +302,6 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- ANÁLISIS DE CORTE AXIAL VS CORTE RADIAL -->
   <section id="tecnologia" class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
@@ -322,7 +310,6 @@ import Layout from '../../layouts/Layout.astro';
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <!-- Corte Axial (Zoeller) -->
         <div class="p-6 rounded-xl border border-slate-200 bg-steel-light/20">
           <div class="inline-block px-2 py-0.5 text-[10px] font-bold text-white bg-industrial-blue rounded uppercase mb-3">Diseño Geométrico Zoeller</div>
           <h3 class="text-xl font-bold text-slate-900 mb-4">Corte Axial (Plano Horizontal de Cizalla)</h3>
@@ -333,7 +320,7 @@ import Layout from '../../layouts/Layout.astro';
           <div class="space-y-3 text-xs text-steel-gray">
             <p><strong>Ventajas Técnicas:</strong></p>
             <ul class="list-disc pl-5 space-y-1">
-              <li><strong class="text-slate-900">Inmunidad al embobinamiento:</strong> Al no existir espacio entre la placa de corte y las cuchillas, hilos, cabellos y fibras textiles se pulverizan antes de enredarse.</li>
+              <li><strong class="text-slate-900">Inmunidad al embobinamiento:</strong> Al no existir espacio entre la placa de corte and las cuchillas, hilos, cabellos y fibras textiles se pulverizan antes de enredarse.</li>
               <li><strong class="text-slate-900">Efecto autoafilante continuo:</strong> El rozamiento controlado entre piezas mantiene los filos activos sin necesidad de intervenciones mecánicas externas.</li>
               <li><strong class="text-slate-900">Alta frecuencia por revolución:</strong> El diseño Tri-Slice® multiplica la cantidad de micro-cortes netos por cada giro del motor.</li>
             </ul>
@@ -342,7 +329,6 @@ import Layout from '../../layouts/Layout.astro';
           </div>
         </div>
 
-        <!-- Corte Radial -->
         <div class="p-6 rounded-xl border border-slate-200 bg-white">
           <div class="inline-block px-2 py-0.5 text-[10px] font-bold text-slate-500 bg-slate-100 rounded uppercase mb-3">Diseño Tradicional de Competencia</div>
           <h3 class="text-xl font-bold text-slate-900 mb-4">Corte Radial (Anillo Perimetral de Desbaste)</h3>
@@ -364,7 +350,6 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- MATRIZ DE MATERIALES PROCESABLES -->
   <section class="py-16 bg-steel-light/30 border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-12">
@@ -422,7 +407,6 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- INTEGRACIÓN DE CONTROL CON CURRENT COMMAND -->
   <section class="py-16 bg-slate-900 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-gradient-to-r from-industrial-dark to-industrial-blue rounded-2xl p-8 md:p-12 shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -448,39 +432,4 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </div>
   </section>
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Zoeller vs Competidores: Comparativa de Bombas Trituradoras en México",
-    "description": "Análisis técnico avanzado de rendimiento, materiales y sistemas de corte entre las series Zoeller Shark y HD frente a Barmesa, Flygt, Myers, Grundfos, Altamira y Goulds.",
-    "inLanguage": "es-MX",
-    "datePublished": "2026-06-03",
-    "author": {
-      "@type": "WebSite",
-      "name": "Current Command",
-      "url": "https://currentcommand.com"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "Bombas Trituradoras",
-        "description": "Sistemas de bombeo industrial con mecanismos de corte axial para aguas negras."
-      },
-      {
-        "@type": "Brand",
-        "name": "Zoeller"
-      }
-    ],
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://currentcommand.com/comparativa-bombas-grinder"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "SIBI Soluciones Integrales en Bombeo Inteligente",
-      "url": "https://sibi.mx"
-    }
-  }
-</script>
 </Layout>
