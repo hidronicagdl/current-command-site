@@ -1,0 +1,40 @@
+---
+// src/components/FaqSection.astro
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  faqs: FAQItem[];
+}
+
+const { faqs } = Astro.props;
+
+// Si el artículo actual no tiene FAQs declaradas en el markdown, el componente no renderiza nada
+if (!faqs || faqs.length === 0) return null;
+---
+
+<section class="my-12 border-t border-gray-200 pt-8">
+  <h2 class="text-2xl font-bold text-slate-900 mb-6 tracking-tight">
+    Preguntas Frecuentes sobre Ingeniería de Bombeo
+  </h2>
+  
+  <div class="space-y-4">
+    {faqs.map((faq) => (
+      <details class="group bg-slate-50 rounded-lg p-5 border border-slate-200 [&_summary::-webkit-details-marker]:hidden transition-all duration-300 open:bg-white open:shadow-sm">
+        <summary class="flex justify-between items-center font-bold text-slate-800 cursor-pointer list-none select-none text-base md:text-lg">
+          <span>{faq.question}</span>
+          <span class="ml-4 flex-shrink-0 text-slate-400 transition-transform duration-300 group-open:rotate-180">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </summary>
+        <p class="mt-3 text-gray-600 leading-relaxed text-sm md:text-base font-normal">
+          {faq.answer}
+        </p>
+      </details>
+    ))}
+  </div>
+</section>

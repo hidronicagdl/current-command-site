@@ -2,6 +2,13 @@
 // src/pages/blog/[slug].astro
 import { getCollection, render } from 'astro:content'; 
 import Layout from '../../layouts/Layout.astro';
+import FaqSection from '../../components/FaqSection.astro'; // 1. Importar el nuevo componente
+
+
+
+
+
+
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog');
@@ -17,6 +24,7 @@ const { Content } = await render(entry);
 // ESTRATEGIA SEO CRÍTICA: Romper la duplicación exacta de Meta Title y H1
 const seoTitle = entry.data.metaTitle || `${entry.data.title} | CurrentCommand`;
 
+
 // CONSTRUCCIÓN DEL OBJETO SCHEMA JSON-LD PARA OPTIMIZACIÓN GENERATIVA (GEO)
 // Determinamos la URL absoluta de forma dinámica para consolidar la entidad web
 const canonicalURL = new URL(Astro.url.pathname, 'https://currentcommand.com');
@@ -27,11 +35,29 @@ const jsonLd = {
   "headline": entry.data.title,
   "description": entry.data.description,
   "datePublished": entry.data.pubDate,
+
+
   "author": {
     "@type": "Person",
     "name": entry.data.author || "José Aguilar",
-    "url": "https://currentcommand.com"
+    "jobTitle": "Vendedor y Gerente de Nuevas Tecnologías",
+    "url": "https://currentcommand.com",
+    
+    // El puente de confianza: Relación con la empresa real
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Soluciones Integrales en Bombeo Inteligente (SIBI)",
+      "url": "https://sibi.mx"
+    },
+    
+    // El núcleo del Gráfico de Conocimiento: Tus canales de autoridad
+    "sameAs": [
+      "https://www.linkedin.com/in/jose-gpe-aguilar",
+      "https://www.youtube.com/@JoseAguilar-bombas",
+	  "https://www.youtube.com/@sibigdl"
+    ]
   },
+  
   "publisher": {
     "@type": "Organization",
     "name": "CurrentCommand",
@@ -41,13 +67,41 @@ const jsonLd = {
     "@type": "WebPage",
     "@id": canonicalURL.href
   },
-  "inLanguage": "es-MX"
+  "inLanguage": "es-MX",
+  // Inyección dinámica de entidades para que los LLMs (Gemini, Perplexity) entiendan el contexto exacto
+  "about": [
+    ...(entry.data.brandEntity ? [{ "@type": "Brand", "name": entry.data.brandEntity }] : []),
+    ...(entry.data.geoEntities ? entry.data.geoEntities.map((entidad: string) => ({ "@type": "Thing", "name": entidad })) : [])
+  ]  
 };
+
+// 2. CONSTRUCCIÓN AUTOMATIZADA DEL SCHEMA FAQPAGE PARA ROBOTS DE IA
+let faqJsonLd = null;
+if (entry.data.faqs && entry.data.faqs.length > 0) {
+  faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": entry.data.faqs.map((faq: any) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+}
+// LÍNEA DE MONITOREO INDUSTRIAL: Ver los datos crudos en la consola de tu computadora
+console.log("Campos detectados por Astro en este post:", Object.keys(entry.data));
 ---
 
 <Layout title={seoTitle} description={entry.data.description}>
   {/* INYECCIÓN DE DATOS ESTRUCTURADOS: Uso de set:html e is:inline para evitar escapes de caracteres en el build */}
-  <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(jsonLd)} />
+
+{faqJsonLd && (
+    <script type="application/ld+json" slot="head" set:html={JSON.stringify(faqJsonLd)} />
+  )}
 
   <main class="max-w-4xl mx-auto px-6 py-12 md:py-16">
     <article class="text-steel-gray">
@@ -64,6 +118,8 @@ const jsonLd = {
       <div class="markdown-content">
         <Content />
       </div>
+	  
+	  <FaqSection faqs={entry.data.faqs} />
 
     </article>
   </main>

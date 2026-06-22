@@ -1,15 +1,71 @@
 ---
 // src/pages/comparativa-bombas-grinder.astro
-// Integración nativa con el sistema de diseño de currentcommand.com
 import Layout from '../../layouts/Layout.astro';
-import Schema from '../../components/Schema.astro';
+import FaqSection from '../../components/FaqSection.astro'; // Importamos tu componente de acordeones
 
-// Matriz de Datos Estructurados para la Automatización SEO y GEO
-const schemaData = {
-  name: "Zoeller vs Competidores: Comparativa de Bombas Trituradoras en México",
-  description: "Análisis técnico avanzado de rendimiento, materiales y sistemas de corte entre las series Zoeller Shark y HD frente a Barmesa, Flygt, Myers, Grundfos, Altamira y Goulds.",
-  brand: "Zoeller",
-  image: "https://currentcommand.com/images/default-product.png"
+// 1. DETERMINACIÓN DE ENTIDADES Y CANONICAL PARA ROBOTS
+const canonicalURL = new URL(Astro.url.pathname, 'https://currentcommand.com');
+
+// 2. CONSTRUCCIÓN DEL GRAFO COMPLETO DE ENTIDADES (GEO / E-E-A-T)
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Review // ProductCollection",
+      "@id": `${canonicalURL.href}#comparison`,
+      "name": "Zoeller vs Competidores: Comparativa de Bombas Trituradoras en México",
+      "description": "Análisis técnico avanzado de rendimiento, materiales y sistemas de corte entre las series Zoeller Shark y HD frente a Barmesa, Flygt, Myers, Grundfos, Altamira y Goulds.",
+      "image": "https://currentcommand.com/images/default-product.png",
+      "url": canonicalURL.href,
+      // Conectamos formalmente al experto que respalda la comparativa
+      "author": {
+        "@type": "Person",
+        "name": "José Aguilar",
+        "jobTitle": "Vendedor y Gerente de Nuevas Tecnologías",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Soluciones Integrales en Bombeo Inteligente (SIBI)",
+          "url": "https://sibi.mx"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/jose-gpe-aguilar",
+          "https://www.youtube.com/@JoseAguilar-bombas",
+          "https://www.youtube.com/@sibigdl"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CurrentCommand",
+        "url": "https://currentcommand.com"
+      }
+    }
+  ]
+};
+
+// 3. BLOQUE DE PREGUNTAS FRECUENTES BASADO EN LAS DUDAS COMERCIALES EN MÉXICO
+const pageFaqs = [
+  {
+    question: "¿Cuál es la diferencia crítica entre el corte axial de Zoeller Shark y el corte radial de competidores como Barmesa o Myers?",
+    answer: "El sistema axial de Zoeller ejecuta un cizallamiento plano horizontal directamente en la succión que pulveriza textiles y látex antes de tocar el impulsor, eliminando el fenómeno de embobinamiento (roping). Los sistemas radiales desbastan de forma perimetral lateral, lo que eleva el riesgo de atascos ante altas concentraciones de fibras elásticas."
+  },
+  {
+    question: "¿Por qué las bombas trituradoras de la serie Zoeller HD tienen mayor durabilidad térmica en cárcamos severos?",
+    answer: "A diferencia de las carcasas lisas tradicionales del mercado, la serie Zoeller HD incorpora aletas térmicas integradas en su cuerpo de hierro fundido Clase 30. Esto maximiza el contacto con el fluido interno y el aceite dieléctrico, disipando el calor de los devanados del estator de manera continua incluso operando en niveles dinámicos bajos."
+  }
+];
+
+// 4. SCHEMA FAQPAGE INTEGRADO
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": pageFaqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
 };
 ---
 

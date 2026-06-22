@@ -58,6 +58,9 @@ const { title, description } = Astro.props;
 	
 	{/* Título Dinámico de la Página */}
 	<title>{title}</title>
+	
+	<slot name="head" />
+	
 	</head>
 	
 	
