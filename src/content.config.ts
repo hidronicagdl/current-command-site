@@ -2,10 +2,7 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
-// Monitor de compilación en caliente para la consola de Windows
-console.log("=================================================");
-console.log("🔥 ¡ALERTA OPERATIVA: EL ESQUEMA DE DATA DE ASTRO V6 HA SIDO ACTUALIZADO! 🔥");
-console.log("=================================================");
+
 
 const blog = defineCollection({
   // Cargador profundo recursivo nativo para tu versión de Astro

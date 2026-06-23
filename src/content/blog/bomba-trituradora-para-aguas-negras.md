@@ -2,6 +2,7 @@
 title: "Guía de Selección de Bomba Trituradora para Aguas Negras en Desarrollos Comerciales"
 description: "Criterios de ingeniería hidráulica para el dimensionamiento, cálculo de CDT y selección semántica de bombas trituradoras axiales Zoeller Shark frente al mercado mexicano."
 pubDate: "2026-06-03"
+dateModified: "2026-06-22"
 author: "José Aguilar"
 brandEntity: "Zoeller"
 tags:

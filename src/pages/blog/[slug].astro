@@ -35,6 +35,7 @@ const jsonLd = {
   "headline": entry.data.title,
   "description": entry.data.description,
   "datePublished": entry.data.pubDate,
+  "dateModified": entry.data.dateModified || entry.data.pubDate,
 
 
   "author": {
