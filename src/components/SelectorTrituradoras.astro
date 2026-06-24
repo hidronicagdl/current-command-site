@@ -1,0 +1,850 @@
+---
+import bombasData from '../data/bombas.json';
+---
+
+<div class="selector-container">
+  <div class="selector-grid">
+    
+    <div class="card-panel input-panel">
+      <h2 class="panel-title">1. Conteo de Muebles Sanitarios</h2>
+      <p class="panel-subtitle">Indica la cantidad de piezas que descargarán en el cárcamo de bombeo:</p>
+      
+      <div class="fixtures-grid">
+        <div class="fixture-card">
+          <div class="fixture-info">
+            <svg class="fixture-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 2h10v4H7z"></path>
+              <path d="M5 6h14v4H5z"></path>
+              <path d="M6 10v6a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4v-6"></path>
+              <path d="M9 20v2"></path>
+              <path d="M15 20v2"></path>
+            </svg>
+            <label for="f-toilets">Inodoros / WC</label>
+          </div>
+          <input type="number" id="f-toilets" min="0" value="0" class="input-counter" />
+        </div>
+
+        <div class="fixture-card">
+          <div class="fixture-info">
+            <svg class="fixture-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v4M12 6a3 3 0 0 0-3 3h6a3 3 0 0 0-3-3z"></path>
+              <path d="M4 11h16a1 1 0 0 1 1 1v2a6 6 0 0 1-6 6H9a6 6 0 0 1-6-6v-2a1 1 0 0 1 1-1z"></path>
+            </svg>
+            <label for="f-sinks">Lavamanos / Lavabos</label>
+          </div>
+          <input type="number" id="f-sinks" min="0" value="0" class="input-counter" />
+        </div>
+
+        <div class="fixture-card">
+          <div class="fixture-info">
+            <svg class="fixture-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h6v2H4zM7 6v14"></path>
+              <path d="M17 6a4 4 0 0 1 4 4v1a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1v-1a4 4 0 0 1 4-4z"></path>
+              <path d="M15 15v1M17 15v2M19 15v1M21 15v2"></path>
+            </svg>
+            <label for="f-showers">Regaderas / Tinas</label>
+          </div>
+          <input type="number" id="f-showers" min="0" value="0" class="input-counter" />
+        </div>
+
+        <div class="fixture-card">
+          <div class="fixture-info">
+            <svg class="fixture-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 8h20v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8z"></path>
+              <path d="M6 8V4h3a2 2 0 0 1 2 2v2"></path>
+              <path d="M2 13h20"></path>
+            </svg>
+            <label for="f-kitchens">Fregaderos de Cocina</label>
+          </div>
+          <input type="number" id="f-kitchens" min="0" value="0" class="input-counter" />
+        </div>
+
+        <div class="fixture-card">
+          <div class="fixture-info">
+            <svg class="fixture-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+              <circle cx="12" cy="13" r="4"></circle>
+              <path d="M8 6h2"></path>
+            </svg>
+            <label for="f-washers">Lavadoras de Ropa</label>
+          </div>
+          <input type="number" id="f-washers" min="0" value="0" class="input-counter" />
+        </div>
+      </div>
+
+      <h2 class="panel-title" style="margin-top: 35px;">2. Trayectoria de la Tubería</h2>
+      <p class="panel-subtitle">Valores en metros. Diámetro fijo calculado para PVC C-40 de 1 1/4".</p>
+      
+      <div class="pipe-inputs-grid">
+        <div class="form-field">
+          <label for="p-height-m">Altura Vertical Máxima (Metros)</label>
+          <input type="number" id="p-height-m" min="0" value="0" step="0.1" class="input-text" placeholder="Ej. 4.5" />
+          <span class="field-help">Distancia neta desde el fondo del cárcamo al desahogo.</span>
+        </div>
+        <div class="form-field">
+          <label for="p-length-m">Distancia Horizontal Total (Metros)</label>
+          <input type="number" id="p-length-m" min="0" value="0" step="0.1" class="input-text" placeholder="Ej. 25.0" />
+          <span class="field-help">Desarrollo lineal completo de la tubería.</span>
+        </div>
+        <div class="form-field">
+          <label for="p-elbows">Cantidad de Codos de 90°</label>
+          <input type="number" id="p-elbows" min="0" value="0" class="input-text" placeholder="0" />
+          <span class="field-help">Cambios de dirección instalados en la trayectoria.</span>
+        </div>
+      </div>
+
+      <button type="button" id="btn-calculate" class="btn-submit">
+        Calcular Selección Hidráulica
+      </button>
+    </div>
+
+    <div class="card-panel output-panel" id="printable-report-zone">
+      
+      <div id="results-placeholder" class="placeholder-state">
+        <div class="placeholder-icon">📊</div>
+        <h3>Panel de Diagnóstico Vacante</h3>
+        <p>Configura las variables técnicas y de consumo en el panel de la izquierda para desplegar la recomendación definitiva de SIBI.</p>
+      </div>
+
+      <div id="no-selection-error" class="error-state" style="display: none;">
+        <h3 class="error-title">⚠️ Requerimientos Fuera de Rango</h3>
+        <p>Las cargas dinámicas de fricción o el volumen punta exceden las capacidades seguras para un sistema presurizado en diámetro de 1 1/4". Solicita asistencia para un diseño a gran escala con nuestro departamento de ingeniería en SIBI.</p>
+      </div>
+
+      <div id="selection-success" style="display: none;">
+        
+        <div class="report-header">
+          <span class="badge-success">Selección Certificada</span>
+          <h3 class="model-title">Bomba Zoeller Serie <span id="r-model"></span></h3>
+          <p class="company-tag">Diseño Consultivo por Soluciones Integrales en Bombeo Inteligente SIBI</p>
+        </div>
+
+        <div class="commercial-pricing-card">
+          <div class="price-label">Inversión Especial Autorizada:</div>
+          <div id="r-cost" class="price-amount"></div>
+          <div class="price-conditions">* Precio Neto expresado en MXN. Facturado con IVA Incluido. Descuento corporativo aplicado sobre precio de lista.</div>
+        </div>
+
+        <div class="specs-dashboard">
+          <div class="spec-tile">
+            <span class="tile-label">Potencia Nominal</span>
+            <span id="r-hp" class="tile-value">--</span>
+          </div>
+          <div class="spec-tile">
+            <span class="tile-label">Mecanismo Impulsor</span>
+            <span id="r-type" class="tile-value">--</span>
+          </div>
+          <div class="spec-tile">
+            <span class="tile-label">Diámetro de Descarga</span>
+            <span class="tile-value">1.25" NPT</span>
+          </div>
+          <div class="spec-tile">
+            <span class="tile-label">Corte Reversible</span>
+            <span id="r-reversible" class="tile-value">--</span>
+          </div>
+        </div>
+
+        <div class="chart-box" style="margin-bottom: 25px;">
+          <h4 class="section-subtitle">Curva de Rendimiento Hidráulico Hidrodinámico</h4>
+          <div class="canvas-wrapper" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px; position: relative;">
+            <canvas id="pumpCurveCanvas" width="500" height="260" style="width: 100%; height: auto; display: block;"></canvas>
+          </div>
+        </div>
+
+        <div class="calculation-report">
+          <h4 class="section-subtitle">Memoria Técnica Justificativa</h4>
+          
+          <p class="report-paragraph">
+            <strong>Dinámica de Caudal (Q):</strong> Evaluando el perfil simultáneo de los muebles indicados, se determina un flujo punta de <strong><span id="rep-q-theo"></span> GPM</strong>. <span id="rep-self-cleaning-note"></span> El flujo definitivo de diseño se establece en <strong><span id="rep-q-design"></span> GPM</strong>.
+          </p>
+
+          <p class="report-paragraph">
+            <strong>Cálculo de Carga Dinámica Total (CDT):</strong> Para el análisis de rozamiento forzado se emplea la ecuación de <em>Hazen-Williams</em> para tuberías plásticas lisas (C=150) con un diámetro interno real de 1.380":
+          </p>
+          
+          <ul class="report-list">
+            <li>Altura geométrica vertical: <span id="rep-h-static-m"></span> m (<span id="rep-h-static-ft"></span> ft equiv).</li>
+            <li>Longitud lineal física: <span id="rep-l-physical-m"></span> m (<span id="rep-l-physical-ft"></span> ft equiv).</li>
+            <li>Adición virtual por accesorios: <span id="rep-l-equiv-ft"></span> ft (<span id="rep-valves-desc"></span> codos a 3.5 ft + 11.5 ft por válvula check).</li>
+            <li>Longitud total equivalente de diseño: <span id="rep-l-total-ft"></span> ft.</li>
+            <li>Pérdidas totales por fricción en línea: <span id="rep-h-friction-ft"></span> ft de columna de agua.</li>
+            <li><strong>Carga Dinámica Total de diseño requerida: <span id="rep-h-tdh-ft"></span> ft de columna de agua.</strong></li>
+          </ul>
+
+          <p class="report-paragraph" style="margin-bottom: 0;">
+            <strong>Validación Analítica:</strong> Al cruzar el requerimiento con la ecuación polinomial del modelo Zoeller Serie <span id="rep-eval-model"></span>, el equipo genera una carga disponible de <strong><span id="rep-pump-head"></span> ft</strong> al flujo de operación de <span id="rep-eval-q"></span> GPM, consolidando un margen de holgura técnica de <span id="rep-safety-margin"></span> ft. <span id="rep-justification-reason"></span>
+          </p>
+        </div>
+
+        <div class="sibi-footer-branding">
+          <strong>Soluciones Integrales en Bombeo Inteligente (SIBI)</strong><br />
+          Especialistas en Automatización Hidráulica y Pumping Systems de Alta Eficiencia<br />
+          Contacto: <a href="mailto:jgaguilar@sibi.mx">jgaguilar@sibi.mx</a> | Soporte Técnico Autorizado
+        </div>
+
+        <button type="button" onclick="window.print()" class="btn-print">
+          Imprimir Propuesta Económica
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  .selector-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .selector-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 25px;
+  }
+  .card-panel {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card-panel:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  }
+  .panel-title {
+    margin: 0 0 6px 0;
+    font-size: 1.4rem;
+    color: #1e293b;
+    font-weight: 700;
+  }
+  .panel-subtitle {
+    margin: 0 0 20px 0;
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.4;
+  }
+  
+  .fixtures-grid {
+    display: grid;
+    gap: 12px;
+  }
+  .fixture-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+  .fixture-card:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+    transform: translateX(3px);
+  }
+  .fixture-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #334155;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .fixture-icon {
+    width: 22px;
+    height: 22px;
+    color: #475569;
+  }
+  .fixture-card:hover .fixture-icon {
+    color: #2e7d32;
+  }
+  
+  .input-counter {
+    width: 70px;
+    padding: 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #1e293b;
+    outline: none;
+    transition: all 0.15s ease;
+  }
+  .input-counter:focus, .input-text:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+    background: #ffffff;
+  }
+
+  .pipe-inputs-grid {
+    display: grid;
+    gap: 16px;
+  }
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .form-field label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
+  }
+  .input-text {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    outline: none;
+    background: #f8fafc;
+    transition: all 0.15s ease;
+  }
+  .field-help {
+    font-size: 0.78rem;
+    color: #94a3b8;
+  }
+
+  .btn-submit {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    background: #2e7d32;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(46, 125, 50, 0.2);
+    transition: all 0.2s ease;
+  }
+  .btn-submit:hover {
+    background: #1b5e20;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(46, 125, 50, 0.3);
+  }
+
+  .placeholder-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: #64748b;
+  }
+  .placeholder-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+  .placeholder-state h3 {
+    margin: 0 0 8px 0;
+    color: #334155;
+    font-size: 1.25rem;
+  }
+  .placeholder-state p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .error-state {
+    background: #fff5f5;
+    border-left: 4px solid #e53e3e;
+    padding: 20px;
+    border-radius: 6px;
+  }
+  .error-title {
+    margin: 0 0 6px 0;
+    color: #c53030;
+    font-size: 1.1rem;
+  }
+
+  .badge-success {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  .model-title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #0f172a;
+    font-weight: 800;
+  }
+  .company-tag {
+    margin: 4px 0 0 0;
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 600;
+  }
+
+  .commercial-pricing-card {
+    background: linear-gradient(135deg, #f4f9f4 0%, #e8f5e9 100%);
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 18px;
+    margin: 20px 0;
+  }
+  .price-label {
+    font-size: 0.85rem;
+    color: #43a047;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .price-amount {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #1b5e20;
+    margin: 2px 0 8px 0;
+  }
+  .price-conditions {
+    font-size: 0.75rem;
+    color: #2e7d32;
+    line-height: 1.4;
+  }
+
+  .specs-dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+  .spec-tile {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .tile-label {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .tile-value {
+    font-size: 0.95rem;
+    color: #0f172a;
+    font-weight: 700;
+  }
+
+  .calculation-report {
+    border-top: 1px dashed #cbd5e1;
+    padding-top: 20px;
+  }
+  .section-subtitle {
+    margin: 0 0 12px 0;
+    font-size: 0.85rem;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+  .report-paragraph {
+    font-size: 0.9rem;
+    color: #334155;
+    line-height: 1.5;
+    margin: 0 0 12px 0;
+  }
+  .report-list {
+    font-size: 0.85rem;
+    color: #475569;
+    line-height: 1.6;
+    padding-left: 20px;
+    margin: 0 0 15px 0;
+  }
+
+  .sibi-footer-branding {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 15px;
+    margin-top: 25px;
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.4;
+  }
+  .sibi-footer-branding a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .btn-print {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    color: #334155;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .btn-print:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+    color: #0f172a;
+  }
+
+/* ==========================================================================
+     REGLAS DE IMPRESIÓN LIMPIA Y PROPUESTA ECONÓMICA (FASE 3 - CORREGIDA)
+     ========================================================================== */
+  @media print {
+    /* 1. Desaparecer por completo elementos web globales para que ocupen CERO espacio */
+    header, footer, nav, .input-panel, .btn-print, #results-placeholder,
+    .site-header, .site-footer, #global-header, #global-footer {
+      display: none !important;
+    }
+    
+    /* 2. Romper la malla de dos columnas y forzar ancho completo */
+    .selector-grid {
+      display: block !important;
+      width: 100% !important;
+    }
+    
+    .card-panel.output-panel {
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      width: 100% !important;
+      background: #ffffff !important;
+    }
+    
+    /* 3. Control estricto de saltos de página (Evita que los bloques se corten a la mitad) */
+    .report-header, 
+    .commercial-pricing-card, 
+    .specs-dashboard, 
+    .chart-box, 
+    .calculation-report, 
+    .sibi-footer-branding {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+      margin-bottom: 20px !important;
+    }
+
+    /* 4. Ajustar el tamaño del gráfico para que quepa perfectamente en una hoja Carta/A4 */
+    #pumpCurveCanvas {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+    
+    /* 5. Forzar la renderización de colores e identidad corporativa en el PDF/Impresora */
+    body {
+      background: #ffffff !important;
+      color: #000000 !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+  }
+
+</style>
+
+<script define:vars={{ bombasData }}>
+  window.BOMBAS_CATALOG = bombasData;
+</script>
+
+<script>
+  const VALORES_GPM_MUEBLE = { toilets: 2.5, sinks: 0.5, showers: 1.5, kitchens: 1.5, washers: 2.0 };
+  const FLUX_MIN_AUTOLIMPIEZA = 9.5; 
+  const CODO_EQUIV_LENGTH = 3.5;    
+  const CHECK_EQUIV_LENGTH = 11.5;  
+  const PVC_C_COEFF = 150;           
+  const INNER_DIAMETER = 1.380;     
+  const METROS_A_PIES = 3.28084;
+  const TOLERANCIA_HIDRAULICA = 0.95;
+
+  const placeholder = document.getElementById('results-placeholder');
+  const errorDiv = document.getElementById('no-selection-error');
+  const successDiv = document.getElementById('selection-success');
+
+  // FUNCIÓN PARA EL TRAZADO GRÁFICO DINÁMICO (PUNTO 9)
+  function drawPumpCurveChart(bomba, qOperacion, hRequerida) {
+    const canvas = document.getElementById('pumpCurveCanvas') as HTMLCanvasElement;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    // Dimensiones internas de dibujo
+    const w = canvas.width;
+    const h = canvas.height;
+    ctx.clearRect(0, 0, w, h);
+
+    const paddingLeft = 50;
+    const paddingBottom = 40;
+    const paddingTop = 20;
+    const paddingRight = 20;
+
+    const graphWidth = w - paddingLeft - paddingRight;
+    const graphHeight = h - paddingTop - paddingBottom;
+
+    // Escalamiento inteligente basado en las capacidades de la bomba
+    const maxQ = bomba.qMax * 1.15;
+    const maxH = bomba.coeficientes.c * 1.15; // El término c representa la carga a flujo cero (Shut-off)
+
+    // Funciones de mapeo de coordenadas matemáticas a píxeles
+    const mapX = (q) => paddingLeft + (q / maxQ) * graphWidth;
+    const mapY = (head) => (paddingTop + graphHeight) - (head / maxH) * graphHeight;
+
+    // 1. Dibujar la cuadrícula de fondo (Gridlines)
+    ctx.strokeStyle = '#f1f5f9';
+    ctx.lineWidth = 1;
+    
+    for (let i = 1; i <= 5; i++) {
+      // Líneas verticales (Flujo)
+      const qVal = (maxQ / 5) * i;
+      ctx.beginPath();
+      ctx.moveTo(mapX(qVal), paddingTop);
+      ctx.lineTo(mapX(qVal), paddingTop + graphHeight);
+      ctx.stroke();
+
+      // Líneas horizontales (Presión)
+      const hVal = (maxH / 5) * i;
+      ctx.beginPath();
+      ctx.moveTo(paddingLeft, mapY(hVal));
+      ctx.lineTo(paddingLeft + graphWidth, mapY(hVal));
+      ctx.stroke();
+    }
+
+    // 2. Dibujar Ejes principales
+    ctx.strokeStyle = '#475569';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(paddingLeft, paddingTop);
+    ctx.lineTo(paddingLeft, paddingTop + graphHeight);
+    ctx.lineTo(paddingLeft + graphWidth, paddingTop + graphHeight);
+    ctx.stroke();
+
+    // Labels de los Ejes
+    ctx.fillStyle = '#64748b';
+    ctx.font = '10px sans-serif';
+    ctx.textAlign = 'center';
+    
+    // Eje X (GPM)
+    for (let i = 0; i <= 5; i++) {
+      const qVal = (maxQ / 5) * i;
+      ctx.fillText(qVal.toFixed(0), mapX(qVal), paddingTop + graphHeight + 15);
+    }
+    ctx.fillText('Caudal (GPM)', paddingLeft + graphWidth / 2, paddingTop + graphHeight + 32);
+
+    // Eje Y (Pies)
+    ctx.textAlign = 'right';
+    ctx.textBaseline = 'middle';
+    for (let i = 0; i <= 5; i++) {
+      const hVal = (maxH / 5) * i;
+      ctx.fillText(hVal.toFixed(0), paddingLeft - 8, mapY(hVal));
+    }
+    
+    // Etiqueta vertical rotada para el eje Y
+    ctx.save();
+    ctx.translate(15, paddingTop + graphHeight / 2);
+    ctx.rotate(-Math.PI / 2);
+    ctx.textAlign = 'center';
+    ctx.fillText('Carga Dinámica Total (Pies H2O)', 0, 0);
+    ctx.restore();
+
+    // 3. Trazar la Curva Parabólica de Rendimiento de Zoeller
+    ctx.strokeStyle = '#2e7d32'; // Verde SIBI
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+
+    let firstPoint = true;
+    const pasos = 30;
+    for (let i = 0; i <= pasos; i++) {
+      const q = (bomba.qMax / pasos) * i;
+      if (q < bomba.qMin) continue;
+      const head = (bomba.coeficientes.a * Math.pow(q, 2)) + (bomba.coeficientes.b * q) + bomba.coeficientes.c;
+      
+      if (firstPoint) {
+        ctx.moveTo(mapX(q), mapY(head));
+        firstPoint = false;
+      } else {
+        ctx.lineTo(mapX(q), mapY(head));
+      }
+    }
+    ctx.stroke();
+
+    // 4. Dibujar el Punto de Trabajo Requerido (Target Crosshair)
+    const ptX = mapX(qOperacion);
+    const ptY = mapY(hRequerida);
+
+    // Líneas guías del punto de operación (Dashed Lines)
+    ctx.strokeStyle = '#ef4444'; // Rojo Objetivo
+    ctx.lineWidth = 1;
+    ctx.setLineDash([4, 4]);
+    
+    ctx.beginPath();
+    ctx.moveTo(paddingLeft, ptY);
+    ctx.lineTo(ptX, ptY);
+    ctx.lineTo(ptX, paddingTop + graphHeight);
+    ctx.stroke();
+    ctx.setLineDash([]); // Resetear patrón continuo
+
+    // Círculo del Punto de Trabajo
+    ctx.fillStyle = '#ef4444';
+    ctx.beginPath();
+    ctx.circle ? ctx.arc(ptX, ptY, 6, 0, 2 * Math.PI) : ctx.arc(ptX, ptY, 6, 0, 2 * Math.PI);
+    ctx.fill();
+    
+    // Contorno blanco para contraste
+    ctx.strokeStyle = '#ffffff';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+  }
+
+  document.getElementById('btn-calculate')?.addEventListener('click', () => {
+    const getInputValue = (id) => {
+      const el = document.getElementById(id);
+      return el ? parseInt((el as HTMLInputElement).value) || 0 : 0;
+    };
+    const getInputFloat = (id) => {
+      const el = document.getElementById(id);
+      return el ? parseFloat((el as HTMLInputElement).value) || 0 : 0;
+    };
+
+    const nToilets = getInputValue('f-toilets');
+    const nSinks = getInputValue('f-sinks');
+    const nShowers = getInputValue('f-showers');
+    const nKitchens = getInputValue('f-kitchens');
+    const nWashers = getInputValue('f-washers');
+
+    let qTeorico = (nToilets * VALORES_GPM_MUEBLE.toilets) +
+                    (nSinks * VALORES_GPM_MUEBLE.sinks) +
+                    (nShowers * VALORES_GPM_MUEBLE.showers) +
+                    (nKitchens * VALORES_GPM_MUEBLE.kitchens) +
+                    (nWashers * VALORES_GPM_MUEBLE.washers);
+    
+    if (qTeorico === 0) qTeorico = 0;
+
+    let qDiseno = qTeorico;
+    let aplicoCandadoLimpieza = false;
+
+    if (qTeorico > 0 && qTeorico < FLUX_MIN_AUTOLIMPIEZA) {
+      qDiseno = FLUX_MIN_AUTOLIMPIEZA;
+      aplicoCandadoLimpieza = true;
+    }
+
+    const hEstaticaM = getInputFloat('p-height-m');
+    const lFisicaM = getInputFloat('p-length-m');
+    const nCodos = getInputValue('p-elbows');
+
+    const hEstaticaFt = hEstaticaM * METROS_A_PIES;
+    const lFisicaFt = lFisicaM * METROS_A_PIES;
+
+    const lEquivalenteConexiones = (nCodos * CODO_EQUIV_LENGTH) + CHECK_EQUIV_LENGTH;
+    const lTotalDisenoFt = lFisicaFt + hEstaticaFt + lEquivalenteConexiones;
+
+    let hFriccionFt = 0;
+    if (qDiseno > 0 && lTotalDisenoFt > 0) {
+      hFriccionFt = (10.44 * lTotalDisenoFt * Math.pow(qDiseno, 1.852)) / 
+                   (Math.pow(PVC_C_COEFF, 1.852) * Math.pow(INNER_DIAMETER, 4.8655));
+    }
+    
+    const cdtRequeridaFt = hEstaticaFt + hFriccionFt;
+
+    const candidatos = [];
+    const catalogo = window['BOMBAS_CATALOG'] || [];
+
+    for (const bomba of catalogo) {
+      if (qDiseno >= bomba.qMin && qDiseno <= bomba.qMax) {
+        const a = bomba.coeficientes.a;
+        const b = bomba.coeficientes.b;
+        const c = bomba.coeficientes.c;
+        const hBombaDisponible = (a * Math.pow(qDiseno, 2)) + (b * qDiseno) + c;
+
+        if (hBombaDisponible >= (cdtRequeridaFt * TOLERANCIA_HIDRAULICA)) {
+          candidatos.push({
+            ...bomba,
+            hDisponible: hBombaDisponible,
+            margenSeguridad: hBombaDisponible - cdtRequeridaFt
+          });
+        }
+      }
+    }
+
+    if (placeholder) placeholder.style.display = 'none';
+
+    if (candidatos.length === 0) {
+      if (errorDiv) errorDiv.style.display = 'block';
+      if (successDiv) successDiv.style.display = 'none';
+      return;
+    }
+
+    if (errorDiv) errorDiv.style.display = 'none';
+    if (successDiv) successDiv.style.display = 'block';
+
+    candidatos.sort((bA, bB) => {
+      if (bA.costo !== bB.costo) return bA.costo - bB.costo;
+      return bB.reversible ? 1 : -1; 
+    });
+
+    const ganadora = candidatos[0];
+    const precioFinalReal = ganadora.costo * 0.725;
+
+    const setSecText = (id, text) => {
+      const el = document.getElementById(id);
+      if (el) el.innerText = text;
+    };
+
+    setSecText('r-model', ganadora.modelo);
+    setSecText('r-hp', ganadora.hp);
+    setSecText('r-type', ganadora.tipo);
+    setSecText('r-reversible', ganadora.reversible ? 'Sí (Cortador Bidireccional)' : 'No');
+    setSecText('r-cost', new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' }).format(precioFinalReal) + ' MXN');
+
+    setSecText('rep-q-theo', qTeorico.toFixed(1));
+    setSecText('rep-q-design', qDiseno.toFixed(1));
+    
+    const noteElement = document.getElementById('rep-self-cleaning-note');
+    if (noteElement) {
+      if (aplicoCandadoLimpieza) {
+        noteElement.innerHTML = ` Debido al bajo volumen simultáneo, <strong>se aplicó la restricción normativa de velocidad de autolimpieza</strong> para asegurar un régimen mínimo de 2.0 ft/s en la línea de 1 1/4" y mitigar riesgos de azolvamiento.`;
+      } else {
+        noteElement.innerText = ' El caudal calculado se encuentra optimizado bajo criterios de simultaneidad y arrastre de sólidos.';
+      }
+    }
+
+    setSecText('rep-h-static-m', hEstaticaM.toFixed(2));
+    setSecText('rep-h-static-ft', hEstaticaFt.toFixed(1));
+    setSecText('rep-l-physical-m', lFisicaM.toFixed(2));
+    setSecText('rep-l-physical-ft', lFisicaFt.toFixed(1));
+    setSecText('rep-l-equiv-ft', lEquivalenteConexiones.toFixed(1));
+    setSecText('rep-valves-desc', `${nCodos}`);
+    setSecText('rep-l-total-ft', lTotalDisenoFt.toFixed(1));
+    setSecText('rep-h-friction-ft', hFriccionFt.toFixed(2));
+    setSecText('rep-h-tdh-ft', cdtRequeridaFt.toFixed(2));
+
+    setSecText('rep-eval-q', qDiseno.toFixed(1));
+    setSecText('rep-eval-model', ganadora.modelo);
+    setSecText('rep-pump-head', ganadora.hDisponible.toFixed(2));
+    setSecText('rep-safety-margin', ganadora.margenSeguridad.toFixed(2));
+
+    const elReason = document.getElementById('rep-justification-reason');
+    if (elReason) {
+      let razonJustificada = `Este modelo representa la alternativa de ingeniería de <strong>menor costo</strong> disponible en nuestro catálogo que cumple con las demandas del proyecto.`;
+      if (ganadora.reversible) {
+        razonJustificada += ` Cuenta además con tecnología de <strong>corte reversible automático</strong>, lo que previene atascamientos prolongados y duplica el tiempo de vida útil de las cuchillas trituradoras en aplicaciones comerciales o domésticas exigentes.`;
+      }
+      if (ganadora.tipo === 'CavidadProgresiva') {
+        razonJustificada += ` Al tratar de un mecanismo de desplazamiento positivo (cavidad progresiva), es ideal para mantener caudales constantes y estables frente a redes presurizadas que experimenten altas fluctuaciones de presión estática externa.`;
+      }
+      elReason.innerHTML = razonJustificada;
+    }
+
+    // MANDAR LLAMAR EL DIBUJO DE LA CURVA EN TIEMPO REAL
+    drawPumpCurveChart(ganadora, qDiseno, cdtRequeridaFt);
+  });
+</script>

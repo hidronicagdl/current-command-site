@@ -1,0 +1,112 @@
+[
+  {
+    "modelo": "803",
+    "hp": "1/2HP",
+    "tipo": "Vortex",
+    "reversible": false,
+    "costo": 27066.00,
+    "qMin": 0,
+    "qMax": 38.6,
+    "coeficientes": { "a": -0.0135, "b": -0.3852, "c": 35.0 }
+  },
+  {
+    "modelo": "805",
+    "hp": "3/4HP",
+    "tipo": "Vortex",
+    "reversible": false,
+    "costo": 27798.00,
+    "qMin": 0,
+    "qMax": 43.2,
+    "coeficientes": { "a": -0.0125, "b": -0.5000, "c": 45.0 }
+  },
+  {
+    "modelo": "807",
+    "hp": "1HP",
+    "tipo": "Vortex",
+    "reversible": false,
+    "costo": 27981.00,
+    "qMin": 0,
+    "qMax": 48.1,
+    "coeficientes": { "a": -0.0103, "b": -0.6481, "c": 55.0 }
+  },
+  {
+    "modelo": "810",
+    "hp": "1HP",
+    "tipo": "CavidadProgresiva",
+    "reversible": false,
+    "costo": 47269.00,
+    "qMin": 5.5,
+    "qMax": 9.0,
+    "coeficientes": { "a": -0.0870, "b": -23.8400, "c": 371.6 }
+  },
+  {
+    "modelo": "815",
+    "hp": "2HP",
+    "tipo": "CavidadProgresiva",
+    "reversible": false,
+    "costo": 51222.00,
+    "qMin": 5.5,
+    "qMax": 14.5,
+    "coeficientes": { "a": 0.5370, "b": -33.3700, "c": 407.3 }
+  },
+  {
+    "modelo": "818",
+    "hp": "1HP",
+    "tipo": "Vortex",
+    "reversible": false,
+    "costo": 36582.00,
+    "qMin": 0,
+    "qMax": 47.5,
+    "coeficientes": { "a": -0.0170, "b": -0.3800, "c": 53.0 }
+  },
+  {
+    "modelo": "819",
+    "hp": "1.5HP",
+    "tipo": "Vortex",
+    "reversible": false,
+    "costo": 42072.00,
+    "qMin": 0,
+    "qMax": 46.0,
+    "coeficientes": { "a": -0.0150, "b": -0.5500, "c": 107.0 }
+  },
+  {
+    "modelo": "820",
+    "hp": "2HP",
+    "tipo": "Vortex",
+    "reversible": false,
+    "costo": 42072.00,
+    "qMin": 0,
+    "qMax": 46.0,
+    "coeficientes": { "a": -0.0150, "b": -0.5500, "c": 107.0 }
+  },
+  {
+    "modelo": "840",
+    "hp": "2HP",
+    "tipo": "Vortex",
+    "reversible": true,
+    "costo": 56712.00,
+    "qMin": 0,
+    "qMax": 45.0,
+    "coeficientes": { "a": -0.0038, "b": -1.3615, "c": 104.0 }
+  },
+  {
+    "modelo": "841",
+    "hp": "2HP",
+    "tipo": "Vortex",
+    "reversible": false,
+    "costo": 56712.00,
+    "qMin": 0,
+    "qMax": 54.0,
+    "coeficientes": { "a": -0.0036, "b": -1.1481, "c": 125.0 }
+  },
+  {
+    "modelo": "842",
+    "hp": "2HP",
+    "tipo": "Vortex",
+    "reversible": false,
+    "costo": 56712.00,
+    "qMin": 0,
+    "qMax": 34.0,
+    "coeficientes": { "a": -0.0417, "b": -0.9167, "c": 125.0 }
+  }
+]

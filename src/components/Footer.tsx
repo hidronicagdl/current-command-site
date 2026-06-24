@@ -63,6 +63,21 @@ export const Footer: React.FC = () => {
               </li>
               */}
             </ul>
+			
+			<h4 className="font-mono text-white font-bold uppercase tracking-wide">Herramientas</h4>
+            <ul className="space-y-2">
+              <li>
+                {/* CAMBIO: Usamos <a> estándar para SEO y navegación nativa */}
+                <a href="/productos/selector-trituradoras" className="hover:text-white transition-colors">Selector Trituradoras</a>
+              </li>
+			  
+              {/* Oculto hasta tener contenido 
+              <li>
+                <a href="/terminos" className="hover:text-white transition-colors">Términos y Condiciones</a>
+              </li>
+              */}
+            </ul>
+			
           </div>
         </div>
 

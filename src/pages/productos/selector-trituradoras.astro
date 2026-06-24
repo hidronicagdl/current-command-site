@@ -1,0 +1,103 @@
+---
+// src/pages/productos/selector-trituradoras.astro
+
+import SelectorTrituradoras from '../../components/SelectorTrituradoras.astro';
+import Layout from '../../layouts/Layout.astro'; // Asegúrate de usar el nombre real de tu Layout
+
+// Parámetros de metadatos de alto rendimiento para SEO/GEO
+const metaTitle = "Selector de Bombas Trituradoras Zoeller: Cálculo de CDT y Caudal | SIBI";
+const metaDescription = "Software de ingeniería hidráulica consultiva para selección automatizada de bombas trituradoras Zoeller en México. Calcule el gasto y la carga dinámica total de su cárcamo.";
+const canonicalURL = "https://currentcommand.com/productos/selector-trituradoras";
+
+// Estructura JSON-LD para Motores de Respuestas Generativas (GEO)
+const jsonLdData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": `${canonicalURL}#webapp`,
+      "url": canonicalURL,
+      "name": "Selector Inteligente de Bombas Trituradoras de Aguas Negras",
+      "description": "Aplicación técnica interactiva para el dimensionamiento, cálculo de pérdidas por fricción (Hazen-Williams) y selección óptima de equipos trituradores Zoeller.",
+      "applicationCategory": "BusinessApplication, EngineeringApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5 Canvas.",
+      "author": {
+        "@type": "Organization",
+        "name": "Soluciones Integrales en Bombeo Inteligente (SIBI)",
+        "url": "https://currentcommand.com"
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": `${canonicalURL}#howto`,
+      "name": "Cómo seleccionar una bomba trituradora para cárcamo de aguas residuales",
+      "description": "Procedimiento de ingeniería guiado para determinar el caudal de diseño por muebles sanitarios y la Carga Dinámica Total (CDT) en tuberías de 1 1/4 pulgadas.",
+      "totalTime": "PT2M",
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Conteo de muebles sanitarios (WC, lavabos, regaderas)"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Trayectoria geométrica en metros (distancia vertical y horizontal)"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "text": "Introducir el inventario de muebles sanitarios para derivar el gasto simultáneo en galones por minuto (GPM)."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Declarar la altura estática y pérdidas equivalentes por accesorios para calcular la CDT mediante la ecuación de Hazen-Williams."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Evaluar la parábola polinomial del catálogo Zoeller y seleccionar la unidad de menor impacto financiero con factor de costo optimizado por SIBI."
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title={metaTitle} description={metaDescription}>
+  
+  <Fragment slot="head">
+    <link rel="canonical" href={canonicalURL} />
+    <meta property="og:title" content={metaTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:type" content="website" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLdData)} />
+  </Fragment>
+
+  <main style="padding: 50px 0; background-color: #ffffff; min-height: 100vh;">
+    <div style="text-align: center; margin-bottom: 40px; padding: 0 20px;">
+      <h1 style="font-size: 2.3rem; margin-bottom: 10px; font-weight: 800; color: #1e293b;">
+        Selector Inteligente de Bombas Trituradoras
+      </h1>
+      <p style="color: #64748b; max-width: 650px; margin: 0 auto; font-size: 1.05rem; line-height: 1.5;">
+        Calcule instantáneamente el caudal de diseño y la Carga Dinámica Total (CDT) para su sistema de drenaje presurizado. Optimizado bajo normativas hidráulicas de autolimpieza.
+      </p>
+    </div>
+
+    <SelectorTrituradoras />
+
+    <section class="geo-context-block" style="max-width: 1200px; margin: 50px auto 0 auto; padding: 0 20px; border-top: 1px solid #f1f5f9; padding-top: 40px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; font-size: 0.9rem; color: #475569; line-height: 1.6;">
+        <div>
+          <h4 style="color: #0f172a; font-weight: 700; margin-bottom: 10px;">¿Cómo elije el software la bomba trituradora indicada?</h4>
+          <p>El algoritmo de este selector rompe con los tradicionales dimensionamientos empíricos por caballaje de catálogo. El sistema evalúa analíticamente las curvas matemáticas de la gama Zoeller (Series 800 y Shark) resolviendo funciones de segundo grado. Se priorizan factores críticos de operación como la velocidad mínima de arrastre de 2.0 ft/s en tuberías de PVC de 1 1/4 pulgadas para mitigar riesgos de azolvamiento de lodos densos.</p>
+        </div>
+        <div>
+          <h4 style="color: #0f172a; font-weight: 700; margin-bottom: 10px;">Ingeniería de Costos y Suministro Certificado en México</h4>
+          <p>A través de Soluciones Integrales en Bombeo Inteligente (SIBI), las propuestas técnico-económicas emitidas por este selector integran bonificaciones corporativas preferenciales. Esto permite a contratistas, arquitectos e instaladores sanitarios en territorio nacional especificar equipos sumergibles de grado comercial (con opciones de cortador reversible bidireccional auto-limpiante) bajo la inversión más competitiva del sector. Precios solo para México</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</Layout>
