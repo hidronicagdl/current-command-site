@@ -1,0 +1,23 @@
+{
+  "modelo": "807",
+  "hp": "1 HP",
+  "tipo": "Vortex Shark",
+  "reversible": false,
+  "costoBase": 27981.00,
+  "descarga": "1.25\" NPT",
+  "pasoSolidos": "Sólidos destructibles ordinarios",
+  "velocidadRpm": 3400,
+  "materialCuerpo": "hierro fundido gris de alta resistencia mecánica clase 30",
+  "selloMecanico": "carburo de silicio/carburo de silicio en cámara de aceite integrada",
+  "certificaciones": "NOM-014-ENER-2004, UL778 listed y CSA22.2 certified",
+  "pesoLbs": 65,
+  "maxTemp": "130°F (54°C)",
+  "aislamientoMotor": "Class B",
+  "tipoAceite": "Dieléctrico de transferencia térmica",
+  "alturaInches": 17.25,
+  "anchoInches": 8.91,
+  "voltajesDisponibles": ["115V", "200-230V"],
+  "fasesDisponibles": ["1 Ph"],
+  "descripcionLarga": "La bomba trituradora Zoeller Serie 807 es la unidad de mayor caballaje dentro de la familia residencial compacta Shark. Diseñada con protección de sobrecarga térmica de restablecimiento automático en el motor, hereda un robusto eje de acero laminado en frío 1215 soportado por rodamientos de bolas superiores e inferiores lubricados en aceite.",
+  "aplicacionIdeal": "Proyectos de bombeo de aguas negras domésticas de alta demanda simultánea o distancias horizontales prolongadas que requieran mantener un flujo constante de autolimpieza en la línea."
+}

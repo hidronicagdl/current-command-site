@@ -1,0 +1,23 @@
+{
+  "modelo": "818",
+  "hp": "1 HP",
+  "tipo": "Vortex Shark Single Seal",
+  "reversible": false,
+  "costoBase": 36582.00,
+  "descarga": "1.25\" NPT vertical u horizontal",
+  "pasoSolidos": "Sólidos destructibles ordinarios cortados a un diámetro de 7/32\" o menor",
+  "velocidadRpm": 3450,
+  "materialCuerpo": "hierro fundido gris de alta resistencia clase 30 con acabado de pintura epóxica aplicada en polvo",
+  "selloMecanico": "monolítico de carbono/cerámica con resorte de acero inoxidable",
+  "certificaciones": "Tested to Standard UL778, cCSAus 22.2 No. 108 Standards y SSPMA certified",
+  "pesoLbs": 88,
+  "maxTemp": "130°F (54°C)",
+  "aislamientoMotor": "Class B",
+  "tipoAceite": "Aceite dieléctrico de enfriamiento continuo sumergido",
+  "alturaInches": 18.56,
+  "anchoInches": 9.06,
+  "voltajesDisponibles": ["115V", "200-230V"],
+  "fasesDisponibles": ["1 Ph"],
+  "descripcionLarga": "La bomba sumergible trituradora Zoeller Serie 818 incorpora un robusto cortador Tri-slice de dos hojas con alto torque y acción de corte tipo tijera (scissor-style). Su impulsor de plástico de ingeniería reforzado con vidrio cuenta con un inserto de acero inoxidable dispuesto en configuración Vortex. El eje del motor está fabricado en acero inoxidable 416 soportado por baleros de bolas superiores e inferiores[cite: 5].",
+  "aplicacionIdeal": "Sistemas residenciales e industriales preempacados de tamaño medio donde la Carga Dinámica Total no exceda los 53 pies columna de agua y se requiera una descarga de alto arrastre hidrodinámico[cite: 5]."
+}

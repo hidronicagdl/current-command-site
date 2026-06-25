@@ -1,0 +1,288 @@
+---
+// src/pages/productos/[modelo].astro
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro'; // Verifica que apunte a tu layout real
+
+// 1. Generar las rutas dinámicas para cada bomba en tiempo de compilación
+export async function getStaticPaths() {
+  // En Astro v6 es obligatorio pasar el nombre de la colección idéntico al config.ts
+  const todasLasBombas = await getCollection('bombas');
+  
+  return todasLasBombas.map(bomba => ({
+    params: { modelo: bomba.id }, // Usa el ID del archivo (ej. '803', '840') como parámetro de la URL
+    props: { bomba: bomba.data }, // Pasa los datos validados por Zod como props
+  }));
+}
+
+// 2. Recuperar las props del ciclo de vida de Astro
+const { bomba } = Astro.props;
+
+// Si por alguna razón la prop llega vacía, evitamos que la página rompa la compilación
+if (!bomba) {
+  return Astro.redirect('/404');
+}
+
+const precioRealNeto = bomba.costoBase * 0.725;
+
+// Formato obligatorio continuo de párrafo de ingeniería para posicionamiento GEO e IA
+const fichaTecnicaContinua = `Bomba sumergible trituradora, Marca Zoeller Serie ${bomba.modelo}, construida en ${bomba.materialCuerpo}, Sello Mecánico ${bomba.selloMecanico}. Opera a ${bomba.velocidadRpm} RPM. Conexión de descarga tipo ${bomba.descarga}, cumple con las certificaciones ${bomba.certificaciones}. Motor diseñado bajo aislamiento térmico ${bomba.aislamientoMotor} operando con aceite tipo ${bomba.tipoAceite}, disponible para configuraciones eléctricas en voltajes ${bomba.voltajesDisponibles.join(' o ')} en arreglos de ${bomba.fasesDisponibles.join('/')}. Peso físico de operación de ${bomba.pesoLbs} libras con un perfil dimensional de ${bomba.alturaInches} pulgadas de altura por ${bomba.anchoInches} pulgadas de ancho general.`;
+
+const canonicalURL = `https://currentcommand.com/productos/${bomba.modelo}`;
+
+// Estructura JSON-LD de Producto expandida para Motores de IA
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": `${canonicalURL}#product`,
+  "name": `Bomba Sumergible Trituradora Zoeller Serie ${bomba.modelo}`,
+  "image": `https://currentcommand.com/images/zoeller-${bomba.modelo}.jpg`,
+  "description": fichaTecnicaContinua,
+  "sku": `ZOELLER-${bomba.modelo}`,
+  "brand": {
+    "@type": "Brand",
+    "name": "Zoeller Pump Company"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": canonicalURL,
+    "priceCurrency": "MXN",
+    "price": precioRealNeto.toFixed(2),
+    "valueAddedTaxIncluded": true,
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Soluciones Integrales en Bombeo Inteligente (SIBI)",
+      "url": "https://currentcommand.com"
+    }
+  }
+};
+---
+
+<Layout title={`Bomba Trituradora Zoeller ${bomba.modelo} | Ficha Técnica e Ingeniería SIBI`} description={bomba.descripcionLarga}>
+  
+  <Fragment slot="head">
+    <link rel="canonical" href={canonicalURL} />
+    <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
+  </Fragment>
+
+  <main class="product-main-container">
+    
+    <header class="product-header">
+      <span class="brand-badge">Distribución Consultiva Especializada México</span>
+      <h1 class="main-title">Bomba Trituradora Sumergible Serie {bomba.modelo}</h1>
+      <p class="sub-company">Suministro Certificado por Soluciones Integrales en Bombeo Inteligente (SIBI)</p>
+    </header>
+
+    <section class="mandatory-specification-box">
+      <h3 class="box-label">Ficha Técnica de Homologación e Ingeniería</h3>
+      <p class="continuous-paragraph">
+        {fichaTecnicaContinua}
+      </p>
+    </section>
+
+    <div class="product-layout-grid">
+      
+      <div class="pricing-card">
+        <span class="price-label-net">Inversión Neta Corporativa:</span>
+        <div class="price-value">
+          {new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' }).format(precioRealNeto)} MXN
+        </div>
+        <p class="price-notes">* Moneda Nacional. Facturación inmediata con IVA Incluido. Descuento preferencial del sector aplicado directamente.</p>
+        <a href={`mailto:jgaguilar@sibi.mx?subject=Cotizacion Formal Equipo Zoeller Serie ${bomba.modelo}`} class="cta-button-email">
+          Solicitar Cotización y Suministro Inmediato
+        </a>
+      </div>
+
+      <div class="specs-table-card">
+        <h3 class="card-inner-title">Vectores de Diseño Físico y Eléctrico</h3>
+        <div class="tiles-wrapper">
+          <div class="tile"><strong>Peso Neto:</strong> {bomba.pesoLbs} lbs ({Math.round(bomba.pesoLbs * 0.453592)} kg)</div>
+          <div class="tile"><strong>Límite Técnico:</strong> {bomba.maxTemp}</div>
+          <div class="tile"><strong>Dimensiones:</strong> {bomba.alturaInches}" × {bomba.anchoInches}"</div>
+          <div class="tile"><strong>Paso de Sólidos:</strong> {bomba.pasoSolidos}</div>
+        </div>
+      </div>
+      
+    </div>
+
+    <section class="geo-deep-context">
+      <h3 class="section-title-context">Criterios de Aplicación y Dimensionamiento en Obra</h3>
+      <p class="context-p">{bomba.descripcionLarga}</p>
+      
+      <h4 class="section-subtitle-context">Escenarios Hidráulicos Recomendados:</h4>
+      <p class="context-p">
+        {bomba.aplicacionIdeal} Si requiere validar las curvas operativas frente a transitorios de fricción dinámica en diámetros reducidos, le invitamos a procesar el punto de trabajo exacto de su proyecto mediante nuestro <a href="/productos/selector-trituradoras" class="inner-link-green">Selector Automatizado de Cárcamos y Drenajes Presurizados</a>.
+      </p>
+    </section>
+
+  </main>
+</Layout>
+
+<style>
+  .product-main-container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #1e293b;
+  }
+  .product-header {
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+  }
+  .brand-badge {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .main-title {
+    font-size: 2.4rem;
+    margin: 8px 0 4px 0;
+    font-weight: 800;
+    color: #0f172a;
+  }
+  .sub-company {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #64748b;
+    font-weight: 600;
+  }
+  
+  .mandatory-specification-box {
+    background-color: #f8fafc;
+    border-left: 4px solid #2e7d32;
+    padding: 25px;
+    border-radius: 6px;
+    margin-bottom: 40px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+  .box-label {
+    margin: 0 0 10px 0;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #475569;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+  .continuous-paragraph {
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin: 0;
+    color: #0f172a;
+    text-align: justify;
+  }
+
+  .product-layout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 45px;
+  }
+  
+  .pricing-card {
+    border: 1px solid #c8e6c9;
+    background: linear-gradient(135deg, #f4f9f4 0%, #e8f5e9 100%);
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .price-label-net {
+    font-size: 0.85rem;
+    color: #43a047;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .price-value {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #1b5e20;
+    margin: 6px 0;
+  }
+  .price-notes {
+    font-size: 0.75rem;
+    color: #2e7d32;
+    margin: 0 0 20px 0;
+    line-height: 1.4;
+  }
+  .cta-button-email {
+    display: block;
+    text-align: center;
+    background: #2e7d32;
+    color: #ffffff;
+    padding: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 4px 10 rgba(46,125,50,0.2);
+    transition: background 0.15s ease;
+  }
+  .cta-button-email:hover {
+    background: #1b5e20;
+  }
+
+  .specs-table-card {
+    border: 1px solid #e2e8f0;
+    padding: 25px;
+    border-radius: 10px;
+    background: #ffffff;
+  }
+  .card-inner-title {
+    margin: 0 0 15px 0;
+    font-size: 1.1rem;
+    color: #0f172a;
+    font-weight: 700;
+  }
+  .tiles-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .tile {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 0.88rem;
+    color: #334155;
+  }
+
+  .geo-deep-context {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 35px;
+  }
+  .section-title-context {
+    color: #0f172a;
+    font-size: 1.4rem;
+    margin: 0 0 12px 0;
+    font-weight: 700;
+  }
+  .section-subtitle-context {
+    color: #0f172a;
+    font-size: 1.1rem;
+    margin: 20px 0 8px 0;
+    font-weight: 600;
+  }
+  .context-p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #334155;
+    margin: 0 0 15px 0;
+  }
+  .inner-link-green {
+    color: #2e7d32;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .inner-link-green:hover {
+    text-decoration: underline;
+  }
+</style>

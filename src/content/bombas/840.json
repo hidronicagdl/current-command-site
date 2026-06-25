@@ -1,0 +1,23 @@
+{
+  "modelo": "840",
+  "hp": "2 HP",
+  "tipo": "Vortex Shark Dual Seal",
+  "reversible": true,
+  "costoBase": 56712.00,
+  "descarga": "1.25\" NPT o 1.5\" NPT opcional",
+  "pasoSolidos": "Sólidos densos destructibles mediante cortador bidireccional",
+  "velocidadRpm": 3450,
+  "materialCuerpo": "hierro fundido gris texturizado clase 30 con tornillería de acero inoxidable",
+  "selloMecanico": "Tandem Doble (Carbono/Cerámica superior y Carburo de Silicio inferior)",
+  "certificaciones": "UL listed de grado industrial, CSA y cumplimiento estricto de normativas de efluentes",
+  "pesoLbs": 137,
+  "maxTemp": "130°F (54°C)",
+  "aislamientoMotor": "Class F de alta resistencia térmica",
+  "tipoAceite": "Aceite dieléctrico de enfriamiento continuo sumergido",
+  "alturaInches": 24.21,
+  "anchoInches": 11.65,
+  "voltajesDisponibles": ["200V", "230V", "460V"],
+  "fasesDisponibles": ["1 Ph", "3 Ph"],
+  "descripcionLarga": "La serie Shark 840 representa la cumbre en trituración forzada. Incorpora un cortador reversible automático que alterna el sentido de giro del motor ante obstrucciones severas, duplicando la vida útil del filo. El sistema de doble sello mecánico en tándem ofrece un sensor de humedad integrado (moisture sensor) para alertar antes de cualquier falla mecánica.",
+  "aplicacionIdeal": "Cárcamos comerciales de alta demanda, unidades habitacionales multi-familiares y desarrollos municipales de drenaje presurizado forzado."
+}

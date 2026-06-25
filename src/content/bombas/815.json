@@ -1,0 +1,23 @@
+{
+  "modelo": "815",
+  "hp": "2 HP",
+  "tipo": "Cavidad Progresiva Shark Sewage Waste",
+  "reversible": false,
+  "costoBase": 51222.00,
+  "descarga": "1.25\" NPT Horizontal",
+  "pasoSolidos": "Sólidos densos destructibles mediante cortador de alta dureza",
+  "velocidadRpm": 1725,
+  "materialCuerpo": "hierro fundido gris clase 30 con acabado de pintura epóxica aplicada en polvo",
+  "selloMecanico": "Tándem doble de carbono/cerámica con tornillería de acero inoxidable",
+  "certificaciones": "CSA C22.2 No. 108 certified y estándares SSPMA",
+  "pesoLbs": 91,
+  "maxTemp": "130°F (54°C)",
+  "aislamientoMotor": "Class B",
+  "tipoAceite": "Aceite dieléctrico de enfriamiento continuo sumergido",
+  "alturaInches": 24.44,
+  "anchoInches": 10.44,
+  "voltajesDisponibles": ["230V"],
+  "fasesDisponibles": ["1 Ph"],
+  "descripcionLarga": "El modelo de cavidad progresiva Shark 815 representa la máxima potencia de presión de la línea, incorporando un motor Permanent Split Capacitor de 2 HP. Su diseño hidráulico de desplazamiento positivo está diseñado específicamente para bombear a caudales estables incluso frente a variaciones dinámicas severas en la red externa de descarga.",
+  "aplicacionIdeal": "Redes de presión municipal, desarrollos comerciales o residenciales de gran escala geográficamente complejos que requieran vencer hasta 240 pies de Carga Dinámica Total."
+}

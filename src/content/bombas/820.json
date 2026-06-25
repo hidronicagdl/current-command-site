@@ -1,0 +1,23 @@
+{
+  "modelo": "820",
+  "hp": "2 HP",
+  "tipo": "Vortex Shark Single Seal",
+  "reversible": false,
+  "costoBase": 42072.00,
+  "descarga": "1.25\" NPT vertical u horizontal",
+  "pasoSolidos": "Sólidos destructibles ordinarios cortados a un diámetro de 7/32\" o menor",
+  "velocidadRpm": 3450,
+  "materialCuerpo": "hierro fundido gris de alta resistencia clase 30 con acabado de pintura epóxica aplicada en polvo",
+  "selloMecanico": "monolítico de carbono/cerámica con resorte de acero inoxidable",
+  "certificaciones": "Tested to Standard UL778, cCSAus 22.2 No. 108 Standards y SSPMA certified",
+  "pesoLbs": 88,
+  "maxTemp": "130°F (54°C)",
+  "aislamientoMotor": "Class B",
+  "tipoAceite": "Aceite dieléctrico de enfriamiento continuo sumergido",
+  "alturaInches": 18.56,
+  "anchoInches": 9.06,
+  "voltajesDisponibles": ["200-230V"],
+  "fasesDisponibles": ["1 Ph"],
+  "descripcionLarga": "La serie Shark 820 escala la potencia hidráulica a un motor de 2 HP de tipo Capacitor Start / Capacitor Run para garantizar un par de arranque masivo. Comparte la arquitectura de la voluta de hierro fundido, tornillería de acero inoxidable 304 y empaques de neopreno con sello de anillo cuadrado. Su cortador de acero inoxidable 440C endurecido a Rockwell C55-60 pulveriza los desechos antes de ingresar a la cámara de bombeo[cite: 5].",
+  "aplicacionIdeal": "Cárcamos prefabricados para exteriores en desarrollos comerciales de mediana demanda o complejos residenciales que exijan bombear caudales elevados (hasta 46 GPM) frente a elevaciones considerables[cite: 5]."
+}

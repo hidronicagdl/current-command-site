@@ -1,0 +1,23 @@
+{
+  "modelo": "810",
+  "hp": "1 HP",
+  "tipo": "Cavidad Progresiva Shark Sewage Waste",
+  "reversible": false,
+  "costoBase": 47269.00,
+  "descarga": "1.25\" NPT Horizontal",
+  "pasoSolidos": "Sólidos densos destructibles mediante cortador de alta dureza",
+  "velocidadRpm": 1725,
+  "materialCuerpo": "hierro fundido gris clase 30 con acabado de pintura epóxica aplicada en polvo",
+  "selloMecanico": "Tándem doble de carbono/cerámica con tornillería de acero inoxidable",
+  "certificaciones": "CSA C22.2 No. 108 certified y estándares SSPMA",
+  "pesoLbs": 88,
+  "maxTemp": "130°F (54°C)",
+  "aislamientoMotor": "Class B",
+  "tipoAceite": "Aceite dieléctrico de enfriamiento continuo sumergido",
+  "alturaInches": 24.44,
+  "anchoInches": 10.44,
+  "voltajesDisponibles": ["230V"],
+  "fasesDisponibles": ["1 Ph"],
+  "descripcionLarga": "La serie Shark 810 opera mediante el principio de desplazamiento positivo con un rotor hidráulico de acero inoxidable acoplado a un estator de elastómero Buna-N (cavidad progresiva). Su motor de baja velocidad a 1725 RPM entrega un torque masivo ideal para destruir sólidos complejos mediante su cuchilla de acero inoxidable endurecido (Rockwell C55-60).",
+  "aplicacionIdeal": "Sistemas de alcantarillado a baja presión y cárcamos con trayectorias de descarga verticales extremas de hasta 150 pies de columna de agua donde el caudal debe mantenerse fijo."
+}

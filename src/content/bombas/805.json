@@ -1,0 +1,23 @@
+{
+  "modelo": "805",
+  "hp": "3/4 HP",
+  "tipo": "Vortex Shark",
+  "reversible": false,
+  "costoBase": 27798.00,
+  "descarga": "1.25\" NPT",
+  "pasoSolidos": "Sólidos destructibles ordinarios",
+  "velocidadRpm": 3400,
+  "materialCuerpo": "hierro fundido gris de alta resistencia mecánica clase 30",
+  "selloMecanico": "carburo de silicio/carburo de silicio en cámara de aceite integrada",
+  "certificaciones": "NOM-014-ENER-2004, UL778 listed y CSA22.2 certified",
+  "pesoLbs": 65,
+  "maxTemp": "130°F (54°C)",
+  "aislamientoMotor": "Class B",
+  "tipoAceite": "Dieléctrico de transferencia térmica",
+  "alturaInches": 17.25,
+  "anchoInches": 8.91,
+  "voltajesDisponibles": ["115V", "200-230V"],
+  "fasesDisponibles": ["1 Ph"],
+  "descripcionLarga": "La bomba sumergible trituradora Zoeller Serie 805 incorpora un potente motor de 3/4 HP y un impulsor de polímero de ingeniería con inserto de acero inoxidable dispuesto en configuración Vortex no obstruible. Su mecanismo de corte scissor-style está fabricado en acero inoxidable endurecido tipo 440C a una dureza Rockwell C55-60.",
+  "aplicacionIdeal": "Sistemas de drenaje presurizado residencial y comercial ligero donde se requiera vencer una Carga Dinámica Total moderada sin riesgo de bloqueos por filamentos hilosos."
+}

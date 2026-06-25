@@ -1,0 +1,23 @@
+{
+  "modelo": "842",
+  "hp": "2 HP",
+  "tipo": "Non-Clogging Vortex Shark Dual Seal",
+  "reversible": false,
+  "costoBase": 56712.00,
+  "descarga": "1.25\" NPT o 1.5\" NPT horizontal de alta presión",
+  "pasoSolidos": "Sólidos densos destructibles pulverizados mediante mecanismo de corte de alta dureza",
+  "velocidadRpm": 3450,
+  "materialCuerpo": "hierro fundido gris texturizado clase 30 con tornillería de acero inoxidable 304",
+  "selloMecanico": "Tándem Doble (Carbono/Cerámica superior y Carburo de Silicio inferior) en cámara de aceite",
+  "certificaciones": "Tested to Standard UL778, Certified to CSA Standard C22.2 No. 108 y SSPMA de grado industrial",
+  "pesoLbs": 137,
+  "maxTemp": "130°F (54°C)",
+  "aislamientoMotor": "Class F de alta resistencia térmica",
+  "tipoAceite": "Aceite dieléctrico de transferencia térmica y lubricación continua sumergida",
+  "alturaInches": 20.62,
+  "anchoInches": 10.5,
+  "voltajesDisponibles": ["200V", "230V", "460V"],
+  "fasesDisponibles": ["1 Fase", "3 Fases"],
+  "descripcionLarga": "La bomba Shark Serie 842 es una unidad de descarga horizontal diseñada para aplicaciones severas de flujo acotado y alta carga. Cuenta con un impulsor Vortex de hierro dúctil de alta resistencia al desgaste y un eje de acero inoxidable 416. Incorpora un avanzado sistema de doble sello mecánico en tándem con sensores de humedad (moisture sensors) que fungen como un blindaje predictivo contra filtraciones.",
+  "aplicacionIdeal": "Cárcamos industriales, redes comerciales de drenaje presurizado forzado a baja presión y colectores sanitarios donde el rango seguro de flujo de operación deba ser estrecho pero con demandas de presión elevadas."
+}

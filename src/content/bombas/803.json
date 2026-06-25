@@ -1,0 +1,23 @@
+{
+  "modelo": "803",
+  "hp": "1/2 HP",
+  "tipo": "Vortex",
+  "reversible": false,
+  "costoBase": 27066.00,
+  "descarga": "1.25\" NPT",
+  "pasoSolidos": "Sólidos destructibles ordinarios",
+  "velocidadRpm": 3400,
+  "materialCuerpo": "hierro fundido gris de alta resistencia mecánica clase 30",
+  "selloMecanico": "carburo de silicio/carburo de silicio en cámara de aceite integrada",
+  "certificaciones": "NOM-014-ENER-2004, UL listed y CSA certified",
+  "pesoLbs": 65,
+  "maxTemp": "130°F (54°C)",
+  "aislamientoMotor": "Class B",
+  "tipoAceite": "Dieléctrico de transferencia térmica",
+  "alturaInches": 19.34,
+  "anchoInches": 9.25,
+  "voltajesDisponibles": ["115V", "200-230V"],
+  "fasesDisponibles": ["1 Ph"],
+  "descripcionLarga": "La bomba sumergible trituradora Zoeller Serie 803 cuenta con un diseño de impulsor Vortex de polímero de ingeniería con inserto de acero inoxidable que evita el bloqueo por arrastre de filamentos. Su carcasa de motor, voluta y adaptador están construidos íntegramente en hierro fundido clase 30 para disipación térmica óptima.",
+  "aplicacionIdeal": "Sistemas de descarga presurizada residencial individual y nodos comerciais secundarios donde la Carga Dinámica Total requiera un balance costo-beneficio óptimo."
+}
