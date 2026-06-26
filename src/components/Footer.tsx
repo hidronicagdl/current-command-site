@@ -57,7 +57,11 @@ export const Footer: React.FC = () => {
                 {/* CAMBIO: Usamos <a> estándar para SEO y navegación nativa */}
                 <a href="/cookies" className="hover:text-white transition-colors">Política de Cookies</a>
               </li>
-              {/* Oculto hasta tener contenido 
+              <li>
+                <a href="/Terminos" className="hover:text-white transition-colors">Términos y Condiciones</a>
+              </li>
+			  
+			  {/* Oculto hasta tener contenido 
               <li>
                 <a href="/terminos" className="hover:text-white transition-colors">Términos y Condiciones</a>
               </li>
@@ -71,11 +75,9 @@ export const Footer: React.FC = () => {
                 <a href="/productos/selector-trituradoras" className="hover:text-white transition-colors">Selector Trituradoras</a>
               </li>
 			  
-              {/* Oculto hasta tener contenido 
-              <li>
-                <a href="/terminos" className="hover:text-white transition-colors">Términos y Condiciones</a>
-              </li>
-              */}
+               
+              
+              
             </ul>
 			
           </div>
