@@ -1,3 +1,4 @@
 # Redirecciones Permanentes (301) para limpiar errores 404
 /home/              /              301
 /legal/privacidad/  /privacidad/   301
+https://eventos.currentcommand.com/* https://currentcommand.com/eventos/:splat  301!

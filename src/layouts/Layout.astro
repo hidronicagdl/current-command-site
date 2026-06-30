@@ -11,15 +11,10 @@ import '../styles/global.css';
 interface Props {
 	title: string;
 	description?: string;
+	minimal?: boolean; // Propiedad condicional para controlar el entorno de la Landing
 }
 
-const { title, description } = Astro.props;
-
-
-
-
-
-
+const { title, description, minimal = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -71,18 +66,23 @@ const { title, description } = Astro.props;
 	
 	</head>
 	
-	
 	<body class="font-sans text-steel-gray bg-white flex flex-col min-h-screen">
 		
-		<Header client:load />
+		{/* Solo renderiza el Header si NO es una landing de campaña minimalista */}
+		{ !minimal && <Header client:load /> }
 
 		<main class="flex-grow">
             <slot />
 		</main>
 
-		<Footer />
-		<WhatsAppWidget client:idle />
-		<CookieConsent client:only="react" />
+		{/* Elementos globales excluidos dinámicamente en entornos de Landing */}
+		{ !minimal && (
+			<>
+				<Footer />
+				<WhatsAppWidget client:idle />
+				<CookieConsent client:only="react" />
+			</>
+		)}
 
 	</body>
 </html>
