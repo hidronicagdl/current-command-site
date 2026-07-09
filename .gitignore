@@ -22,3 +22,8 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# selector de bombas sumergibles grundfos
+src/pages/productos/selector-bombas-sumergibles-grundfos.astro
+src/components/SelectorGrundfosSP.astro
+src/data/bombas_SP_MX.json
