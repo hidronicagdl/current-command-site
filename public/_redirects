@@ -2,3 +2,4 @@
 /home/              /              301
 /legal/privacidad/  /privacidad/   301
 https://eventos.currentcommand.com/* https://currentcommand.com/eventos/:splat  301!
+/blog/*  /blog  200

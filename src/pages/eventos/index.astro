@@ -90,11 +90,11 @@ import Layout from '../../layouts/Layout.astro';
     <div class="section-container">
       <div class="events-grid">
 
-        <!-- TARJETA 1: EVENTO ZOELLER -->
-        <article class="event-card border-zoeller">
+        <!-- TARJETA 1: EVENTO ZOELLER (FINALIZADO) -->
+        <article class="event-card border-zoeller card-disabled">
           <div class="card-header">
             <span class="badge-tech badge-zoeller">AGUAS NEGRAS / CÁRCAMOS</span>
-            <span class="event-status">CUPO LIMITADO</span>
+            <span class="event-status status-ended">EVENTO FINALIZADO</span>
           </div>
 
           <div class="card-body">
@@ -112,9 +112,9 @@ import Layout from '../../layouts/Layout.astro';
           </div>
 
           <div class="card-footer">
-            <a href="/eventos/zoeller" class="btn-card btn-zoeller">
-              VER AGENDA Y SOLICITAR REGISTRO >
-            </a>
+            <span class="btn-card btn-disabled">
+              REGISTRO CERRADO
+            </span>
           </div>
         </article>
 
@@ -199,7 +199,6 @@ import Layout from '../../layouts/Layout.astro';
     const subSuccessMessage = document.getElementById('sub-success-message');
     const subBtn = document.getElementById('sub-btn');
 
-    // Mismo Apps Script o uno nuevo para guardar interesados en próximas fechas
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwnVxvsaLaprumpCk14-UeEtJRrBDHXx0NhWBNE6DAr29EwQYcDmqPMGOzhB9wPVwewYA/exec';
 
     subForm.addEventListener('submit', async (e) => {
@@ -432,6 +431,32 @@ import Layout from '../../layouts/Layout.astro';
 
   .btn-future { background-color: var(--dark-charcoal); color: #ffffff; border: none; cursor: pointer; }
   .btn-future:hover { background-color: #374151; }
+
+  /* EVENTOS FINALIZADOS / INACTIVOS */
+  .event-card.card-disabled {
+    filter: grayscale(0.9);
+    opacity: 0.7;
+    background-color: #f3f4f6;
+    border-top-color: #9ca3af !important;
+  }
+
+  .event-card.card-disabled:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .event-status.status-ended {
+    color: #4b5563;
+    background-color: #e5e7eb;
+  }
+
+  .btn-disabled {
+    background-color: #9ca3af;
+    color: #ffffff;
+    cursor: not-allowed;
+    pointer-events: none;
+    user-select: none;
+  }
 
   /* FORMULARIO SUSCRIPCIÓN */
   .future-form {

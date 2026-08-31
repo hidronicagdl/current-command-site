@@ -1,127 +1,460 @@
 ---
-// src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 
-// Importación de la imagen para procesamiento automático (WebP/AVIF + Resizing)
+// Importación de imagen estática para optimización automática (LCP/CLS)
 import hydroMpcImage from '../assets/Hydro_MPC_Grundfos.webp';
 
-// Iconos: Para mantener 0 JS, usamos componentes de Lucide pero como SVGs estáticos
-import { CheckCircle, Activity, Ruler, ShieldCheck } from 'lucide-react';
+// Iconos de Lucide React para renderizado de SVG sin JavaScript adicional en cliente
+import { 
+  CheckCircle, 
+  Activity, 
+  Ruler, 
+  ShieldCheck, 
+  Cpu, 
+  Zap, 
+  Building2, 
+  Flame, 
+  Droplets, 
+  GraduationCap, 
+  Wrench, 
+  Radio, 
+  FileCheck,
+  ArrowRight,
+  Server,
+  Hospital,
+  Hotel,
+  Plane
+} from 'lucide-react';
 
-// Título dinámico para SEO
-const title = "Inicio | CURRENT COMMAND - Ingeniería de Bombeo";
+// Título y metadatos enfocados en SEO técnico y de nicho
+const title = "Current Command | Soluciones de Bombeo Comercial, Drenaje Presurizado e Integración BMS";
+const description = "Especialistas en selección, ingeniería y suministro de equipos de bombeo comercial de gran escala (Grundfos, Zoeller, Wolf Pumps, AC Fire Pump). Respaldo directo SIBI.";
 ---
 
-<Layout title={title}>
-  <div class="flex flex-col min-h-screen">
+<Layout title={title} description={description}>
+  {/* Schema.org Structured Data para Google (SEO semántico de la relación con SIBI) */}
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Current Command - Ingeniería de Bombeo Comercial",
+      "url": "https://currentcommand.com",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Soluciones Integrales en Bombeo Inteligente S.A. de C.V. (SIBI)",
+        "url": "https://sibi.mx"
+      },
+      "areaServed": "México",
+      "knowsAbout": [
+        "Sistemas de presurización inteligente Hydro MPC Grundfos",
+        "HVAC distribuido Grundfos DELTA",
+        "Bombas trituradoras y drenaje presurizado Zoeller",
+        "Bombas de turbina y sumergibles Wolf Pumps",
+        "Sistemas contra incendio UL FM AC Fire Pump",
+        "Conectividad BMS Modbus BACnet Ethernet"
+      ]
+    }
+  </script>
+
+  <div class="flex flex-col min-h-screen bg-slate-50 text-slate-900">
     
-    {/* Hero Section - Optimizado para LCP */}
-    <section class="relative bg-slate-900 py-24 md:py-32 overflow-hidden">
-      <div class="absolute inset-0 bg-slate-900 opacity-20 mix-blend-overlay"></div>
+    {/* HERO SECTION */}
+    <section class="relative bg-slate-900 py-20 md:py-28 text-white overflow-hidden">
+      <div class="absolute inset-0 bg-blue-950/40 mix-blend-multiply"></div>
       
       <div class="container mx-auto px-4 relative z-10">
-        <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
           
-          {/* Texto Principal */}
-          <div class="w-full md:w-1/2">
-            <h1 class="text-4xl md:text-6xl font-bold text-white font-mono tracking-tighter mb-6">
-              INGENIERÍA DE BOMBEO <br class="hidden md:block" />
-              PARA EL MUNDO REAL
+          {/* Columna de Texto Principal */}
+          <div class="w-full lg:w-7/12">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-900/80 border border-blue-500/40 rounded-none text-blue-300 text-xs font-mono font-semibold tracking-wider uppercase mb-6">
+              <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+              Especialización Comercial B2B &bull; Respaldo SIBI
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-mono tracking-tight leading-tight mb-6">
+              INGENIERÍA DE BOMBEO PARA <span class="text-blue-500">PROYECTOS COMERCIALES</span> DE GRAN ESCALA
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl">
-              18 años de experiencia en campo resolviendo desafíos hidráulicos.
-              Distribuidores autorizados Grundfos, Wolf y Zoeller. Respaldo SIBI.
+
+            <p class="text-base sm:text-lg text-slate-300 mb-8 leading-relaxed max-w-2xl">
+              Optimización, selección y suministro de sistemas hidráulicos críticos para <strong>Hoteles, Hospitales, Torres de Oficinas, Centros de Datos, Estadios y Aeropuertos</strong>. Integración experta a sistemas BMS/SCADA y drenaje presurizado de alto desempeño.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-              <a href="/productos" class="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white bg-blue-700 hover:bg-blue-800 transition-colors rounded-none shadow-lg">
-                VER EQUIPOS
+
+            <div class="flex flex-col sm:flex-row gap-4 mb-8">
+              <a 
+                href="/contacto" 
+                class="inline-flex items-center justify-center px-7 py-4 text-sm font-bold tracking-wider text-white bg-blue-700 hover:bg-blue-600 transition-colors rounded-none shadow-lg group font-mono uppercase"
+              >
+                SOLICITAR REVISIÓN DE INGENIERÍA
+                <ArrowRight size={18} class="ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="/contacto" class="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white border-2 border-white hover:bg-white hover:text-slate-900 transition-colors rounded-none">
-                CONSULTAR A UN INGENIERO
+              <a 
+                href="#soluciones" 
+                class="inline-flex items-center justify-center px-7 py-4 text-sm font-bold tracking-wider text-slate-200 border border-slate-600 hover:border-white hover:bg-white hover:text-slate-900 transition-colors rounded-none font-mono uppercase"
+              >
+                EQUIPOS Y MARCAS PILAR
               </a>
+            </div>
+
+            <div class="pt-6 border-t border-slate-800 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono text-slate-400">
+              <div>
+                <span class="block text-white font-bold text-sm">GRUNDFOS</span>
+                Hydro MPC & DELTA
+              </div>
+              <div>
+                <span class="block text-white font-bold text-sm">ZOELLER</span>
+                Trituradoras y Cárcamos
+              </div>
+              <div>
+                <span class="block text-white font-bold text-sm">WOLF PUMPS</span>
+                Turbinas y Pozos
+              </div>
+              <div>
+                <span class="block text-white font-bold text-sm">AC FIRE PUMP</span>
+                Sistemas UL / FM
+              </div>
             </div>
           </div>
 
-          {/* Imagen del Hydro MPC - Solución CLS y LCP */}
-          <div class="w-full md:w-1/2">
-            <Image 
-              src={hydroMpcImage} 
-              alt="Sistema de presión constante Hydro MPC de Grundfos" 
-              width={800} 
-              height={600}
-              loading="eager" 
-              fetchpriority="high"
-              class="w-full h-auto shadow-2xl grayscale hover:grayscale-0 transition-all duration-500 rounded-sm border border-slate-700"
-            />
+          {/* Columna de Imagen Hero */}
+          <div class="w-full lg:w-5/12">
+            <div class="relative">
+              <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-none blur opacity-25"></div>
+              <div class="relative bg-slate-950 p-2 border border-slate-800">
+                <Image 
+                  src={hydroMpcImage} 
+                  alt="Equipo de presión constante tipo paquete Grundfos Hydro MPC para presurización comercial e integración a BMS" 
+                  width={800} 
+                  height={600}
+                  loading="eager" 
+                  fetchpriority="high"
+                  class="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                />
+                <div class="p-4 bg-slate-900 border-t border-slate-800 font-mono text-xs text-slate-400 flex justify-between items-center">
+                  <span>GRUNDFOS HYDRO MPC</span>
+                  <span class="text-blue-400 font-semibold">PRESIÓN CONSTANTE VARIABLE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    {/* NICHOS DE APLICACIÓN (SECTOR COMERCIAL DE GRAN ESCALA) */}
+    <section class="py-12 bg-slate-800 text-white border-b border-slate-700">
+      <div class="container mx-auto px-4">
+        <p class="text-xs font-mono uppercase tracking-widest text-blue-400 text-center mb-6">
+          Especialización Exclusiva en Edificación e Infraestructura Comercial (No Industrial)
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-center">
+          <div class="p-4 bg-slate-900/60 border border-slate-700/60 flex flex-col items-center">
+            <Hotel size={28} class="text-blue-400 mb-2" />
+            <span class="text-xs font-mono font-bold uppercase">Hoteles</span>
+          </div>
+          <div class="p-4 bg-slate-900/60 border border-slate-700/60 flex flex-col items-center">
+            <Hospital size={28} class="text-blue-400 mb-2" />
+            <span class="text-xs font-mono font-bold uppercase">Hospitales</span>
+          </div>
+          <div class="p-4 bg-slate-900/60 border border-slate-700/60 flex flex-col items-center">
+            <Building2 size={28} class="text-blue-400 mb-2" />
+            <span class="text-xs font-mono font-bold uppercase">Torres & Oficinas</span>
+          </div>
+          <div class="p-4 bg-slate-900/60 border border-slate-700/60 flex flex-col items-center">
+            <Server size={28} class="text-blue-400 mb-2" />
+            <span class="text-xs font-mono font-bold uppercase">Data Centers</span>
+          </div>
+          <div class="p-4 bg-slate-900/60 border border-slate-700/60 flex flex-col items-center">
+            <Droplets size={28} class="text-blue-400 mb-2" />
+            <span class="text-xs font-mono font-bold uppercase">Estadios</span>
+          </div>
+          <div class="p-4 bg-slate-900/60 border border-slate-700/60 flex flex-col items-center">
+            <Plane size={28} class="text-blue-400 mb-2" />
+            <span class="text-xs font-mono font-bold uppercase">Aeropuertos</span>
           </div>
         </div>
       </div>
     </section>
 
-    {/* Authority Section */}
-    <section class="py-20 bg-white">
+    {/* MARCAS ESPECIALIZADAS Y LÍNEAS DE PRODUCTO */}
+    <section id="soluciones" class="py-20 bg-white">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="max-w-3xl mb-16">
+          <h2 class="text-xs font-mono uppercase tracking-widest text-blue-700 mb-2">Portfolio Técnico Certificado</h2>
+          <h3 class="text-3xl md:text-4xl font-bold font-mono text-slate-900 mb-4">
+            EQUIPAMIENTO DE ALTA INGENIERÍA
+          </h3>
+          <p class="text-slate-600 leading-relaxed">
+            Nos enfocamos en cuatro familias tecnológicas líderes a nivel global para resolver las demandas críticas de agua sanitaria, HVAC, presurización de servicios y protección contra incendio.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
-          <div class="p-8 border border-gray-200 hover:border-blue-700 transition-colors group">
-            <div class="w-12 h-12 bg-slate-100 flex items-center justify-center mb-6 group-hover:bg-blue-700 group-hover:text-white transition-colors">
+          {/* GRUNDFOS */}
+          <div class="border border-slate-200 bg-slate-50 p-6 flex flex-col justify-between hover:border-blue-600 transition-colors">
+            <div>
+              <div class="text-xs font-mono font-bold text-blue-700 uppercase mb-2">GRUNDFOS</div>
+              <h4 class="text-xl font-bold font-mono text-slate-800 mb-3">Presurización & HVAC</h4>
+              <ul class="text-sm text-slate-600 space-y-2 mb-6">
+                <li>&bull; <strong>Hydro MPC:</strong> Paquetes booster de velocidad variable.</li>
+                <li>&bull; <strong>DELTA:</strong> Agua helada HVAC con bombeo distribuido.</li>
+                <li>&bull; <strong>Bombas CR:</strong> Verticales multipasos de alta eficiencia.</li>
+              </ul>
+            </div>
+            <a href="/productos#grundfos" class="text-xs font-mono font-bold text-blue-700 hover:text-blue-900 uppercase inline-flex items-center">
+              Ver detalles Grundfos <ArrowRight size={14} class="ml-1" />
+            </a>
+          </div>
+
+          {/* ZOELLER */}
+          <div class="border border-slate-200 bg-slate-50 p-6 flex flex-col justify-between hover:border-blue-600 transition-colors">
+            <div>
+              <div class="text-xs font-mono font-bold text-blue-700 uppercase mb-2">ZOELLER & ZOELLER ENGINEERED</div>
+              <h4 class="text-xl font-bold font-mono text-slate-800 mb-3">Drenaje Presurizado</h4>
+              <ul class="text-sm text-slate-600 space-y-2 mb-6">
+                <li>&bull; <strong>Bombas Trituradoras:</strong> Manejo severo de aguas negras sanitarias.</li>
+                <li>&bull; <strong>Cárcamos Prefabricados:</strong> Fibra de vidrio equipada de fábrica.</li>
+                <li>&bull; <strong>Sistemas Presurizados:</strong> Redes de alcantarillado sanitario.</li>
+              </ul>
+            </div>
+            <a href="/productos#zoeller" class="text-xs font-mono font-bold text-blue-700 hover:text-blue-900 uppercase inline-flex items-center">
+              Ver detalles Zoeller <ArrowRight size={14} class="ml-1" />
+            </a>
+          </div>
+
+          {/* WOLF PUMPS */}
+          <div class="border border-slate-200 bg-slate-50 p-6 flex flex-col justify-between hover:border-blue-600 transition-colors">
+            <div>
+              <div class="text-xs font-mono font-bold text-blue-700 uppercase mb-2">WOLF PUMPS</div>
+              <h4 class="text-xl font-bold font-mono text-slate-800 mb-3">Turbinas & Pozo Profundo</h4>
+              <ul class="text-sm text-slate-600 space-y-2 mb-6">
+                <li>&bull; <strong>Turbina Flecha Hueca:</strong> Bombas verticales de uso pesado.</li>
+                <li>&bull; <strong>Sumergibles de Tazones:</strong> Extracción de agua subterránea.</li>
+                <li>&bull; <strong>Riego Comercial:</strong> Equipos para redes de riego institucional.</li>
+              </ul>
+            </div>
+            <a href="/productos#wolf" class="text-xs font-mono font-bold text-blue-700 hover:text-blue-900 uppercase inline-flex items-center">
+              Ver detalles Wolf <ArrowRight size={14} class="ml-1" />
+            </a>
+          </div>
+
+          {/* AC FIRE PUMP */}
+          <div class="border border-slate-200 bg-slate-50 p-6 flex flex-col justify-between hover:border-blue-600 transition-colors">
+            <div>
+              <div class="text-xs font-mono font-bold text-blue-700 uppercase mb-2">AC FIRE PUMP</div>
+              <h4 class="text-xl font-bold font-mono text-slate-800 mb-3">Protección Contra Incendio</h4>
+              <ul class="text-sm text-slate-600 space-y-2 mb-6">
+                <li>&bull; <strong>Equipos Certificados:</strong> Listado UL y Aprobación FM.</li>
+                <li>&bull; <strong>Paquetes de Protección:</strong> Motores diésel y eléctricos.</li>
+                <li>&bull; <strong>Cumplimiento NFPA 20:</strong> Proyectos normados de alta seguridad.</li>
+              </ul>
+            </div>
+            <a href="/productos#acfire" class="text-xs font-mono font-bold text-blue-700 hover:text-blue-900 uppercase inline-flex items-center">
+              Ver detalles AC Fire <ArrowRight size={14} class="ml-1" />
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    {/* DIFERENCIADOR TÉCNICO: CONECTIVIDAD BMS / SCADA */}
+    <section class="py-20 bg-slate-900 text-white border-t border-b border-slate-800">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          
+          <div class="w-full lg:w-1/2">
+            <div class="w-12 h-12 bg-blue-700 flex items-center justify-center mb-6">
+              <Cpu size={28} class="text-white" />
+            </div>
+            <h2 class="text-xs font-mono uppercase tracking-widest text-blue-400 mb-2">Smart Building Integration</h2>
+            <h3 class="text-3xl font-bold font-mono text-white mb-6">
+              CONEXIÓN DIRECTA A BMS Y SISTEMAS SCADA
+            </h3>
+            <p class="text-slate-300 leading-relaxed mb-6">
+              Suministramos e integramos equipos de bombeo que no actúan como "islas aisladas". Garantizamos la interconexión nativa con la infraestructura de automatización de su edificio inteligente.
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-sm text-slate-200 mb-8">
+              <div class="flex items-center gap-2 bg-slate-800 p-3 border border-slate-700">
+                <CheckCircle size={16} class="text-blue-400 shrink-0" />
+                <span>BACnet MS/TP & IP</span>
+              </div>
+              <div class="flex items-center gap-2 bg-slate-800 p-3 border border-slate-700">
+                <CheckCircle size={16} class="text-blue-400 shrink-0" />
+                <span>Modbus RTU & TCP/IP</span>
+              </div>
+              <div class="flex items-center gap-2 bg-slate-800 p-3 border border-slate-700">
+                <CheckCircle size={16} class="text-blue-400 shrink-0" />
+                <span>Ethernet / IP Industrial</span>
+              </div>
+              <div class="flex items-center gap-2 bg-slate-800 p-3 border border-slate-700">
+                <Radio size={16} class="text-blue-400 shrink-0" />
+                <span>Telemetría y Monitoreo Remoto</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-1/2 bg-slate-950 p-8 border border-slate-800">
+            <h4 class="text-xl font-bold font-mono text-white mb-4">¿POR QUÉ INTEGRAR EL BOMBEO AL BMS?</h4>
+            <ul class="space-y-4 text-sm text-slate-300">
+              <li class="flex items-start">
+                <Zap size={18} class="text-blue-400 mr-3 shrink-0 mt-1" />
+                <div>
+                  <strong>Optimización Energética Dinámica:</strong> Ajuste de velocidad en tiempo real de los variadores Grundfos según la demanda real del edificio.
+                </div>
+              </li>
+              <li class="flex items-start">
+                <Activity size={18} class="text-blue-400 mr-3 shrink-0 mt-1" />
+                <div>
+                  <strong>Alertas Tempranas en Drenaje Sanitarios:</strong> Monitoreo continuo de nivel y operación en cárcamos Zoeller para prevenir desbordamientos en instalaciones críticas.
+                </div>
+              </li>
+              <li class="flex items-start">
+                <FileCheck size={18} class="text-blue-400 mr-3 shrink-0 mt-1" />
+                <div>
+                  <strong>Trazabilidad Operativa:</strong> Reportes históricos de consumo y horas de trabajo para programas de mantenimiento preventivo.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    {/* SERVICIOS DE INGENIERÍA Y ASESORÍA ESPECIALIZADA */}
+    <section class="py-20 bg-slate-100">
+      <div class="container mx-auto px-4">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs font-mono uppercase tracking-widest text-blue-700 mb-2">Alcance de Servicios</h2>
+          <h3 class="text-3xl font-bold font-mono text-slate-900">
+            ASESORÍA, SERVICIO DE TALLER Y CAPACITACIÓN TÉCNICA
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          
+          <div class="bg-white p-8 border border-slate-200 hover:border-blue-700 transition-colors">
+            <div class="w-12 h-12 bg-blue-50 text-blue-700 flex items-center justify-center mb-6">
+              <FileCheck size={24} />
+            </div>
+            <h4 class="text-lg font-bold font-mono text-slate-900 mb-3">Revisión de Ingeniería de Proyectos</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Analizamos los planos y memorias técnicas de su proyecto antes de la compra para confirmar si la selección hidráulica proyectada es la opción más eficiente e inteligente.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 border border-slate-200 hover:border-blue-700 transition-colors">
+            <div class="w-12 h-12 bg-blue-50 text-blue-700 flex items-center justify-center mb-6">
               <Activity size={24} />
             </div>
-            <h3 class="text-xl font-bold text-slate-800 mb-3 font-mono">Diagnóstico de Fallas</h3>
+            <h4 class="text-lg font-bold font-mono text-slate-900 mb-3">Diagnósticos de Ahorro Energético</h4>
             <p class="text-slate-600 text-sm leading-relaxed">
-              Analizamos por qué falló su equipo anterior y proponemos soluciones que atacan la raíz del problema.
+              Evaluación de instalaciones existentes o por construir mediante herramientas Grundfos para identificar retornos de inversión mediante actualización a tecnología de velocidad variable.
             </p>
           </div>
 
-          <div class="p-8 border border-gray-200 hover:border-blue-700 transition-colors group">
-            <div class="w-12 h-12 bg-slate-100 flex items-center justify-center mb-6 group-hover:bg-blue-700 group-hover:text-white transition-colors">
+          <div class="bg-white p-8 border border-slate-200 hover:border-blue-700 transition-colors">
+            <div class="w-12 h-12 bg-blue-50 text-blue-700 flex items-center justify-center mb-6">
               <Ruler size={24} />
             </div>
-            <h3 class="text-xl font-bold text-slate-800 mb-3 font-mono">Cálculo Hidráulico Real</h3>
+            <h4 class="text-lg font-bold font-mono text-slate-900 mb-3">Cálculo de Drenaje Presurizado</h4>
             <p class="text-slate-600 text-sm leading-relaxed">
-              Evite el sobredimensionamiento. Cálculos precisos basados en su curva de operación.
+              Diseño y dimensionamiento hidráulico especializado con tecnología Zoeller para desalojo de aguas negras en niveles subterráneos y redes presurizadascomplejas.
             </p>
           </div>
 
-          <div class="p-8 border border-gray-200 hover:border-blue-700 transition-colors group">
-            <div class="w-12 h-12 bg-slate-100 flex items-center justify-center mb-6 group-hover:bg-blue-700 group-hover:text-white transition-colors">
-              <ShieldCheck size={24} />
+          <div class="bg-white p-8 border border-slate-200 hover:border-blue-700 transition-colors">
+            <div class="w-12 h-12 bg-blue-50 text-blue-700 flex items-center justify-center mb-6">
+              <Wrench size={24} />
             </div>
-            <h3 class="text-xl font-bold text-slate-800 mb-3 font-mono">Equipos Certificados</h3>
+            <h4 class="text-lg font-bold font-mono text-slate-900 mb-3">Taller de Reparación Especializada</h4>
             <p class="text-slate-600 text-sm leading-relaxed">
-              Suministro con certificaciones internacionales UL/FM y normativas sanitarias vigentes.
+              Mantenimiento mayor y reparación de bombas verticales tipo turbina y sumergibles tipo turbina. Rebobinado de motores sumergibles de pozo profundo.
             </p>
+          </div>
+
+          <div class="bg-white p-8 border border-slate-200 hover:border-blue-700 transition-colors">
+            <div class="w-12 h-12 bg-blue-50 text-blue-700 flex items-center justify-center mb-6">
+              <GraduationCap size={24} />
+            </div>
+            <h4 class="text-lg font-bold font-mono text-slate-900 mb-3">Seminarios y Capacitación Técnica</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Inmersión y cursos técnicos para proyectistas, despachos de ingeniería y constructoras en presurización Hydro MPC, HVAC distribuido DELTA y trituración Zoeller.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 border border-slate-200 hover:border-blue-700 transition-colors">
+            <div class="w-12 h-12 bg-blue-50 text-blue-700 flex items-center justify-center mb-6">
+              <Droplets size={24} />
+            </div>
+            <h4 class="text-lg font-bold font-mono text-slate-900 mb-3">Asesoría para Sistemas de Riego</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Asesoría técnica y selección exacta de bombas para suministro hidráulico a sistemas de riego comercial e institucional de grandes áreas verdes.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    {/* SECCIÓN DE RESPALDO CORPORATIVO Y TRANSPARENCIA CON SIBI */}
+    <section class="py-20 bg-white border-t border-slate-200">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-slate-900 text-white p-8 md:p-12 relative overflow-hidden">
+          <div class="absolute right-0 top-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="relative z-10">
+            <div class="inline-block px-3 py-1 bg-blue-700 font-mono text-xs text-white uppercase font-bold mb-4">
+              Transparencia Institucional
+            </div>
+
+            <h3 class="text-2xl md:text-3xl font-bold font-mono mb-4">
+              CURRENT COMMAND & RESPALDO TÉCNICO DE SIBI
+            </h3>
+
+            <p class="text-slate-300 leading-relaxed mb-6">
+              <strong>CurrentCommand.com</strong> es la plataforma técnica operada para la atención de proyectos comerciales e ingeniería de especificación por personal especializado de <strong>Soluciones Integrales en Bombeo Inteligente SIBI</strong>.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-slate-800 pt-6 text-sm">
+              <div class="flex items-start">
+                <CheckCircle size={20} class="text-blue-400 mr-3 shrink-0 mt-1" />
+                <span class="text-slate-300">
+                  <strong> Respaldo Fiscal y Facturación:</strong> Operación directa a través de Soluciones Integrales en Bombeo Inteligente SIBI con base en Tlaquepaque, Jalisco.
+                </span>
+              </div>
+              <div class="flex items-start">
+                <CheckCircle size={20} class="text-blue-400 mr-3 shrink-0 mt-1" />
+                <span class="text-slate-300">
+                  <strong>Taller Físico Directo:</strong> Infraestructura propia para ensamble, diagnóstico y reparación de bombas turbina y sumergibles.
+                </span>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <span class="text-xs font-mono text-slate-400">
+                Conozca más sobre la estructura matriz en <a href="https://siga.sibi.mx" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">sibi.mx</a>
+              </span>
+              <a 
+                href="/contacto" 
+                class="px-6 py-3 bg-white text-slate-900 font-mono font-bold text-xs uppercase hover:bg-slate-200 transition-colors"
+              >
+                HABLAR CON UN INGENIERO DE APLICACIÓN
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    {/* Respaldo Técnico Section */}
-    <section class="py-20 bg-slate-50 border-t border-gray-200">
-      <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-        <div class="w-full md:w-1/2">
-          <h2 class="text-3xl font-bold text-slate-800 mb-6 font-mono">RESPALDO TÉCNICO TOTAL</h2>
-          <p class="text-slate-600 mb-6">
-            Detrás de CURRENT COMMAND está la infraestructura de <strong>SIBI SA DE CV</strong>.
-            Con base en Tlaquepaque, Jalisco, atendemos a la industria en todo el occidente del país.
-          </p>
-          <ul class="space-y-3 mb-8">
-            <li class="flex items-center text-sm text-slate-700">
-              <CheckCircle size={18} class="text-blue-700 mr-3" />
-              Taller de servicio autorizado
-            </li>
-            <li class="flex items-center text-sm text-slate-700">
-              <CheckCircle size={18} class="text-blue-700 mr-3" />
-              Stock de refacciones críticas
-            </li>
-            <li class="flex items-center text-sm text-slate-700">
-              <CheckCircle size={18} class="text-blue-700 mr-3" />
-              Puesta en marcha y alineación láser
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
   </div>
 </Layout>
