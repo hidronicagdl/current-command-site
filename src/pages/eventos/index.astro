@@ -16,7 +16,7 @@ import Layout from '../../layouts/Layout.astro';
     <!-- Open Graph (SEM / Social) -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Seminarios y Capacitaciones Técnicas de Ingeniería Hidráulica 2026" />
-    <meta property="og:description" content="Actualización de alto nivel en bombeo de aguas negras y ahorro energético en HVAC con Zoeller y Grundfos." />
+    <meta property="og:description" content="Actualización de alto nivel en bombeo de aguas negras, optimización de Delta T y bombeo distribuido en HVAC con Zoeller y Grundfos." />
     <meta property="og:url" content="https://currentcommand.com/eventos" />
 
     <!-- Marcado Schema ItemList para Indexación de Calendarios por IA -->
@@ -32,6 +32,7 @@ import Layout from '../../layouts/Layout.astro';
               "@type": "BusinessEvent",
               "name": "Curso Técnico Zoeller: Bombeo de Aguas Negras y Cárcamos Presurizados",
               "startDate": "2026-08-06T09:00:00-06:00",
+              "eventStatus": "https://schema.org/EventCompleted",
               "url": "https://currentcommand.com/eventos/zoeller",
               "location": {
                 "@type": "Place",
@@ -45,9 +46,26 @@ import Layout from '../../layouts/Layout.astro';
             "position": 2,
             "item": {
               "@type": "BusinessEvent",
-              "name": "Curso Técnico Grundfos: Ahorro Energético en HVAC y Bombeo Distribuido",
+              "name": "Curso Técnico Grundfos: Ahorro Energético en HVAC y Equipos Delta",
               "startDate": "2026-08-27T11:00:00-06:00",
+              "eventStatus": "https://schema.org/EventCompleted",
               "url": "https://currentcommand.com/eventos/grundfos",
+              "location": {
+                "@type": "Place",
+                "name": "Cámara de Comercio de Tlaquepaque",
+                "address": "San Pedro Tlaquepaque, Jalisco"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "BusinessEvent",
+              "name": "Curso Técnico Grundfos: Revolución Energética con Bombeo Distribuido en HVAC",
+              "startDate": "2026-10-09T11:00:00-06:00",
+              "eventStatus": "https://schema.org/EventScheduled",
+              "url": "https://currentcommand.com/eventos/bombeo-distribuido",
               "location": {
                 "@type": "Place",
                 "name": "Cámara de Comercio de Tlaquepaque",
@@ -118,15 +136,15 @@ import Layout from '../../layouts/Layout.astro';
           </div>
         </article>
 
-        <!-- TARJETA 2: EVENTO GRUNDFOS -->
-        <article class="event-card border-grundfos">
+        <!-- TARJETA 2: EVENTO GRUNDFOS AGOSTO (FINALIZADO) -->
+        <article class="event-card border-grundfos card-disabled">
           <div class="card-header">
             <span class="badge-tech badge-grundfos">SISTEMAS HVAC / EFICIENCIA</span>
-            <span class="event-status">CUPO LIMITADO</span>
+            <span class="event-status status-ended">EVENTO FINALIZADO</span>
           </div>
 
           <div class="card-body">
-            <h3>Curso Técnico Grundfos: Ahorro Energético HVAC & Bombeo Distribuido</h3>
+            <h3>Curso Técnico Grundfos: Ahorro Energético HVAC & Equipos Delta</h3>
             
             <ul class="event-meta-list">
               <li>📅 <strong>Fecha:</strong> 27 de Agosto, 2026</li>
@@ -140,23 +158,51 @@ import Layout from '../../layouts/Layout.astro';
           </div>
 
           <div class="card-footer">
-            <a href="/eventos/grundfos" class="btn-card btn-grundfos">
+            <span class="btn-card btn-disabled">
+              REGISTRO CERRADO
+            </span>
+          </div>
+        </article>
+
+        <!-- TARJETA 3: EVENTO GRUNDFOS OCTUBRE (NUEVO / ACTIVO) -->
+        <article class="event-card border-grundfos border-active">
+          <div class="card-header">
+            <span class="badge-tech badge-grundfos">BOMBEO DISTRIBUIDO / HVAC</span>
+            <span class="event-status status-open">PRÓXIMO EVENTO</span>
+          </div>
+
+          <div class="card-body">
+            <h3>Curso Técnico Grundfos: Revolución Energética con Bombeo Distribuido</h3>
+            
+            <ul class="event-meta-list">
+              <li>📅 <strong>Fecha:</strong> 9 de Octubre, 2026</li>
+              <li>⏰ <strong>Horario:</strong> 11:00 a 14:00 hrs (Incluye Coffee Break & Snacks)</li>
+              <li>📍 <strong>Sede:</strong> Cámara de Comercio de Tlaquepaque (Tlaquepaque, Jal.)</li>
+            </ul>
+
+            <p class="card-description">
+              Análisis profundo de la tecnología de bombeo distribuido. Cómo eliminar válvulas de balanceo y de control modulantes reemplazándolas por bombas inteligentes locales para un ahorro de bombeo hasta del 50%.
+            </p>
+          </div>
+
+          <div class="card-footer">
+            <a href="/eventos/bombeo-distribuido" class="btn-card btn-grundfos">
               VER AGENDA Y SOLICITAR REGISTRO >
             </a>
           </div>
         </article>
 
-        <!-- TARJETA 3: CAPTURA PARA FUTUROS EVENTOS -->
+        <!-- TARJETA 4: CAPTURA PARA FUTUROS EVENTOS -->
         <article class="event-card border-future">
           <div class="card-header">
             <span class="badge-tech badge-future">PRÓXIMAS FECHAS / NOTIFICACIONES</span>
           </div>
 
           <div class="card-body">
-            <h3>¿No puedes asistir en agosto? Recibe convocatorias exclusivas</h3>
+            <h3>¿Quieres enterarte de nuestras próximas fechas de capacitación?</h3>
             
             <p class="card-description">
-              Déjanos tus datos para recibir la agenda de seminarios del segundo semestre de 2026 antes de la publicación abierta.
+              Déjanos tus datos para recibir convocatorias exclusivas de los próximos seminarios y talleres de ingeniería hidráulica.
             </p>
 
             <form id="future-events-form" class="future-form">
@@ -358,6 +404,10 @@ import Layout from '../../layouts/Layout.astro';
   .border-grundfos { border-top: 5px solid var(--grundfos-blue); }
   .border-future { border-top: 5px solid var(--dark-charcoal); background-color: var(--bg-premium); }
 
+  .border-active {
+    box-shadow: 0 4px 12px rgba(0, 81, 158, 0.12);
+  }
+
   .card-header {
     display: flex;
     justify-content: space-between;
@@ -379,10 +429,14 @@ import Layout from '../../layouts/Layout.astro';
   .event-status {
     font-size: 10px;
     font-weight: 800;
-    color: #b91c1c;
-    background-color: #fef2f2;
     padding: 4px 8px;
     border-radius: 4px;
+  }
+
+  .status-open {
+    color: var(--grundfos-blue);
+    background-color: #e6f0fa;
+    border: 1px solid #b3d7ff;
   }
 
   .card-body h3 {
