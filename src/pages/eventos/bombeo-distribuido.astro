@@ -4,8 +4,8 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout 
-  title="Curso Técnico: Bombeo Distribuido en HVAC con Grundfos y SIBI" 
-  description="Capacitación técnica exclusiva sobre tecnología de bombeo distribuido Grundfos el 9 de octubre en la Cámara de Comercio de Tlaquepaque. Cupo limitado a 20 especialistas."
+  title="Curso Técnico: Bombeo Distribuido en HVAC con Grundfos y SIBI (Presencial y Virtual)" 
+  description="Capacitación técnica sobre tecnología de bombeo distribuido Grundfos el 9 de octubre. Modalidades Presencial en Tlaquepaque y Virtual En Vivo. Organiza SIBI y Grundfos."
   minimal={true}
 >
   <Fragment slot="head">
@@ -13,8 +13,8 @@ import Layout from '../../layouts/Layout.astro';
     <link rel="canonical" href="https://currentcommand.com/eventos/bombeo-distribuido" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Curso Técnico: Bombeo Distribuido en HVAC - Grundfos & SIBI" />
-    <meta property="og:description" content="Descubra cómo eliminar la sobrepresión y optimizar el Delta T en sistemas HVAC con Bombeo Distribuido Grundfos en Tlaquepaque. Evento sin costo, cupo limitado." />
+    <meta property="og:title" content="Curso Técnico: Bombeo Distribuido en HVAC - Grundfos & SIBI (Presencial y Virtual)" />
+    <meta property="og:description" content="Descubra cómo eliminar la sobrepresión y optimizar el Delta T en sistemas HVAC con Bombeo Distribuido Grundfos. Asistencia presencial en Tlaquepaque o virtual en vivo." />
     <meta property="og:url" content="https://currentcommand.com/eventos/bombeo-distribuido" />
 
     <script type="application/ld+json" is:inline>
@@ -26,19 +26,25 @@ import Layout from '../../layouts/Layout.astro';
         "startDate": "2026-10-09T11:00:00-06:00",
         "endDate": "2026-10-09T14:00:00-06:00",
         "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "location": {
-          "@type": "Place",
-          "name": "Cámara de Comercio de Tlaquepaque",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Independencia #321, Centro",
-            "addressLocality": "San Pedro Tlaquepaque",
-            "addressRegion": "Jalisco",
-            "postalCode": "45500",
-            "addressCountry": "MX"
+        "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+        "location": [
+          {
+            "@type": "Place",
+            "name": "Cámara de Comercio de Tlaquepaque",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Independencia #321, Centro",
+              "addressLocality": "San Pedro Tlaquepaque",
+              "addressRegion": "Jalisco",
+              "postalCode": "45500",
+              "addressCountry": "MX"
+            }
+          },
+          {
+            "@type": "VirtualLocation",
+            "url": "https://currentcommand.com/eventos/bombeo-distribuido"
           }
-        },
+        ],
         "organizer": [
           {
             "@type": "Organization",
@@ -75,11 +81,11 @@ import Layout from '../../layouts/Layout.astro';
 
   <header class="hero-section">
     <div class="hero-container">
-      <p class="hero-kicker">EXCLUSIVO PARA DISEÑADORES HVAC, CONSULTORES MEP Y GERENTES DE PLANTA</p>
+      <p class="hero-kicker">EXCLUSIVO PARA DISEÑADORES HVAC, CONSULTORES MEP Y GERENTES DE PLANTA | PRESENCIAL Y VIRTUAL</p>
       <h1>Revolución Energética en HVAC: Tecnología de Bombeo Distribuido Grundfos</h1>
       
       <p class="hero-lead">
-        ¿Por qué seguir regulando el flujo hidráulico estrangulando válvulas de control y balanceo cuando puede generar únicamente la presión exacta que cada carga demanda? Descubra cómo el bombeo distribuido elimina el desperdicio de kWh en plantas de agua helada.
+        ¿Por qué seguir regulando el flujo hidráulico estrangulando válvulas de control y balanceo cuando puede generar únicamente la presión exacta que cada carga demanda? Descubra cómo el bombeo distribuido elimina el desperdicio de kWh en plantas de agua helada. <strong>Participe de forma presencial en Tlaquepaque o mediante transmisión virtual en vivo.</strong>
       </p>
 
       <div class="logistics-grid">
@@ -90,6 +96,10 @@ import Layout from '../../layouts/Layout.astro';
         <div class="logistic-card">
           <span class="card-label">HORARIO</span>
           <span class="card-value">11:00 a 14:00 hrs</span>
+        </div>
+        <div class="logistic-card">
+          <span class="card-label">MODALIDADES</span>
+          <span class="card-value">Presencial u Online</span>
         </div>
       </div>
 
@@ -103,8 +113,8 @@ import Layout from '../../layouts/Layout.astro';
           <span class="metric-text">AHORRO EN BOMBEO</span>
         </div>
         <div class="metric-item">
-          <span class="metric-number">CUPO REAL</span>
-          <span class="metric-text">LIMITADO A 20 ESPECIALISTAS</span>
+          <span class="metric-number">FORMATO HÍBRIDO</span>
+          <span class="metric-text">PRESENCIAL Y VIRTUAL EN VIVO</span>
         </div>
       </div>
     </div>
@@ -160,7 +170,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="immersion-card">
           <div class="card-num">02</div>
           <h3>Estabilización del Delta T y Control Dinámico</h3>
-          <p>Cómo el flujo regulado localmente garantiza un Delta T constante en el chiller, eliminando el arranque innecesario de compresores adicionales a cargas parciales.</p>
+          <p>Cómo el flujo regulado localmente garantiza un $\Delta T$ constante en el chiller, eliminando el arranque innecesario de compresores adicionales a cargas parciales.</p>
         </div>
 
         <div class="immersion-card">
@@ -171,15 +181,15 @@ import Layout from '../../layouts/Layout.astro';
 
         <div class="immersion-card">
           <div class="card-num">04</div>
-          <h3>Networking y Sesión de Consultoría MEP</h3>
-          <p>Análisis directo de planos y esquemas hidráulicos de los asistentes con el equipo de ingenieros de Grundfos y SIBI.</p>
+          <h3>Networking y Sesión Q&A en Vivo</h3>
+          <p>Análisis directo de proyectos. Espacio abierto de preguntas tanto para los asistentes en sala como para quienes se conecten vía remota.</p>
         </div>
       </div>
 
       <div class="inclusion-banner">
-        <span>☕ COFFEE BREAK CONTINUO</span>
+        <span>☕ COFFEE BREAK EN SEDE</span>
         <span class="banner-divider">•</span>
-        <span class="banner-divider">🍪 SNACK KIT INDIVIDUAL INCLUIDO</span>
+        <span class="banner-divider">📡 TRANSMISIÓN EN VIVO HD PARA ASISTENCIA VIRTUAL</span>
       </div>
     </div>
   </section>
@@ -187,14 +197,11 @@ import Layout from '../../layouts/Layout.astro';
   <section id="registro" class="form-section">
     <div class="form-container">
       <h2>Solicitar Invitación Exclusiva</h2>
-      <p class="form-lead">Cupos estrictamente limitados a 20 profesionales del sector HVAC. Sujeto a confirmación por el comité organizador de SIBI.</p>
+      <p class="form-lead">Seleccione su modalidad de preferencia. Cupos presenciales limitados a 20 profesionales. Sujeto a confirmación por el comité organizador de SIBI.</p>
 
       <div class="location-notice">
-        📍 <strong>Sede Oficial:</strong> Cámara de Comercio de Tlaquepaque.<br>
-        <span>Independencia #321, Centro, San Pedro Tlaquepaque, Jal.</span>
-        <div class="parking-tip">
-          🅿️ <strong>Estacionamiento Recomendado:</strong> Le sugerimos utilizar el estacionamiento público ubicado justo en el cruce de <strong>Constitución y Niños Héroes</strong> (a unos pasos de la sede).
-        </div>
+        📍 <strong>Asistencia Presencial:</strong> Cámara de Comercio de Tlaquepaque (Independencia #321, Centro, San Pedro Tlaquepaque, Jal.).<br>
+        💻 <strong>Asistencia Virtual:</strong> Transmisión en directo a través de plataforma privada (enlace enviado tras confirmación).
       </div>
 
       <form id="landing-form" class="premium-form">
@@ -220,34 +227,77 @@ import Layout from '../../layouts/Layout.astro';
           </div>
         </div>
 
-        <div class="form-group">
-          <label for="interes">TEMA DE PRINCIPAL INTERÉS</label>
-          <select id="interes" name="interes" required>
-            <option value="" disabled selected>Seleccione el enfoque principal de su interés</option>
-            <option value="Arquitectura de Bombeo Distribuido">Arquitectura e Instalación de Bombeo Distribuido</option>
-            <option value="Optimizacion de Delta T en Chillers">Optimización de Delta T y Control Térmico</option>
-            <option value="Retrofit en Plantas de Agua Helada Exisentes">Retrofit en Plantas de Agua Helada Existentes</option>
-          </select>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="modalidad">MODALIDAD DE ASISTENCIA</label>
+            <select id="modalidad" name="modalidad" required>
+              <option value="" disabled selected>Seleccione la modalidad de su interés</option>
+              <option value="Presencial">Presencial (Sede Cámara de Comercio Tlaquepaque)</option>
+              <option value="Virtual">Virtual (Transmisión En Vivo / Online)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="interes">TEMA DE PRINCIPAL INTERÉS</label>
+            <select id="interes" name="interes" required>
+              <option value="" disabled selected>Seleccione el enfoque principal</option>
+              <option value="Arquitectura de Bombeo Distribuido">Arquitectura e Instalación de Bombeo Distribuido</option>
+              <option value="Optimizacion de Delta T en Chillers">Optimización de Delta T y Control Térmico</option>
+              <option value="Retrofit en Plantas de Agua Helada Exisentes">Retrofit en Plantas de Agua Helada Existentes</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- CASILLA DE POLÍTICAS DE PRIVACIDAD -->
+        <div class="form-group checkbox-group">
+          <label for="privacidad" class="checkbox-label">
+            <input 
+              type="checkbox" 
+              id="privacidad" 
+              name="privacidad" 
+              required 
+              oninvalid="this.setCustomValidity('Debes aceptar las políticas de privacidad para continuar.')"
+              oninput="this.setCustomValidity('')"
+            />
+            <span>He leído y acepto las <a href="/privacidad" target="_blank" rel="noopener noreferrer">políticas de privacidad</a>.</span>
+          </label>
         </div>
 
         <button type="submit" id="submit-btn" class="btn-submit-premium">
-          SOLICITAR MI INVITACIÓN EXCLUSIVA
+          SOLICITAR MI INVITACIÓN EXCLUSIVA >
         </button>
-        <div class="form-group checkbox-group">
-  <label for="privacidad" class="checkbox-label">
-    <input type="checkbox" id="privacidad" name="privacidad" required />
-    <span>He leído y acepto las <a href="/privacidad" target="_blank" rel="noopener noreferrer">políticas de privacidad</a>.</span>
-  </label>
-</div>
       </form>
 
-      <div id="success-message" class="success-box" style="display: none;">
+      <!-- CONFIRMACIÓN PARA ASISTENCIA PRESENCIAL -->
+      <div id="success-presencial" class="success-box" style="display: none;">
         <h3>¡Muchas gracias por tu registro! Nos vemos el próximo 9 de octubre en la Cámara de Comercio de Tlaquepaque.</h3>
         
+        <div class="location-detail-box">
+          📍 <strong>Sede Oficial:</strong> Cámara de Comercio de Tlaquepaque.<br>
+          Independencia #321, Centro, San Pedro Tlaquepaque, Jal.<br>
+          🅿️ <strong>Estacionamiento Recomendado:</strong> Cerca de la sede en el cruce de Constitución y Niños Héroes.
+        </div>
+
         <div class="selector-promo-box">
           <h4>¿Tiene un proyecto de climatización o Chiller Planta en fase de diseño o retrofit?</h4>
           <p>Próximamente compartiremos con usted información técnica preliminar sobre los esquemas de bombeo distribuido Grundfos.</p>
           <span class="selector-tag">⚡ Nos pondremos en contacto vía WhatsApp para confirmar los detalles de su acceso.</span>
+        </div>
+      </div>
+
+      <!-- CONFIRMACIÓN PARA ASISTENCIA VIRTUAL -->
+      <div id="success-virtual" class="success-box success-virtual-box" style="display: none;">
+        <h3>¡Registro Exitoso para la Transmisión Virtual!</h3>
+        <p class="virtual-sub-lead">Te hemos registrado para acompañarnos en vivo el próximo <strong>9 de octubre de 11:00 a 14:00 hrs</strong>.</p>
+
+        <div class="virtual-notice-box">
+          📱 <strong>Instrucción Importante:</strong> Te enviaremos el enlace de acceso personalizado y las instrucciones de conexión directamente a tu número de WhatsApp antes de la sesión. Por favor, mantente al pendiente de tu celular.
+        </div>
+
+        <div class="selector-promo-box">
+          <h4>¿Tiene un proyecto de climatización o Chiller Planta en fase de diseño o retrofit?</h4>
+          <p>Próximamente compartiremos con usted información técnica preliminar sobre los esquemas de bombeo distribuido Grundfos.</p>
+          <span class="selector-tag">⚡ Nos pondremos en contacto vía WhatsApp para confirmar los detalles de su enlace.</span>
         </div>
       </div>
 
@@ -266,8 +316,9 @@ import Layout from '../../layouts/Layout.astro';
 
   <script is:inline>
     const form = document.getElementById('landing-form');
-    const successMessage = document.getElementById('success-message');
     const submitBtn = document.getElementById('submit-btn');
+    const successPresencial = document.getElementById('success-presencial');
+    const successVirtual = document.getElementById('success-virtual');
 
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyM9s62E1h7T9lpt3LLKbxeOHY54lWGn86oy-kmZ5bb2xp72dsSwjTIlexJwV78DD8/exec';
 
@@ -278,14 +329,18 @@ import Layout from '../../layouts/Layout.astro';
       submitBtn.innerText = 'VERIFICANDO DISPONIBILIDAD Y GUARDANDO REGISTRO...';
 
       const formData = new FormData(form);
+      const modalidad = formData.get('modalidad');
+
       const data = {
         fecha_registro: new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' }),
         nombre: formData.get('nombre'),
         empresa: formData.get('empresa'),
         correo: formData.get('correo'),
         whatsapp: formData.get('whatsapp'),
+        modalidad: modalidad,
         interes: formData.get('interes'),
-        evento: 'Bombeo Distribuido Grundfos 09-Oct'
+        evento: 'Bombeo Distribuido Grundfos 09-Oct',
+        acepto_politicas: formData.get('privacidad') === 'on' ? 'Sí' : 'No'
       };
 
       try {
@@ -299,14 +354,20 @@ import Layout from '../../layouts/Layout.astro';
         if (typeof window.gtag === 'function') {
           window.gtag('event', 'generate_lead', {
             'event_category': 'engagement',
-            'event_label': 'Registro Curso Grundfos Bombeo Distribuido Tlaquepaque',
+            'event_label': `Registro Grundfos Bombeo Distribuido - ${modalidad}`,
             'value': 1
           });
         }
 
         form.style.display = 'none';
-        successMessage.style.display = 'block';
-        successMessage.scrollIntoView({ behavior: 'smooth' });
+
+        if (modalidad === 'Virtual') {
+          successVirtual.style.display = 'block';
+          successVirtual.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          successPresencial.style.display = 'block';
+          successPresencial.scrollIntoView({ behavior: 'smooth' });
+        }
 
       } catch (error) {
         console.error('Error de red:', error);
@@ -392,7 +453,7 @@ import Layout from '../../layouts/Layout.astro';
     border-bottom: 1px solid var(--border-color);
   }
   .hero-kicker {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 800;
     color: var(--grundfos-blue);
     letter-spacing: 1px;
@@ -597,14 +658,6 @@ import Layout from '../../layouts/Layout.astro';
     text-align: center;
     color: var(--dark-charcoal);
   }
-  
-  .parking-tip {
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px dashed #b3d7ff;
-    font-size: 12px;
-    color: var(--slate-gray);
-  }
 
   .premium-form {
     display: flex;
@@ -641,6 +694,38 @@ import Layout from '../../layouts/Layout.astro';
     box-shadow: 0 0 0 1px var(--grundfos-blue);
   }
 
+  /* ESTILOS CASILLA DE PRIVACIDAD */
+  .checkbox-group {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .checkbox-label {
+    display: flex !important;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    color: var(--slate-gray);
+    cursor: pointer;
+    line-height: 1.4;
+  }
+  .checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 1px;
+    cursor: pointer;
+    accent-color: var(--grundfos-blue);
+    flex-shrink: 0;
+  }
+  .checkbox-label a {
+    color: var(--grundfos-blue);
+    text-decoration: underline;
+    font-weight: 600;
+  }
+  .checkbox-label a:hover {
+    color: var(--grundfos-dark);
+  }
+
   .btn-submit-premium {
     background-color: var(--grundfos-blue);
     color: #ffffff;
@@ -666,7 +751,7 @@ import Layout from '../../layouts/Layout.astro';
     letter-spacing: 0.5px;
   }
 
-  /* SUCCESS BOX */
+  /* SUCCESS BOXES */
   .success-box {
     background-color: #d1e7dd;
     color: #0f5132;
@@ -676,6 +761,42 @@ import Layout from '../../layouts/Layout.astro';
     border: 1px solid #badbcc;
     font-size: 16px;
     margin-top: 20px;
+  }
+
+  .success-virtual-box {
+    background-color: #e6f0fa;
+    color: var(--grundfos-dark);
+    border-color: #b3d7ff;
+  }
+
+  .virtual-sub-lead {
+    font-size: 15px;
+    color: var(--dark-charcoal);
+    margin-top: 10px;
+  }
+
+  .virtual-notice-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #b3d7ff;
+    border-radius: 4px;
+    font-size: 13px;
+    color: var(--dark-charcoal);
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .location-detail-box {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #badbcc;
+    border-radius: 4px;
+    font-size: 13px;
+    color: var(--dark-charcoal);
+    line-height: 1.5;
+    text-align: left;
   }
 
   .selector-promo-box {
@@ -732,40 +853,4 @@ import Layout from '../../layouts/Layout.astro';
     .hero-section h1 { font-size: 30px; }
     .logistics-grid, .metrics-bar, .form-row, .trust-badges, .inclusion-banner { grid-template-columns: 1fr; flex-direction: column; gap: 15px; }
   }
-
-  /* ESTILOS PARA LA CASILLA DE PRIVACIDAD */
-.checkbox-group {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.checkbox-label {
-  display: flex !important;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 13px !important;
-  font-weight: 400 !important;
-  color: var(--slate-gray);
-  cursor: pointer;
-  line-height: 1.4;
-}
-
-.checkbox-label input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  margin-top: 1px;
-  cursor: pointer;
-  accent-color: var(--grundfos-blue);
-  flex-shrink: 0;
-}
-
-.checkbox-label a {
-  color: var(--grundfos-blue);
-  text-decoration: underline;
-  font-weight: 600;
-}
-
-.checkbox-label a:hover {
-  color: var(--grundfos-dark);
-}
 </style>
